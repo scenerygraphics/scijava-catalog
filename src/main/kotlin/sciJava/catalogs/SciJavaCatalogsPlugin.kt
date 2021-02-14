@@ -65,9 +65,6 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
             //            <!-- SciJava Search - https://github.com/scijava/scijava-search -->
             //            <scijava-search.version>0.7.0</scijava-search.version>
             //
-            //            <!-- SciJava Table - https://github.com/scijava/scijava-table -->
-            //            <scijava-table.version>0.7.0</scijava-table.version>
-            //
             //            <!-- SciJava UI: AWT - https://github.com/scijava/scijava-ui-awt -->
             //            <scijava-ui-awt.version>0.1.7</scijava-ui-awt.version>
             //

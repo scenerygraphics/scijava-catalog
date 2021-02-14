@@ -110,14 +110,10 @@ fun MutableVersionCatalogContainer.addSciJava() {
         //            <artifactId>scijava-search</artifactId>
         //            <version>${scijava-search.version}</version>
         //            </dependency>
-        //
-        //            <!-- SciJava Table - https://github.com/scijava/scijava-table -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>scijava-table</artifactId>
-        //            <version>${scijava-table.version}</version>
-        //            </dependency>
-        //
+
+        // SciJava Table - https://github.com/scijava/scijava-table
+        alias("table").to("org.scijava:scijava-table:0.7.0")
+
         //            <!-- SciJava UI: AWT - https://github.com/scijava/scijava-ui-awt -->
         //            <dependency>
         //            <groupId>org.scijava</groupId>
