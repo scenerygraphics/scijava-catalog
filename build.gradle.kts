@@ -16,6 +16,8 @@ plugins {
     `maven-publish`
 }
 
+group = "sciJava.catalogs"
+
 repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
