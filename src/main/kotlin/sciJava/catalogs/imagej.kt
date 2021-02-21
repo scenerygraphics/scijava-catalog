@@ -71,19 +71,11 @@ fun MutableVersionCatalogContainer.addImagej() {
         // ImageJ Scripting - https://github.com/imagej/imagej-scripting
         alias("scripting").to("net.imagej:imagej-scripting:0.8.2")
 
-        //            <!-- ImageJ Server - https://github.com/imagej/imagej-server -->
-        //            <dependency>
-        //            <groupId>net.imagej</groupId>
-        //            <artifactId>imagej-server</artifactId>
-        //            <version>${imagej-server.version}</version>
-        //            </dependency>
-        //
-        //            <!-- ImageJ TensorFlow - https://github.com/imagej/imagej-tensorflow -->
-        //            <dependency>
-        //            <groupId>net.imagej</groupId>
-        //            <artifactId>imagej-tensorflow</artifactId>
-        //            <version>${imagej-tensorflow.version}</version>
-        //            </dependency>
+        // ImageJ Server - https://github.com/imagej/imagej-server
+        alias("server").to("net.imagej:imagej-server:0.2.0")
+
+        // ImageJ TensorFlow - https://github.com/imagej/imagej-tensorflow
+        alias("tensorflow").to("net.imagej:imagej-tensorflow:1.1.5")
 
         // ImageJ UI: AWT - https://github.com/imagej/imagej-ui-awt
         alias("uiAwt").to("net.imagej:imagej-ui-awt:0.3.1")
@@ -94,12 +86,8 @@ fun MutableVersionCatalogContainer.addImagej() {
         // ImageJ Updater - https://github.com/imagej/imagej-updater
         alias("updater").to("net.imagej:imagej-updater:0.10.5")
 
-        //            <!-- Op-Finder - https://github.com/imagej/op-finder -->
-        //            <dependency>
-        //            <groupId>net.imagej</groupId>
-        //            <artifactId>op-finder</artifactId>
-        //            <version>${op-finder.version}</version>
-        //            </dependency>
+        // Op-Finder - https://github.com/imagej/op-finder
+        alias("opFinder").to("net.imagej:op-finder:0.1.4")
 
         val base = arrayListOf("common", "deprecated", "launcher", "legacy", "mesh", "meshIo", "notebook", "ops",
             "pluginsBatch", "pluginsCommands", "pluginsTools", "pluginsUploaderSsh", "pluginsUploaderWebdav",

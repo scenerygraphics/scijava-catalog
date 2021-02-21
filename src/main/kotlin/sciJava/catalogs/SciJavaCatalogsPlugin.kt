@@ -23,128 +23,15 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
 
         settings.dependencyResolutionManagement.versionCatalogs.apply {
 
-            //            <!-- Batch Processor - https://github.com/scijava/batch-processor -->
-            //            <batch-processor.version>0.4.1</batch-processor.version>
-            //
-            //            <!-- JUnit Benchmarks - https://github.com/scijava/junit-benchmarks -->
-            //            <junit-benchmarks.version>0.7.4-scijava</junit-benchmarks.version>
-            //
-            //            <!-- MiniMaven - https://github.com/scijava/minimaven -->
-            //            <minimaven.version>2.2.2</minimaven.version>
-            //
-            //            <!-- Native Lib Loader - https://github.com/scijava/native-lib-loader -->
-            //            <native-lib-loader.version>2.3.4</native-lib-loader.version>
-            //
-            //            <!-- Parsington - https://github.com/scijava/parsington -->
-            //            <parsington.version>2.0.0</parsington.version>
-            //
-            //            <!-- SciJava Cache - https://github.com/scijava/scijava-cache -->
-            //            <scijava-cache.version>0.1.2</scijava-cache.version>
-            //
-            //            <!-- SciJava Config - https://github.com/scijava/scijava-config -->
-            //            <scijava-config.version>2.0.2</scijava-config.version>
-            //
-            //            <!-- SciJava Grab - https://github.com/scijava/scijava-grab -->
-            //            <scijava-grab.version>0.1.0</scijava-grab.version>
-            //
-            //            <!-- SciJava Java 3D Tools - https://github.com/scijava/scijava-java3d -->
-            //            <scijava-java3d.version>0.1.0</scijava-java3d.version>
-            //
-            //            <!-- SciJava Listeners - https://github.com/scijava/scijava-listeners -->
-            //            <scijava-listeners.version>1.0.0-beta-3</scijava-listeners.version>
-            //
-            //            <!-- SciJava SLF4J Logging - https://github.com/scijava/scijava-log-slf4j -->
-            //            <scijava-log-slf4j.version>1.0.5</scijava-log-slf4j.version>
-            //
-            //            <!-- SciJava Optional - https://github.com/scijava/scijava-optional -->
-            //            <scijava-optional.version>1.0.0</scijava-optional.version>
-            //
-            //            <!-- SciJava Plugins: Commands - https://github.com/scijava/scijava-plugins-commands -->
-            //            <scijava-plugins-commands.version>0.2.3</scijava-plugins-commands.version>
-            //
-            //            <!-- SciJava Search - https://github.com/scijava/scijava-search -->
-            //            <scijava-search.version>0.7.0</scijava-search.version>
-            //
-            //            <!-- SciJava UI: AWT - https://github.com/scijava/scijava-ui-awt -->
-            //            <scijava-ui-awt.version>0.1.7</scijava-ui-awt.version>
-            //
-            //            <!-- SciJava UI: Swing - https://github.com/scijava/scijava-ui-swing -->
-            //            <scijava-ui-swing.version>0.13.2</scijava-ui-swing.version>
-            //
-            //            <!-- Scripting: BeanShell - https://github.com/scijava/scripting-beanshell -->
-            //            <scripting-beanshell.version>0.3.4</scripting-beanshell.version>
-            //
-            //            <!-- Scripting: Clojure - https://github.com/scijava/scripting-clojure -->
-            //            <scripting-clojure.version>0.1.6</scripting-clojure.version>
-            //
-            //            <!-- Scripting: Groovy - https://github.com/scijava/scripting-groovy -->
-            //            <scripting-groovy.version>0.3.0</scripting-groovy.version>
-            //
-            //            <!-- Scripting: Java - https://github.com/scijava/scripting-java -->
-            //            <scripting-java.version>0.4.1</scripting-java.version>
-            //
-            //            <!-- Scripting: JavaScript - https://github.com/scijava/scripting-javascript -->
-            //            <scripting-javascript.version>0.5.0</scripting-javascript.version>
-            //
-            //            <!-- Scripting: JRuby - https://github.com/scijava/scripting-jruby -->
-            //            <scripting-jruby.version>0.3.1</scripting-jruby.version>
-            //
-            //            <!-- Scripting: Jython - https://github.com/scijava/scripting-jython -->
-            //            <scripting-jython.version>1.0.0</scripting-jython.version>
-            //
-            //            <!-- Scripting: Kotlin - https://github.com/scijava/scripting-kotlin -->
-            //            <scripting-kotlin.version>0.1.1</scripting-kotlin.version>
-            //
-            //            <!-- Scripting: MATLAB - https://github.com/scijava/scripting-matlab -->
-            //            <scripting-matlab.version>0.5.2</scripting-matlab.version>
-            //
-            //            <!-- Scripting: Renjin - https://github.com/scijava/scripting-renjin -->
-            //            <scripting-renjin.version>0.2.3</scripting-renjin.version>
-            //
-            //            <!-- Scripting: Scala - https://github.com/scijava/scripting-scala -->
-            //            <scripting-scala.version>0.2.2</scripting-scala.version>
-            //
-            //            <!-- Swing Checkbox Tree - https://github.com/scijava/swing-checkbox-tree -->
-            //            <swing-checkbox-tree.version>1.0.2</swing-checkbox-tree.version>
-            //
-            //            <!-- UI Behaviour - https://github.com/scijava/ui-behaviour -->
-            //            <ui-behaviour.version>2.0.3</ui-behaviour.version>
-            //
+
             //            <!-- ImageJ - https://github.com/imagej -->
-            //
-            //            <!-- ImageJ Server - https://github.com/imagej/imagej-server -->
-            //            <imagej-server.version>0.2.0</imagej-server.version>
-            //
-            //            <!-- ImageJ TensorFlow - https://github.com/imagej/imagej-tensorflow -->
-            //            <imagej-tensorflow.version>1.1.5</imagej-tensorflow.version>
             //
             //            <!-- ImageJ UI: AWT - https://github.com/imagej/imagej-ui-awt -->
             //            <imagej-ui-awt.version></imagej-ui-awt.version>
             //
-            //            <!-- Op Finder - https://github.com/imagej/op-finder -->
-            //            <op-finder.version>0.1.4</op-finder.version>
             /*
 
 
-                                    <!-- SCIFIO - https://github.com/scifio -->
-
-                                    <!-- SCIFIO-BF-compat - https://github.com/scifio/scifio-bf-compat -->
-                                    <scifio-bf-compat.version>4.1.0</scifio-bf-compat.version>
-
-                                    <!-- SCIFIO Command Line Tools - https://github.com/scifio/scifio-cli -->
-                                    <scifio-cli.version>0.6.1</scifio-cli.version>
-
-                                    <!-- SCIFIO HDF5 - https://github.com/scifio/scifio-hdf5 -->
-                                    <scifio-hdf5.version>0.2.1</scifio-hdf5.version>
-
-                                    <!-- SCIFIO JAI Image I/O - https://github.com/scifio/scifio-jai-imageio -->
-                                    <scifio-jai-imageio.version>1.1.1</scifio-jai-imageio.version>
-
-                                    <!-- SCIFIO-LifeSci - https://github.com/scifio/scifio-lifesci -->
-                                    <scifio-lifesci.version>0.9.0</scifio-lifesci.version>
-
-                                    <!-- SCIFIO-OME-XML - https://github.com/scifio/scifio-ome-xml -->
-                                    <scifio-ome-xml.version>0.16.1</scifio-ome-xml.version>
 
                                     <!-- Fiji - https://github.com/fiji -->
 

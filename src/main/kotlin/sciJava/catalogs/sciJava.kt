@@ -6,88 +6,94 @@ import org.gradle.api.initialization.resolve.MutableVersionCatalogContainer
 fun MutableVersionCatalogContainer.addSciJava() {
 
     create("sciJava").apply {
-        //            <!-- Batch Processor - https://github.com/scijava/batch-processor -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>batch-processor</artifactId>
-        //            <version>${batch-processor.version}</version>
-        //            </dependency>
+
+        //            <!-- JUnit Benchmarks - https://github.com/scijava/junit-benchmarks -->
+        //            <junit-benchmarks.version>0.7.4-scijava</junit-benchmarks.version>
         //
-        //            <!-- MiniMaven - https://github.com/scijava/minimaven -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>minimaven</artifactId>
-        //            <version>${minimaven.version}</version>
-        //            </dependency>
+        //            <!-- SciJava UI: AWT - https://github.com/scijava/scijava-ui-awt -->
+        //            <scijava-ui-awt.version>0.1.7</scijava-ui-awt.version>
         //
-        //            <!-- Native Lib Loader - https://github.com/scijava/native-lib-loader -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>native-lib-loader</artifactId>
-        //            <version>${native-lib-loader.version}</version>
-        //            </dependency>
+        //            <!-- SciJava UI: Swing - https://github.com/scijava/scijava-ui-swing -->
+        //            <scijava-ui-swing.version>0.13.2</scijava-ui-swing.version>
         //
-        //            <!-- Parsington - https://github.com/scijava/parsington -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>parsington</artifactId>
-        //            <version>${parsington.version}</version>
-        //            </dependency>
+        //            <!-- Scripting: BeanShell - https://github.com/scijava/scripting-beanshell -->
+        //            <scripting-beanshell.version>0.3.4</scripting-beanshell.version>
         //
-        //            <!-- SciJava Cache - https://github.com/scijava/scijava-cache -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>scijava-cache</artifactId>
-        //            <version>${scijava-cache.version}</version>
-        //            </dependency>
+        //            <!-- Scripting: Clojure - https://github.com/scijava/scripting-clojure -->
+        //            <scripting-clojure.version>0.1.6</scripting-clojure.version>
+        //
+        //            <!-- Scripting: Groovy - https://github.com/scijava/scripting-groovy -->
+        //            <scripting-groovy.version>0.3.0</scripting-groovy.version>
+        //
+        //            <!-- Scripting: Java - https://github.com/scijava/scripting-java -->
+        //            <scripting-java.version>0.4.1</scripting-java.version>
+        //
+        //            <!-- Scripting: JavaScript - https://github.com/scijava/scripting-javascript -->
+        //            <scripting-javascript.version>0.5.0</scripting-javascript.version>
+        //
+        //            <!-- Scripting: JRuby - https://github.com/scijava/scripting-jruby -->
+        //            <scripting-jruby.version>0.3.1</scripting-jruby.version>
+        //
+        //            <!-- Scripting: Jython - https://github.com/scijava/scripting-jython -->
+        //            <scripting-jython.version>1.0.0</scripting-jython.version>
+        //
+        //            <!-- Scripting: Kotlin - https://github.com/scijava/scripting-kotlin -->
+        //            <scripting-kotlin.version>0.1.1</scripting-kotlin.version>
+        //
+        //            <!-- Scripting: MATLAB - https://github.com/scijava/scripting-matlab -->
+        //            <scripting-matlab.version>0.5.2</scripting-matlab.version>
+        //
+        //            <!-- Scripting: Renjin - https://github.com/scijava/scripting-renjin -->
+        //            <scripting-renjin.version>0.2.3</scripting-renjin.version>
+        //
+        //            <!-- Scripting: Scala - https://github.com/scijava/scripting-scala -->
+        //            <scripting-scala.version>0.2.2</scripting-scala.version>
+        //
+        //            <!-- Swing Checkbox Tree - https://github.com/scijava/swing-checkbox-tree -->
+        //            <swing-checkbox-tree.version>1.0.2</swing-checkbox-tree.version>
+        //
+        //            <!-- UI Behaviour - https://github.com/scijava/ui-behaviour -->
+        //            <ui-behaviour.version>2.0.3</ui-behaviour.version>
+        //
+
+        // Batch Processor - https://github.com/scijava/batch-processor
+        alias("batchProcessor").to("org.scijava:batch-processor:0.4.1")
+
+        // MiniMaven - https://github.com/scijava/minimaven
+        alias("minimaven").to("org.scijava:minimaven:2.2.2")
+
+        // Native Lib Loader - https://github.com/scijava/native-lib-loader
+        alias("libLoader").to("org.scijava:native-lib-loader:2.3.4")
+
+        // Parsington - https://github.com/scijava/parsington
+        alias("parsington").to("org.scijava:parsington:2.0.0")
+
+        // SciJava Cache - https://github.com/scijava/scijava-cache
+        alias("cache").to("org.scijava:scijava-cache:0.1.2")
 
         // SciJava Common - https://github.com/scijava/scijava-common
         alias("common").to("org.scijava:scijava-common:2.85.0")
 
-        //            <!-- SciJava Config - https://github.com/scijava/scijava-config -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>scijava-config</artifactId>
-        //            <version>${scijava-config.version}</version>
-        //            </dependency>
-        //
-        //            <!-- SciJava Grab - https://github.com/scijava/scijava-grab -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>scijava-grab</artifactId>
-        //            <version>${scijava-grab.version}</version>
-        //            </dependency>
+        // SciJava Config - https://github.com/scijava/scijava-config
+        alias("config").to("org.scijava:scijava-config:2.0.2")
+
+        // SciJava Grab - https://github.com/scijava/scijava-grab
+        alias("grab").to("org.scijava:scijava-grab:0.1.0")
 
         // SciJava I/O: HTTP - https://github.com/scijava/scijava-io-http
         alias("ioHttp").to("org.scijava:scijava-io-http:0.2.1")
 
-        //            <!-- SciJava Java 3D Tools - https://github.com/scijava/scijava-java3d -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>scijava-java3d</artifactId>
-        //            <version>${scijava-java3d.version}</version>
-        //            </dependency>
-        //
-        //            <!-- SciJava Listeners - https://github.com/scijava/scijava-listeners -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>scijava-listeners</artifactId>
-        //            <version>${scijava-listeners.version}</version>
-        //            </dependency>
-        //
-        //            <!-- SciJava SLF4J Logging - https://github.com/scijava/scijava-log-slf4j -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>scijava-log-slf4j</artifactId>
-        //            <version>${scijava-log-slf4j.version}</version>
-        //            </dependency>
-        //
-        //            <!-- SciJava Optional - https://github.com/scijava/scijava-optional -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>scijava-optional</artifactId>
-        //            <version>${scijava-optional.version}</version>
-        //            </dependency>
+        // SciJava Java 3D Tools - https://github.com/scijava/scijava-java3d
+        alias("java3d").to("org.scijava:scijava-java3d:0.1.0")
+
+        // SciJava Listeners - https://github.com/scijava/scijava-listeners
+        alias("listeners").to("org.scijava:scijava-listeners:1.0.0-beta-3")
+
+        // SciJava SLF4J Logging - https://github.com/scijava/scijava-log-slf4j
+        alias("logSlf4j").to("org.scijava:scijava-log-slf4j:1.0.5")
+
+        // SciJava Optional - https://github.com/scijava/scijava-optional
+        alias("optional").to("org.scijava:scijava-optional:1.0.0")
 
         // SciJava Plugins: Commands - https://github.com/scijava/scijava-plugins-commands
         alias("pluginsCommands").to("org.scijava:scijava-plugins-commands:0.2.3")
@@ -104,12 +110,8 @@ fun MutableVersionCatalogContainer.addSciJava() {
         // SciJava Plugins: Text: Plain - https://github.com/scijava/scijava-plugins-text-plain
         alias("pluginsTextPlain").to("org.scijava:scijava-plugins-text-plain:0.1.3")
 
-        //            <!-- SciJava Search - https://github.com/scijava/scijava-search -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>scijava-search</artifactId>
-        //            <version>${scijava-search.version}</version>
-        //            </dependency>
+        // SciJava Search - https://github.com/scijava/scijava-search
+        alias("search").to("org.scijava:scijava-search:0.7.0")
 
         // SciJava Table - https://github.com/scijava/scijava-table
         alias("table").to("org.scijava:scijava-table:0.7.0")
