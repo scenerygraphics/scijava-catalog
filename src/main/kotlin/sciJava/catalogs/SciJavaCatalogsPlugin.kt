@@ -296,7 +296,14 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
             // Standard Fiji projects
             addFiji()
 
-            val misc = create("misc").apply {
+            create("lib").alias("what").to("ever")
+            create("lib_").apply { alias("what").to("ever") }
+            create("lib_1").apply {
+                alias("what").to("ever")
+                create("lib_2").alias("wat").to("what")
+            }
+
+            create("misc").apply {
 
                 // External Fiji projects
 
