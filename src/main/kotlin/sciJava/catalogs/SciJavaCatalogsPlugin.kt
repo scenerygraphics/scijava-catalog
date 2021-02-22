@@ -23,431 +23,8 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
 
         settings.dependencyResolutionManagement.versionCatalogs.apply {
 
-
-            //            <!-- ImageJ - https://github.com/imagej -->
-            //
-            //            <!-- ImageJ UI: AWT - https://github.com/imagej/imagej-ui-awt -->
-            //            <imagej-ui-awt.version></imagej-ui-awt.version>
-            //
             /*
 
-
-
-                                    <!-- Fiji - https://github.com/fiji -->
-
-                                    <!-- Fiji - https://github.com/fiji/fiji -->
-                                    <fiji.version>2.2.0</fiji.version>
-
-                                    <!-- Standard Fiji projects -->
-
-                                    <AnalyzeSkeleton.version>3.4.2</AnalyzeSkeleton.version>
-                                    <AnalyzeSkeleton_.version>${AnalyzeSkeleton.version}</AnalyzeSkeleton_.version>
-                                    <Anisotropic_Diffusion_2D.version>2.0.1</Anisotropic_Diffusion_2D.version>
-                                    <Archipelago_Plugins.version>0.5.4</Archipelago_Plugins.version>
-                                    <Arrow.version>2.0.2</Arrow.version>
-                                    <Arrow_.version>${Arrow.version}</Arrow_.version>
-                                    <Auto_Local_Threshold.version>1.10.1</Auto_Local_Threshold.version>
-                                    <Auto_Threshold.version>1.17.2</Auto_Threshold.version>
-                                    <BalloonSegmentation.version>3.0.1</BalloonSegmentation.version>
-                                    <BalloonSegmentation_.version>${BalloonSegmentation.version}</BalloonSegmentation_.version>
-                                    <Bug_Submitter.version>2.1.1</Bug_Submitter.version>
-                                    <CPU_Meter.version>2.0.1</CPU_Meter.version>
-                                    <Calculator_Plus.version>2.0.1</Calculator_Plus.version>
-                                    <Cell_Counter.version>3.0.0</Cell_Counter.version>
-                                    <Colocalisation_Analysis.version>3.0.5</Colocalisation_Analysis.version>
-                                    <Color_Histogram.version>2.0.7</Color_Histogram.version>
-                                    <Color_Inspector_3D.version>2.5.0</Color_Inspector_3D.version>
-                                    <Colour_Deconvolution.version>3.0.3</Colour_Deconvolution.version>
-                                    <CorrectBleach.version>2.0.3</CorrectBleach.version>
-                                    <CorrectBleach_.version>${CorrectBleach.version}</CorrectBleach_.version>
-                                    <Correct_3D_Drift.version>1.0.6</Correct_3D_Drift.version>
-                                    <Descriptor_based_registration.version>2.1.7</Descriptor_based_registration.version>
-                                    <Dichromacy.version>2.1.2</Dichromacy.version>
-                                    <Dichromacy_.version>${Dichromacy.version}</Dichromacy_.version>
-                                    <Directionality.version>2.3.0</Directionality.version>
-                                    <Directionality_.version>${Directionality.version}</Directionality_.version>
-                                    <FS_Align_TrakEM2.version>2.0.3</FS_Align_TrakEM2.version>
-                                    <Feature_Detection.version>2.0.2</Feature_Detection.version>
-                                    <Fiji_3D_Blob_Segmentation.version>3.0.1</Fiji_3D_Blob_Segmentation.version>
-                                    <Fiji_Archipelago.version>2.0.1</Fiji_Archipelago.version>
-                                    <Fiji_Developer.version>2.0.7</Fiji_Developer.version>
-                                    <Fiji_Package_Maker.version>2.1.1</Fiji_Package_Maker.version>
-                                    <Fiji_Plugins.version>3.1.1</Fiji_Plugins.version>
-                                    <FilamentDetector.version>1.0.0</FilamentDetector.version>
-                                    <FlowJ.version>2.0.1</FlowJ.version>
-                                    <FlowJ_.version>${FlowJ.version}</FlowJ_.version>
-                                    <Graph_Cut.version>1.0.2</Graph_Cut.version>
-                                    <Gray_Morphology.version>2.3.5</Gray_Morphology.version>
-                                    <H5J_Loader_Plugin.version>1.1.0</H5J_Loader_Plugin.version>
-                                    <HDF5_Vibez.version>1.1.0</HDF5_Vibez.version>
-                                    <Helmholtz_Analysis.version>2.0.2</Helmholtz_Analysis.version>
-                                    <IJ_Robot.version>2.0.1</IJ_Robot.version>
-                                    <IO.version>4.1.0</IO.version>
-                                    <IO_.version>${IO.version}</IO_.version>
-                                    <ImageJ_3D_Objects_Counter.version>2.0.1</ImageJ_3D_Objects_Counter.version>
-                                    <ImageJ_3D_Viewer.version>4.0.3</ImageJ_3D_Viewer.version>
-                                    <Image_5D.version>2.0.2</Image_5D.version>
-                                    <Image_Expression_Parser.version>3.0.1</Image_Expression_Parser.version>
-                                    <Interactive_3D_Surface_Plot.version>3.0.0</Interactive_3D_Surface_Plot.version>
-                                    <IsoData_Classifier.version>2.0.1</IsoData_Classifier.version>
-                                    <Kappa.version>2.0.0</Kappa.version>
-                                    <Kuwahara_Filter.version>2.0.1</Kuwahara_Filter.version>
-                                    <KymographBuilder.version>2.1.1</KymographBuilder.version>
-                                    <LSM_Reader.version>4.1.2</LSM_Reader.version>
-                                    <LSM_Toolbox.version>4.1.2</LSM_Toolbox.version>
-                                    <Lasso_and_Blow_Tool.version>2.0.2</Lasso_and_Blow_Tool.version>
-                                    <Linear_Kuwahara.version>2.0.1</Linear_Kuwahara.version>
-                                    <LocalThickness.version>4.0.3</LocalThickness.version>
-                                    <LocalThickness_.version>${LocalThickness.version}</LocalThickness_.version>
-                                    <MTrack2.version>2.0.1</MTrack2.version>
-                                    <MTrack2_.version>${MTrack2.version}</MTrack2_.version>
-                                    <M_I_P.version>2.0.1</M_I_P.version>
-                                    <Manual_Tracking.version>2.1.1</Manual_Tracking.version>
-                                    <Multi_Kymograph.version>3.0.1</Multi_Kymograph.version>
-                                    <OMEVisual.version>2.0.0</OMEVisual.version>
-                                    <PIV_analyser.version>1.1.2</PIV_analyser.version>
-                                    <QuickPALM.version>1.1.2</QuickPALM.version>
-                                    <QuickPALM_.version>${QuickPALM.version}</QuickPALM_.version>
-                                    <RATS.version>2.0.2</RATS.version>
-                                    <RATS_.version>${RATS.version}</RATS_.version>
-                                    <Reconstruct_Reader.version>2.0.4</Reconstruct_Reader.version>
-                                    <SPIM_Opener.version>2.0.2</SPIM_Opener.version>
-                                    <SPIM_Registration.version>5.0.21</SPIM_Registration.version>
-                                    <Samples.version>2.0.2</Samples.version>
-                                    <Samples_.version>${Samples.version}</Samples_.version>
-                                    <Series_Labeler.version>2.0.1</Series_Labeler.version>
-                                    <Siox_Segmentation.version>1.0.5</Siox_Segmentation.version>
-                                    <Skeletonize3D.version>2.1.1</Skeletonize3D.version>
-                                    <Skeletonize3D_.version>${Skeletonize3D.version}</Skeletonize3D_.version>
-                                    <SplineDeformationGenerator.version>2.0.2</SplineDeformationGenerator.version>
-                                    <SplineDeformationGenerator_.version>${SplineDeformationGenerator.version}</SplineDeformationGenerator_.version>
-                                    <Stack_Manipulation.version>2.1.2</Stack_Manipulation.version>
-                                    <Statistical_Region_Merging.version>2.0.1</Statistical_Region_Merging.version>
-                                    <Stitching.version>3.1.6</Stitching.version>
-                                    <Stitching_.version>${Stitching.version}</Stitching_.version>
-                                    <Sync_Win.version>1.7-fiji4</Sync_Win.version>
-                                    <Thread_Killer.version>2.0.1</Thread_Killer.version>
-                                    <Time_Lapse.version>2.1.1</Time_Lapse.version>
-                                    <Time_Stamper.version>2.1.0</Time_Stamper.version>
-                                    <ToAST.version>25.0.2</ToAST.version>
-                                    <ToAST_.version>${ToAST.version}</ToAST_.version>
-                                    <TopoJ.version>2.0.1</TopoJ.version>
-                                    <TopoJ_.version>${TopoJ.version}</TopoJ_.version>
-                                    <TrackMate.version>6.0.1</TrackMate.version>
-                                    <TrackMate_.version>${TrackMate.version}</TrackMate_.version>
-                                    <Trainable_Segmentation.version>3.2.34</Trainable_Segmentation.version>
-                                    <TrakEM2_Archipelago.version>2.0.3</TrakEM2_Archipelago.version>
-                                    <VIB-lib.version>2.2.0</VIB-lib.version>
-                                    <VIB.version>3.0.3</VIB.version>
-                                    <VIB_.version>${VIB.version}</VIB_.version>
-                                    <Vaa3d_Reader.version>2.0.3</Vaa3d_Reader.version>
-                                    <Vaa3d_Writer.version>1.0.3</Vaa3d_Writer.version>
-                                    <Video_Editing.version>2.0.1</Video_Editing.version>
-                                    <View5D.version>2.3.1</View5D.version>
-                                    <View5D_.version>${View5D.version}</View5D_.version>
-                                    <Volume_Calculator.version>2.0.2</Volume_Calculator.version>
-                                    <Volume_Viewer.version>2.01.2</Volume_Viewer.version>
-                                    <bUnwarpJ.version>2.6.13</bUnwarpJ.version>
-                                    <bUnwarpJ_.version>${bUnwarpJ.version}</bUnwarpJ_.version>
-                                    <bij.version>1.0.0</bij.version>
-                                    <blockmatching.version>2.1.3</blockmatching.version>
-                                    <blockmatching_.version>${blockmatching.version}</blockmatching_.version>
-                                    <fiji-lib.version>2.1.2</fiji-lib.version>
-                                    <legacy-imglib1.version>1.1.9</legacy-imglib1.version>
-                                    <level_sets.version>1.0.2</level_sets.version>
-                                    <pal-optimization.version>2.0.1</pal-optimization.version>
-                                    <panorama.version>3.0.2</panorama.version>
-                                    <panorama_.version>${panorama.version}</panorama_.version>
-                                    <register_virtual_stack_slices.version>3.0.5</register_virtual_stack_slices.version>
-                                    <registration_3d.version>2.0.1</registration_3d.version>
-                                    <weave_jy2java.version>2.1.1</weave_jy2java.version>
-
-                                    <!-- External Fiji projects -->
-
-                                    <!-- SNT - https://github.com/morphonets/SNT -->
-                                    <SNT.version>3.1.112</SNT.version>
-
-                                    <!-- JITK TPS - https://github.com/saalfeldlab/jitk-tps -->
-                                    <jitk-tps.version>3.0.1</jitk-tps.version>
-
-                                    <!-- BigWarp - https://github.com/saalfeldlab/bigwarp -->
-                                    <bigwarp.version>6.0.0</bigwarp.version>
-                                    <bigwarp_fiji.version>${bigwarp.version}</bigwarp_fiji.version>
-
-                                    <!-- MPI-CBG - https://github.com/axtimwalde/mpicbg -->
-                                    <mpicbg.version>1.4.1</mpicbg.version>
-                                    <mpicbg_.version>${mpicbg.version}</mpicbg_.version>
-
-                                    <!-- TrakEM2 TPS - https://github.com/saalfeldlab/trakem2-tps -->
-                                    <trakem2_tps.version>1.1.4</trakem2_tps.version>
-
-                                    <!-- Z-Spacing correction - https://github.com/saalfeldlab/z-spacing -->
-                                    <z_spacing.version>1.1.1</z_spacing.version>
-
-                                    <!-- BigDataViewer - https://github.com/bigdataviewer -->
-
-                                    <bigdataviewer-core.version>9.0.6</bigdataviewer-core.version>
-                                    <bigdataviewer-server.version>3.0.0</bigdataviewer-server.version>
-                                    <bigdataviewer-vistools.version>1.0.0-beta-21</bigdataviewer-vistools.version>
-                                    <bigdataviewer_fiji.version>6.2.0</bigdataviewer_fiji.version>
-                                    <spim_data.version>2.2.4</spim_data.version>
-
-                                    <!-- TrakEM2 - https://github.com/trakem2 -->
-
-                                    <T2-NIT.version>1.1.3</T2-NIT.version>
-                                    <T2-TreelineGraph.version>1.1.3</T2-TreelineGraph.version>
-                                    <TrakEM2.version>1.3.4</TrakEM2.version>
-                                    <TrakEM2_.version>${TrakEM2.version}</TrakEM2_.version>
-                                    <VectorString.version>2.0.2</VectorString.version>
-                                    <trakem2-transform.version>1.0.1</trakem2-transform.version>
-
-                                    <!-- N5 - https://github.com/saalfeldlab/n5 -->
-
-                                    <imglib2-label-multisets.version>0.9.0</imglib2-label-multisets.version>
-                                    <n5.version>2.2.1</n5.version>
-                                    <n5-aws-s3.version>3.1.3</n5-aws-s3.version>
-                                    <n5-blosc.version>1.1.0</n5-blosc.version>
-                                    <n5-google-cloud.version>3.2.2</n5-google-cloud.version>
-                                    <n5-hdf5.version>1.1.0</n5-hdf5.version>
-                                    <n5-imglib2.version>3.5.1</n5-imglib2.version>
-                                    <n5-viewer_fiji.version>2.2.0</n5-viewer_fiji.version>
-                                    <n5-zarr.version>0.0.4</n5-zarr.version>
-
-                                    <!--
-                                BEGIN MANUALLY MANAGED VERSIONS
-
-                                        The SciJava project uses tools in https://github.com/scijava/scijava-scripts
-                                    and https://github.com/scijava/scijava-maven-plugin to manage the properties
-                                    above.
-                                    -->
-
-                                    <!-- BoneJ - http://bonej.org/ -->
-                                    <bonej.version>7.0.7</bonej.version>
-                                    <bonej-plugins.version>${bonej.version}</bonej-plugins.version>
-                                    <bonej-ops.version>${bonej.version}</bonej-ops.version>
-                                    <bonej-legacy-plugins_.version>${bonej.version}</bonej-legacy-plugins_.version>
-                                    <bonej-legacy-util_.version>${bonej.version}</bonej-legacy-util_.version>
-                                    <bonej-utilities.version>${bonej.version}</bonej-utilities.version>
-
-                                    <!-- Open Microscopy Environment - https://github.com/ome -->
-
-                                    <!-- OME Common Java - https://github.com/ome/ome-common-java -->
-                                    <ome-common.version>6.0.4</ome-common.version>
-
-                                    <!-- Metakit - https://github.com/ome/ome-metakit -->
-                                    <metakit.version>5.3.2</metakit.version>
-
-                                    <!-- OME POI - https://github.com/ome/ome-poi -->
-                                    <ome-poi.version>5.3.3</ome-poi.version>
-
-                                    <!-- OME Model - https://github.com/ome/ome-model -->
-                                    <ome-xml.version>6.1.0</ome-xml.version>
-
-                                    <!-- Glencoe Software jxrlib - https://github.com/glencoesoftware/jxrlib -->
-                                    <jxrlib.version>0.2.4</jxrlib.version>
-                                    <jxrlib-all.version>${jxrlib.version}</jxrlib-all.version>
-
-                                    <!-- Bio-Formats - https://github.com/ome/bioformats -->
-                                    <bio-formats.version>6.5.1</bio-formats.version>
-                                    <bio-formats_plugins.version>${bio-formats.version}</bio-formats_plugins.version>
-                                    <formats-api.version>${bio-formats.version}</formats-api.version>
-                                    <formats-bsd.version>${bio-formats.version}</formats-bsd.version>
-                                    <formats-gpl.version>${bio-formats.version}</formats-gpl.version>
-
-                                    <!-- OMERO Blitz - https://github.com/ome/omero-blitz -->
-                                    <omero-blitz.version>5.5.6</omero-blitz.version>
-
-                                    <!-- OMERO Common - https://github.com/ome/omero-common -->
-                                    <omero-common.version>5.5.5</omero-common.version>
-
-                                    <!-- OMERO DSL Plugin - https://github.com/ome/omero-dsl-plugin -->
-                                    <omero-dsl-plugin.version>5.5.0</omero-dsl-plugin.version>
-
-                                    <!-- OMERO Gateway - https://github.com/ome/omero-gateway-java -->
-                                    <omero-gateway.version>5.6.3</omero-gateway.version>
-
-                                    <!-- OMERO Model - https://github.com/ome/omero-model -->
-                                    <omero-model.version>5.6.0</omero-model.version>
-
-                                    <!-- OMERO Renderer - https://github.com/ome/omero-renderer -->
-                                    <omero-renderer.version>5.5.5</omero-renderer.version>
-
-                                    <!-- OMERO ROMIO - https://github.com/ome/omero-romio -->
-                                    <omero-romio.version>5.6.0</omero-romio.version>
-
-                                    <!-- OMERO Server - https://github.com/ome/omero-server -->
-                                    <omero-server.version>5.5.6</omero-server.version>
-
-                                    <!-- Other SciJava components -->
-
-                                    <!-- MorphoLibJ - https://github.com/ijpb/MorphoLibJ -->
-                                    <MorphoLibJ.version>1.4.2.1</MorphoLibJ.version>
-                                    <MorphoLibJ_.version>${MorphoLibJ.version}</MorphoLibJ_.version>
-
-                                    <!-- BigStitcher - https://github.com/PreibischLab/BigStitcher -->
-                                    <BigStitcher.version>0.5.8</BigStitcher.version>
-
-                                    <!-- multiview-reconstruction - https://github.com/PreibischLab/multiview-reconstruction -->
-                                    <multiview-reconstruction.version>0.7.2</multiview-reconstruction.version>
-
-                                    <!-- multiview-simulation - https://github.com/PreibischLab/multiview-simulation -->
-                                    <multiview-simulation.version>0.2.0</multiview-simulation.version>
-
-                                    <!-- CoreMem - https://github.com/ClearControl/CoreMem -->
-                                    <coremem.version>0.4.8</coremem.version>
-
-                                    <!-- ClearGL - https://github.com/ClearVolume/ClearGL -->
-                                    <cleargl.version>2.2.10</cleargl.version>
-
-                                    <!-- Scenery - https://github.com/scenerygraphics/scenery -->
-                                    <scenery.version>0.7.0-beta-7</scenery.version>
-
-                                    <!-- SciView - https://github.com/scenerygraphics/SciView -->
-                                    <sciview.version>0.2.0-beta-5</sciview.version>
-
-                                    <!-- Third party components -->
-
-                                    <!-- Amazon S3 - https://aws.amazon.com/sdkforjava -->
-                                    <aws-java-sdk-s3.version>1.11.796</aws-java-sdk-s3.version>
-
-                                    <!-- Apache Groovy - https://groovy-lang.org/ -->
-                                    <groovy.version>3.0.4</groovy.version>
-                                    <groovy-ant.version>${groovy.version}</groovy-ant.version>
-                                    <groovy-astbuilder.version>${groovy.version}</groovy-astbuilder.version>
-                                    <groovy-bsf.version>${groovy.version}</groovy-bsf.version>
-                                    <groovy-cli-commons.version>${groovy.version}</groovy-cli-commons.version>
-                                    <groovy-cli-picocli.version>${groovy.version}</groovy-cli-picocli.version>
-                                    <groovy-console.version>${groovy.version}</groovy-console.version>
-                                    <groovy-datetime.version>${groovy.version}</groovy-datetime.version>
-                                    <groovy-dateutil.version>${groovy.version}</groovy-dateutil.version>
-                                    <groovy-docgenerator.version>${groovy.version}</groovy-docgenerator.version>
-                                    <groovy-groovydoc.version>${groovy.version}</groovy-groovydoc.version>
-                                    <groovy-groovysh.version>${groovy.version}</groovy-groovysh.version>
-                                    <groovy-jaxb.version>${groovy.version}</groovy-jaxb.version>
-                                    <groovy-jmx.version>${groovy.version}</groovy-jmx.version>
-                                    <groovy-json.version>${groovy.version}</groovy-json.version>
-                                    <groovy-macro.version>${groovy.version}</groovy-macro.version>
-                                    <groovy-nio.version>${groovy.version}</groovy-nio.version>
-                                    <groovy-servlet.version>${groovy.version}</groovy-servlet.version>
-                                    <groovy-sql.version>${groovy.version}</groovy-sql.version>
-                                    <groovy-swing.version>${groovy.version}</groovy-swing.version>
-                                    <groovy-templates.version>${groovy.version}</groovy-templates.version>
-                                    <groovy-test.version>${groovy.version}</groovy-test.version>
-                                    <groovy-test-junit5.version>${groovy.version}</groovy-test-junit5.version>
-                                    <groovy-testng.version>${groovy.version}</groovy-testng.version>
-                                    <groovy-xml.version>${groovy.version}</groovy-xml.version>
-                                    <groovy-yaml.version>${groovy.version}</groovy-yaml.version>
-
-                                    <!-- Apache Maven - https://maven.apache.org/ -->
-                                    <maven-artifact-transfer.version>0.12.0</maven-artifact-transfer.version>
-                                    <maven-common-artifact-filters.version>3.1.0</maven-common-artifact-filters.version>
-                                    <maven-core.version>3.6.3</maven-core.version>
-                                    <maven-plugin-tools-api.version>3.6.0</maven-plugin-tools-api.version>
-                                    <sisu-inject-bean.version>2.6.0</sisu-inject-bean.version>
-                                    <sisu-inject-plexus.version>2.6.0</sisu-inject-plexus.version>
-
-                                    <!-- Apache POI - https://poi.apache.org/ -->
-                                    <poi.version>3.17</poi.version>
-
-                                    <!-- Apache Spark - https://spark.apache.org/ -->
-                                    <spark.version>2.3.1</spark.version>
-
-                                    <!-- Apache HTTPComponents - https://hc.apache.org/ -->
-                                    <httpclient.version>4.5.12</httpclient.version>
-                                    <httpcore.version>4.4.13</httpcore.version>
-
-                                    <!-- Batik - https://xmlgraphics.apache.org/batik/ -->
-                                    <batik.version>1.13</batik.version>
-                                    <batik-anim.version>${batik.version}</batik-anim.version>
-                                    <batik-awt-util.version>${batik.version}</batik-awt-util.version>
-                                    <batik-bridge.version>${batik.version}</batik-bridge.version>
-                                    <batik-codec.version>${batik.version}</batik-codec.version>
-                                    <batik-constants.version>${batik.version}</batik-constants.version>
-                                    <batik-css.version>${batik.version}</batik-css.version>
-                                    <batik-dom.version>${batik.version}</batik-dom.version>
-                                    <batik-ext.version>${batik.version}</batik-ext.version>
-                                    <batik-extension.version>${batik.version}</batik-extension.version>
-                                    <batik-gui-util.version>${batik.version}</batik-gui-util.version>
-                                    <batik-gvt.version>${batik.version}</batik-gvt.version>
-                                    <batik-i18n.version>${batik.version}</batik-i18n.version>
-                                    <batik-parser.version>${batik.version}</batik-parser.version>
-                                    <batik-rasterizer.version>${batik.version}</batik-rasterizer.version>
-                                    <batik-rasterizer-ext.version>${batik.version}</batik-rasterizer-ext.version>
-                                    <batik-script.version>${batik.version}</batik-script.version>
-                                    <batik-slideshow.version>${batik.version}</batik-slideshow.version>
-                                    <batik-squiggle.version>${batik.version}</batik-squiggle.version>
-                                    <batik-squiggle-ext.version>${batik.version}</batik-squiggle-ext.version>
-                                    <batik-svg-dom.version>${batik.version}</batik-svg-dom.version>
-                                    <batik-svggen.version>${batik.version}</batik-svggen.version>
-                                    <batik-svgpp.version>${batik.version}</batik-svgpp.version>
-                                    <batik-swing.version>${batik.version}</batik-swing.version>
-                                    <batik-transcoder.version>${batik.version}</batik-transcoder.version>
-                                    <batik-ttf2svg.version>${batik.version}</batik-ttf2svg.version>
-                                    <batik-util.version>${batik.version}</batik-util.version>
-                                    <batik-xml.version>${batik.version}</batik-xml.version>
-                                    <xmlgraphics-commons.version>2.4</xmlgraphics-commons.version>
-
-                                    <!-- Blosc - https://blosc.org/ -->
-                                    <jblosc.version>1.0.1</jblosc.version>
-                                    <libblosc.version>1.18.1</libblosc.version>
-
-                                    <!-- CDI - http://cdi-spec.org/ -->
-                                    <cdi-api.version>1.2</cdi-api.version>
-
-                                    <!-- Commons BeanUtils - https://commons.apache.org/proper/commons-beanutils/ -->
-                                    <commons-beanutils.version>1.9.4</commons-beanutils.version>
-
-                                    <!-- Commons Codec - https://commons.apache.org/proper/commons-codec/ -->
-                                    <commons-codec.version>1.14</commons-codec.version>
-
-                                    <!-- Commons Collections - https://commons.apache.org/proper/commons-collections/ -->
-                                    <commons-collections.version>3.2.2</commons-collections.version>
-
-                                    <!-- Commons Compress - https://commons.apache.org/proper/commons-compress/ -->
-                                    <commons-compress.version>1.20</commons-compress.version>
-
-                                    <!-- Commons IO - https://commons.apache.org/proper/commons-io/ -->
-                                    <commons-io.version>2.7</commons-io.version>
-
-                                    <!-- Commons Lang - https://commons.apache.org/proper/commons-lang/ -->
-                                    <commons-lang.version>2.6</commons-lang.version>
-                                    <commons-lang3.version>3.10</commons-lang3.version>
-
-                                    <!-- Commons Logging - https://commons.apache.org/proper/commons-logging/ -->
-                                    <commons-logging.version>1.2</commons-logging.version>
-
-                                    <!-- Commons Math - https://commons.apache.org/proper/commons-math/ -->
-                                    <commons-math3.version>3.6.1</commons-math3.version>
-
-                                    <!-- Commons Text - https://commons.apache.org/proper/commons-text/ -->
-                                    <commons-text.version>1.8</commons-text.version>
-
-                                    <!-- Byte Code Generation Library - https://github.com/cglib/cglib -->
-                                    <cglib.version>3.3.0</cglib.version>
-
-                                    <!--  Eclipse Collections - https://www.eclipse.org/collections/ -->
-                                    <eclipse-collections.version>10.4.0</eclipse-collections.version>
-                                    <eclipse-collections-api.version>${eclipse-collections.version}</eclipse-collections-api.version>
-                                    <eclipse-collections-forkjoin.version>${eclipse-collections.version}</eclipse-collections-forkjoin.version>
-                                    <eclipse-collections-testutils.version>${eclipse-collections.version}</eclipse-collections-testutils.version>
-
-                                    <!-- Eclipse SWT - https://www.eclipse.org/swt/ -->
-                                    <eclipse-swt.version>4.3</eclipse-swt.version>
-                                    <org.eclipse.swt.cocoa.macosx.version>${eclipse-swt.version}</org.eclipse.swt.cocoa.macosx.version>
-                                    <org.eclipse.swt.cocoa.macosx.x86_64.version>${eclipse-swt.version}</org.eclipse.swt.cocoa.macosx.x86_64.version>
-                                    <org.eclipse.swt.gtk.aix.ppc.version>${eclipse-swt.version}</org.eclipse.swt.gtk.aix.ppc.version>
-                                    <org.eclipse.swt.gtk.aix.ppc64.version>${eclipse-swt.version}</org.eclipse.swt.gtk.aix.ppc64.version>
-                                    <org.eclipse.swt.gtk.hpux.ia64.version>${eclipse-swt.version}</org.eclipse.swt.gtk.hpux.ia64.version>
-                                    <org.eclipse.swt.gtk.linux.ppc.version>${eclipse-swt.version}</org.eclipse.swt.gtk.linux.ppc.version>
-                                    <org.eclipse.swt.gtk.linux.ppc64.version>${eclipse-swt.version}</org.eclipse.swt.gtk.linux.ppc64.version>
-                                    <org.eclipse.swt.gtk.linux.s390.version>${eclipse-swt.version}</org.eclipse.swt.gtk.linux.s390.version>
-                                    <org.eclipse.swt.gtk.linux.s390x.version>${eclipse-swt.version}</org.eclipse.swt.gtk.linux.s390x.version>
-                                    <org.eclipse.swt.gtk.linux.x86.version>${eclipse-swt.version}</org.eclipse.swt.gtk.linux.x86.version>
-                                    <org.eclipse.swt.gtk.linux.x86_64.version>${eclipse-swt.version}</org.eclipse.swt.gtk.linux.x86_64.version>
-                                    <org.eclipse.swt.gtk.solaris.sparc.version>${eclipse-swt.version}</org.eclipse.swt.gtk.solaris.sparc.version>
-                                    <org.eclipse.swt.gtk.solaris.x86.version>${eclipse-swt.version}</org.eclipse.swt.gtk.solaris.x86.version>
-                                    <org.eclipse.swt.win32.win32.x86.version>${eclipse-swt.version}</org.eclipse.swt.win32.win32.x86.version>
-                                    <org.eclipse.swt.win32.win32.x86_64.version>${eclipse-swt.version}</org.eclipse.swt.win32.win32.x86_64.version>
 
                                     <!-- Google Cloud Storage - https://github.com/googleapis/google-cloud-java -->
                                     <google-cloud-nio.version>0.120.0-alpha</google-cloud-nio.version>
@@ -716,2355 +293,1053 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
             // SCIFIO - https://github.com/scifio
             addScifio()
 
-            //            <!-- Fiji - https://github.com/fiji -->
-            //
-            //            <!-- Fiji - https://github.com/fiji/fiji -->
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>fiji</artifactId>
-            //            <version>${fiji.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Standard Fiji projects -->
-            //
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>AnalyzeSkeleton_</artifactId>
-            //            <version>${AnalyzeSkeleton_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Anisotropic_Diffusion_2D</artifactId>
-            //            <version>${Anisotropic_Diffusion_2D.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Archipelago_Plugins</artifactId>
-            //            <version>${Archipelago_Plugins.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Arrow_</artifactId>
-            //            <version>${Arrow_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Auto_Local_Threshold</artifactId>
-            //            <version>${Auto_Local_Threshold.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Auto_Threshold</artifactId>
-            //            <version>${Auto_Threshold.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>BalloonSegmentation_</artifactId>
-            //            <version>${BalloonSegmentation_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Bug_Submitter</artifactId>
-            //            <version>${Bug_Submitter.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>CPU_Meter</artifactId>
-            //            <version>${CPU_Meter.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Calculator_Plus</artifactId>
-            //            <version>${Calculator_Plus.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Cell_Counter</artifactId>
-            //            <version>${Cell_Counter.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Colocalisation_Analysis</artifactId>
-            //            <version>${Colocalisation_Analysis.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Color_Histogram</artifactId>
-            //            <version>${Color_Histogram.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Color_Inspector_3D</artifactId>
-            //            <version>${Color_Inspector_3D.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Colour_Deconvolution</artifactId>
-            //            <version>${Colour_Deconvolution.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>CorrectBleach_</artifactId>
-            //            <version>${CorrectBleach_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Correct_3D_Drift</artifactId>
-            //            <version>${Correct_3D_Drift.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Descriptor_based_registration</artifactId>
-            //            <version>${Descriptor_based_registration.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Dichromacy_</artifactId>
-            //            <version>${Dichromacy_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Directionality_</artifactId>
-            //            <version>${Directionality_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>FS_Align_TrakEM2</artifactId>
-            //            <version>${FS_Align_TrakEM2.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Feature_Detection</artifactId>
-            //            <version>${Feature_Detection.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>3D_Blob_Segmentation</artifactId>
-            //            <version>${Fiji_3D_Blob_Segmentation.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Fiji_Archipelago</artifactId>
-            //            <version>${Fiji_Archipelago.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Fiji_Developer</artifactId>
-            //            <version>${Fiji_Developer.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Fiji_Package_Maker</artifactId>
-            //            <version>${Fiji_Package_Maker.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Fiji_Plugins</artifactId>
-            //            <version>${Fiji_Plugins.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>FilamentDetector</artifactId>
-            //            <version>${FilamentDetector.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>FlowJ_</artifactId>
-            //            <version>${FlowJ_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Graph_Cut</artifactId>
-            //            <version>${Graph_Cut.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Gray_Morphology</artifactId>
-            //            <version>${Gray_Morphology.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.janelia</groupId>
-            //            <artifactId>H5J_Loader_Plugin</artifactId>
-            //            <version>${H5J_Loader_Plugin.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>HDF5_Vibez</artifactId>
-            //            <version>${HDF5_Vibez.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Helmholtz_Analysis</artifactId>
-            //            <version>${Helmholtz_Analysis.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>IJ_Robot</artifactId>
-            //            <version>${IJ_Robot.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>IO_</artifactId>
-            //            <version>${IO_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Image_5D</artifactId>
-            //            <version>${Image_5D.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>3D_Objects_Counter</artifactId>
-            //            <version>${ImageJ_3D_Objects_Counter.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>3D_Viewer</artifactId>
-            //            <version>${ImageJ_3D_Viewer.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Image_Expression_Parser</artifactId>
-            //            <version>${Image_Expression_Parser.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Interactive_3D_Surface_Plot</artifactId>
-            //            <version>${Interactive_3D_Surface_Plot.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>IsoData_Classifier</artifactId>
-            //            <version>${IsoData_Classifier.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Kappa</artifactId>
-            //            <version>${Kappa.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Kuwahara_Filter</artifactId>
-            //            <version>${Kuwahara_Filter.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>KymographBuilder</artifactId>
-            //            <version>${KymographBuilder.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>LSM_Reader</artifactId>
-            //            <version>${LSM_Reader.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>LSM_Toolbox</artifactId>
-            //            <version>${LSM_Toolbox.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Lasso_and_Blow_Tool</artifactId>
-            //            <version>${Lasso_and_Blow_Tool.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Linear_Kuwahara</artifactId>
-            //            <version>${Linear_Kuwahara.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>LocalThickness_</artifactId>
-            //            <version>${LocalThickness_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>MTrack2_</artifactId>
-            //            <version>${MTrack2_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>M_I_P</artifactId>
-            //            <version>${M_I_P.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Manual_Tracking</artifactId>
-            //            <version>${Manual_Tracking.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Multi_Kymograph</artifactId>
-            //            <version>${Multi_Kymograph.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>OMEVisual</artifactId>
-            //            <version>${OMEVisual.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>PIV_analyser</artifactId>
-            //            <version>${PIV_analyser.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>QuickPALM_</artifactId>
-            //            <version>${QuickPALM_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>RATS_</artifactId>
-            //            <version>${RATS_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Reconstruct_Reader</artifactId>
-            //            <version>${Reconstruct_Reader.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>SPIM_Opener</artifactId>
-            //            <version>${SPIM_Opener.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>SPIM_Registration</artifactId>
-            //            <version>${SPIM_Registration.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Samples_</artifactId>
-            //            <version>${Samples_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Series_Labeler</artifactId>
-            //            <version>${Series_Labeler.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Siox_Segmentation</artifactId>
-            //            <version>${Siox_Segmentation.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Skeletonize3D_</artifactId>
-            //            <version>${Skeletonize3D_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>SplineDeformationGenerator_</artifactId>
-            //            <version>${SplineDeformationGenerator_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Stack_Manipulation</artifactId>
-            //            <version>${Stack_Manipulation.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Statistical_Region_Merging</artifactId>
-            //            <version>${Statistical_Region_Merging.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Stitching_</artifactId>
-            //            <version>${Stitching_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Sync_Win</artifactId>
-            //            <version>${Sync_Win.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Thread_Killer</artifactId>
-            //            <version>${Thread_Killer.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Time_Lapse</artifactId>
-            //            <version>${Time_Lapse.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Time_Stamper</artifactId>
-            //            <version>${Time_Stamper.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>ToAST_</artifactId>
-            //            <version>${ToAST_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>TopoJ_</artifactId>
-            //            <version>${TopoJ_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>TrackMate_</artifactId>
-            //            <version>${TrackMate_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Trainable_Segmentation</artifactId>
-            //            <version>${Trainable_Segmentation.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>TrakEM2_Archipelago</artifactId>
-            //            <version>${TrakEM2_Archipelago.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>VIB-lib</artifactId>
-            //            <version>${VIB-lib.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>VIB_</artifactId>
-            //            <version>${VIB_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Vaa3d_Reader</artifactId>
-            //            <version>${Vaa3d_Reader.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Vaa3d_Writer</artifactId>
-            //            <version>${Vaa3d_Writer.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Video_Editing</artifactId>
-            //            <version>${Video_Editing.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>View5D_</artifactId>
-            //            <version>${View5D_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Volume_Calculator</artifactId>
-            //            <version>${Volume_Calculator.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>Volume_Viewer</artifactId>
-            //            <version>${Volume_Viewer.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>bUnwarpJ_</artifactId>
-            //            <version>${bUnwarpJ_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>bij</artifactId>
-            //            <version>${bij.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>blockmatching_</artifactId>
-            //            <version>${blockmatching_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>fiji-lib</artifactId>
-            //            <version>${fiji-lib.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>legacy-imglib1</artifactId>
-            //            <version>${legacy-imglib1.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>level_sets</artifactId>
-            //            <version>${level_sets.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>pal-optimization</artifactId>
-            //            <version>${pal-optimization.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>panorama_</artifactId>
-            //            <version>${panorama_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>register_virtual_stack_slices</artifactId>
-            //            <version>${register_virtual_stack_slices.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>registration_3d</artifactId>
-            //            <version>${registration_3d.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>weave_jy2java</artifactId>
-            //            <version>${weave_jy2java.version}</version>
-            //            </dependency>
-            //
-            //            <!-- External Fiji projects -->
-            //
-            //            <!-- SNT - https://github.com/morphonets/SNT -->
-            //            <dependency>
-            //            <groupId>org.morphonets</groupId>
-            //            <artifactId>SNT</artifactId>
-            //            <version>${SNT.version}</version>
-            //            </dependency>
-            //
-            //            <!-- JITK TPS - https://github.com/saalfeldlab/jitk-tps -->
-            //            <dependency>
-            //            <groupId>jitk</groupId>
-            //            <artifactId>jitk-tps</artifactId>
-            //            <version>${jitk-tps.version}</version>
-            //            </dependency>
-            //
-            //            <!-- BigWarp - https://github.com/saalfeldlab/bigwarp -->
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>bigwarp_fiji</artifactId>
-            //            <version>${bigwarp_fiji.version}</version>
-            //            </dependency>
-            //
-            //            <!-- MPI-CBG - https://github.com/axtimwalde/mpicbg -->
-            //            <dependency>
-            //            <groupId>mpicbg</groupId>
-            //            <artifactId>mpicbg</artifactId>
-            //            <version>${mpicbg.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>mpicbg</groupId>
-            //            <artifactId>mpicbg_</artifactId>
-            //            <version>${mpicbg_.version}</version>
-            //            </dependency>
-            //
-            //            <!-- TrakEM2 TPS - https://github.com/saalfeldlab/trakem2-tps -->
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>trakem2_tps</artifactId>
-            //            <version>${trakem2_tps.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Z-Spacing correction - https://github.com/saalfeldlab/z-spacing -->
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>z_spacing</artifactId>
-            //            <version>${z_spacing.version}</version>
-            //            </dependency>
-            //
-            //            <!-- BigDataViewer - https://github.com/bigdataviewer -->
-            //
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>bigdataviewer-core</artifactId>
-            //            <version>${bigdataviewer-core.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>bigdataviewer-server</artifactId>
-            //            <version>${bigdataviewer-server.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>bigdataviewer-vistools</artifactId>
-            //            <version>${bigdataviewer-vistools.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>bigdataviewer_fiji</artifactId>
-            //            <version>${bigdataviewer_fiji.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>spim_data</artifactId>
-            //            <version>${spim_data.version}</version>
-            //            </dependency>
-            //
-            //            <!-- TrakEM2 - https://github.com/trakem2 -->
-            //
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>T2-NIT</artifactId>
-            //            <version>${T2-NIT.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>T2-TreelineGraph</artifactId>
-            //            <version>${T2-TreelineGraph.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>TrakEM2_</artifactId>
-            //            <version>${TrakEM2_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>VectorString</artifactId>
-            //            <version>${VectorString.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>sc.fiji</groupId>
-            //            <artifactId>trakem2-transform</artifactId>
-            //            <version>${trakem2-transform.version}</version>
-            //            </dependency>
-            //
-            //            <!-- N5 - https://github.com/saalfeldlab/n5 -->
-            //
-            //            <dependency>
-            //            <groupId>net.imglib2</groupId>
-            //            <artifactId>imglib2-label-multisets</artifactId>
-            //            <version>${imglib2-label-multisets.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.janelia.saalfeldlab</groupId>
-            //            <artifactId>n5</artifactId>
-            //            <version>${n5.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.janelia.saalfeldlab</groupId>
-            //            <artifactId>n5-aws-s3</artifactId>
-            //            <version>${n5-aws-s3.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.janelia.saalfeldlab</groupId>
-            //            <artifactId>n5-blosc</artifactId>
-            //            <version>${n5-blosc.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.janelia.saalfeldlab</groupId>
-            //            <artifactId>n5-google-cloud</artifactId>
-            //            <version>${n5-google-cloud.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.janelia.saalfeldlab</groupId>
-            //            <artifactId>n5-hdf5</artifactId>
-            //            <version>${n5-hdf5.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.janelia.saalfeldlab</groupId>
-            //            <artifactId>n5-imglib2</artifactId>
-            //            <version>${n5-imglib2.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.janelia.saalfeldlab</groupId>
-            //            <artifactId>n5-viewer_fiji</artifactId>
-            //            <version>${n5-viewer_fiji.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.janelia.saalfeldlab</groupId>
-            //            <artifactId>n5-zarr</artifactId>
-            //            <version>${n5-zarr.version}</version>
-            //            </dependency>
-            //
-            //            <!-- BoneJ - http://bonej.org/ -->
-            //
-            //            <dependency>
-            //            <groupId>org.bonej</groupId>
-            //            <artifactId>bonej-plugins</artifactId>
-            //            <version>${bonej-plugins.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.bonej</groupId>
-            //            <artifactId>bonej-ops</artifactId>
-            //            <version>${bonej-ops.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.bonej</groupId>
-            //            <artifactId>bonej-legacy-plugins_</artifactId>
-            //            <version>${bonej-legacy-plugins_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.bonej</groupId>
-            //            <artifactId>bonej-legacy-util_</artifactId>
-            //            <version>${bonej-legacy-util_.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.bonej</groupId>
-            //            <artifactId>bonej-utilities</artifactId>
-            //            <version>${bonej-utilities.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Open Microscopy Environment - https://github.com/ome -->
-            //
-            //            <!-- Metakit - https://github.com/ome/ome-metakit -->
-            //            <dependency>
-            //            <groupId>org.openmicroscopy</groupId>
-            //            <artifactId>metakit</artifactId>
-            //            <version>${metakit.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <!--
-            //        The banDuplicateClasses rule of the maven-enforcer-plugin reports a
-            //            conflict between logback-classic & slf4j-simple in some scenarios.
-            //            Both include an SLF4J binding (org.slf4j.impl.StaticLoggerBinder).
-            //            Perhaps the classpath of the tooling also includes slf4j-simple?
-            //            Regardless, it is generally problematic to inflict a specific SLF4J
-            //            binding on downstream consumers. "Embedded components such as
-            //            libraries or frameworks should not declare a dependency on any
-            //                    SLF4J binding but only depend on slf4j-api."
-            //            See: https://www.slf4j.org/manual.html#libraries
-            //            -->
-            //            <groupId>ch.qos.logback</groupId>
-            //            <artifactId>logback-classic</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //
-            //            <!-- OME Common Java - https://github.com/ome/ome-common-java -->
-            //            <dependency>
-            //            <groupId>org.openmicroscopy</groupId>
-            //            <artifactId>ome-common</artifactId>
-            //            <version>${ome-common.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <!--
-            //        The banDuplicateClasses rule of the maven-enforcer-plugin reports a
-            //            conflict between logback-classic & slf4j-simple in some scenarios.
-            //            Both include an SLF4J binding (org.slf4j.impl.StaticLoggerBinder).
-            //            Perhaps the classpath of the tooling also includes slf4j-simple?
-            //            Regardless, it is generally problematic to inflict a specific SLF4J
-            //            binding on downstream consumers. "Embedded components such as
-            //            libraries or frameworks should not declare a dependency on any
-            //                    SLF4J binding but only depend on slf4j-api."
-            //            See: https://www.slf4j.org/manual.html#libraries
-            //            -->
-            //            <groupId>ch.qos.logback</groupId>
-            //            <artifactId>logback-classic</artifactId>
-            //            </exclusion>
-            //            <exclusion>
-            //            <groupId>xalan</groupId>
-            //            <artifactId>serializer</artifactId>
-            //            </exclusion>
-            //            <exclusion>
-            //            <groupId>xalan</groupId>
-            //            <artifactId>xalan</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //
-            //            <!-- OME POI - https://github.com/ome/ome-poi -->
-            //            <dependency>
-            //            <groupId>org.openmicroscopy</groupId>
-            //            <artifactId>ome-poi</artifactId>
-            //            <version>${ome-poi.version}</version>
-            //            </dependency>
-            //
-            //            <!-- OME Model - https://github.com/ome/ome-model -->
-            //            <dependency>
-            //            <groupId>org.openmicroscopy</groupId>
-            //            <artifactId>ome-xml</artifactId>
-            //            <version>${ome-xml.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Glencoe Software jxrlib - https://github.com/glencoesoftware/jxrlib -->
-            //            <dependency>
-            //            <groupId>ome</groupId>
-            //            <artifactId>jxrlib-all</artifactId>
-            //            <version>${jxrlib-all.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Bio-Formats - https://github.com/ome/bioformats -->
-            //            <dependency>
-            //            <groupId>ome</groupId>
-            //            <artifactId>bio-formats_plugins</artifactId>
-            //            <version>${bio-formats_plugins.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>ome</groupId>
-            //            <artifactId>formats-api</artifactId>
-            //            <version>${formats-api.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <groupId>xalan</groupId>
-            //            <artifactId>serializer</artifactId>
-            //            </exclusion>
-            //            <exclusion>
-            //            <groupId>xalan</groupId>
-            //            <artifactId>xalan</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>ome</groupId>
-            //            <artifactId>formats-bsd</artifactId>
-            //            <version>${formats-bsd.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <groupId>xalan</groupId>
-            //            <artifactId>serializer</artifactId>
-            //            </exclusion>
-            //            <exclusion>
-            //            <groupId>xalan</groupId>
-            //            <artifactId>xalan</artifactId>
-            //            </exclusion>
-            //            <exclusion>
-            //            <groupId>xml-apis</groupId>
-            //            <artifactId>xml-apis</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>ome</groupId>
-            //            <artifactId>formats-gpl</artifactId>
-            //            <version>${formats-gpl.version}</version>
-            //            </dependency>
-            //
-            //            <!-- OMERO Blitz - https://github.com/ome/omero-blitz -->
-            //            <dependency>
-            //            <groupId>org.openmicroscopy</groupId>
-            //            <artifactId>omero-blitz</artifactId>
-            //            <version>${omero-blitz.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <!-- Conflicts with javax.activation:activation -->
-            //            <groupId>com.sun.activation</groupId>
-            //            <artifactId>javax.activation</artifactId>
-            //            </exclusion>
-            //            <exclusion>
-            //            <!-- Uber-JAR of all batik components -->
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-all</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //
-            //            <!-- OMERO Common - https://github.com/ome/omero-common -->
-            //            <dependency>
-            //            <groupId>org.openmicroscopy</groupId>
-            //            <artifactId>omero-common</artifactId>
-            //            <version>${omero-common.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <!--
-            //        The banDuplicateClasses rule of the maven-enforcer-plugin reports a
-            //            conflict between logback-classic & slf4j-simple in some scenarios.
-            //            Both include an SLF4J binding (org.slf4j.impl.StaticLoggerBinder).
-            //            Perhaps the classpath of the tooling also includes slf4j-simple?
-            //            Regardless, it is generally problematic to inflict a specific SLF4J
-            //            binding on downstream consumers. "Embedded components such as
-            //            libraries or frameworks should not declare a dependency on any
-            //                    SLF4J binding but only depend on slf4j-api."
-            //            See: https://www.slf4j.org/manual.html#libraries
-            //            -->
-            //            <groupId>ch.qos.logback</groupId>
-            //            <artifactId>logback-classic</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //
-            //            <!-- OMERO DSL Plugin - https://github.com/ome/omero-dsl-plugin -->
-            //            <dependency>
-            //            <groupId>org.openmicroscopy</groupId>
-            //            <artifactId>omero-dsl-plugin</artifactId>
-            //            <version>${omero-dsl-plugin.version}</version>
-            //            </dependency>
-            //
-            //            <!-- OMERO Gateway - https://github.com/ome/omero-gateway-java -->
-            //            <dependency>
-            //            <groupId>org.openmicroscopy</groupId>
-            //            <artifactId>omero-gateway</artifactId>
-            //            <version>${omero-gateway.version}</version>
-            //            </dependency>
-            //
-            //            <!-- OMERO Model - https://github.com/ome/omero-model -->
-            //            <dependency>
-            //            <groupId>org.openmicroscopy</groupId>
-            //            <artifactId>omero-model</artifactId>
-            //            <version>${omero-model.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <!-- Conflicts with javax.transaction:javax.transaction-api -->
-            //            <groupId>javax.transaction</groupId>
-            //            <artifactId>jta</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //
-            //            <!-- OMERO Renderer - https://github.com/ome/omero-renderer -->
-            //            <dependency>
-            //            <groupId>org.openmicroscopy</groupId>
-            //            <artifactId>omero-renderer</artifactId>
-            //            <version>${omero-renderer.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <!-- Conflicts with com.mchange:c3p0 and com.mchange:mchange-commons-java -->
-            //            <groupId>c3p0</groupId>
-            //            <artifactId>c3p0</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //
-            //            <!-- OMERO ROMIO - https://github.com/ome/omero-romio -->
-            //            <dependency>
-            //            <groupId>org.openmicroscopy</groupId>
-            //            <artifactId>omero-romio</artifactId>
-            //            <version>${omero-romio.version}</version>
-            //            </dependency>
-            //
-            //            <!-- OMERO Server - https://github.com/ome/omero-server -->
-            //            <dependency>
-            //            <groupId>org.openmicroscopy</groupId>
-            //            <artifactId>omero-server</artifactId>
-            //            <version>${omero-server.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <!-- Conflicts with com.mchange:c3p0 and com.mchange:mchange-commons-java -->
-            //            <groupId>c3p0</groupId>
-            //            <artifactId>c3p0</artifactId>
-            //            </exclusion>
-            //            <exclusion>
-            //            <!-- Conflicts with javax.mail:mail -->
-            //            <groupId>com.sun.mail</groupId>
-            //            <artifactId>javax.mail</artifactId>
-            //            </exclusion>
-            //            <exclusion>
-            //            <!--
-            //        Conflicts with jakarta.activation:activation-api
-            //            See: https://wiki.eclipse.org/Jakarta_EE_Maven_Coordinates
-            //            -->
-            //            <groupId>javax.activation</groupId>
-            //            <artifactId>activation</artifactId>
-            //            </exclusion>
-            //            <exclusion>
-            //            <!-- Uber-JAR of all batik components -->
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-all</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //
-            //            <!-- Other SciJava components -->
-            //
-            //            <!-- MorphoLibJ - https://github.com/ijpb/MorphoLibJ -->
-            //            <dependency>
-            //            <groupId>fr.inra.ijpb</groupId>
-            //            <artifactId>MorphoLibJ_</artifactId>
-            //            <version>${MorphoLibJ_.version}</version>
-            //            </dependency>
-            //
-            //            <!-- BigStitcher - https://github.com/PreibischLab/BigStitcher -->
-            //            <dependency>
-            //            <groupId>net.preibisch</groupId>
-            //            <artifactId>BigStitcher</artifactId>
-            //            <version>${BigStitcher.version}</version>
-            //            </dependency>
-            //
-            //            <!-- multiview-reconstruction - https://github.com/PreibischLab/multiview-reconstruction -->
-            //            <dependency>
-            //            <groupId>net.preibisch</groupId>
-            //            <artifactId>multiview-reconstruction</artifactId>
-            //            <version>${multiview-reconstruction.version}</version>
-            //            </dependency>
-            //
-            //            <!-- multiview-simulation - https://github.com/PreibischLab/multiview-simulation -->
-            //            <dependency>
-            //            <groupId>net.preibisch</groupId>
-            //            <artifactId>multiview-simulation</artifactId>
-            //            <version>${multiview-simulation.version}</version>
-            //            </dependency>
-            //
-            //            <!-- CoreMem - https://github.com/ClearControl/CoreMem -->
-            //            <dependency>
-            //            <groupId>net.clearcontrol</groupId>
-            //            <artifactId>coremem</artifactId>
-            //            <version>${coremem.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <!-- Conflicts with junit:junit. We don't need Android here. -->
-            //            <groupId>com.google.android.tools</groupId>
-            //            <artifactId>dx</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //
-            //            <!-- ClearGL - https://github.com/ClearVolume/ClearGL -->
-            //            <dependency>
-            //            <groupId>net.clearvolume</groupId>
-            //            <artifactId>cleargl</artifactId>
-            //            <version>${cleargl.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Scenery - https://github.com/scenerygraphics/scenery -->
-            //            <dependency>
-            //            <groupId>graphics.scenery</groupId>
-            //            <artifactId>scenery</artifactId>
-            //            <version>${scenery.version}</version>
-            //            </dependency>
-            //
-            //            <!-- SciView - https://github.com/scenerygraphics/SciView -->
-            //            <dependency>
-            //            <groupId>sc.iview</groupId>
-            //            <artifactId>sciview</artifactId>
-            //            <version>${sciview.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Third party components -->
-            //
-            //            <!-- Amazon S3 - https://aws.amazon.com/sdkforjava -->
-            //            <dependency>
-            //            <groupId>com.amazonaws</groupId>
-            //            <artifactId>aws-java-sdk-s3</artifactId>
-            //            <version>${aws-java-sdk-s3.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Apache Groovy - https://groovy-lang.org/ -->
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy</artifactId>
-            //            <version>${groovy.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-ant</artifactId>
-            //            <version>${groovy-ant.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-astbuilder</artifactId>
-            //            <version>${groovy-astbuilder.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-bsf</artifactId>
-            //            <version>${groovy-bsf.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-cli-commons</artifactId>
-            //            <version>${groovy-cli-commons.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-cli-picocli</artifactId>
-            //            <version>${groovy-cli-picocli.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-console</artifactId>
-            //            <version>${groovy-console.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-datetime</artifactId>
-            //            <version>${groovy-datetime.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-dateutil</artifactId>
-            //            <version>${groovy-dateutil.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-docgenerator</artifactId>
-            //            <version>${groovy-docgenerator.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-groovydoc</artifactId>
-            //            <version>${groovy-groovydoc.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-groovysh</artifactId>
-            //            <version>${groovy-groovysh.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-jaxb</artifactId>
-            //            <version>${groovy-jaxb.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-jmx</artifactId>
-            //            <version>${groovy-jmx.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-json</artifactId>
-            //            <version>${groovy-json.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-macro</artifactId>
-            //            <version>${groovy-macro.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-nio</artifactId>
-            //            <version>${groovy-nio.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-servlet</artifactId>
-            //            <version>${groovy-servlet.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-sql</artifactId>
-            //            <version>${groovy-sql.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-swing</artifactId>
-            //            <version>${groovy-swing.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-templates</artifactId>
-            //            <version>${groovy-templates.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-test</artifactId>
-            //            <version>${groovy-test.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-test-junit5</artifactId>
-            //            <version>${groovy-test-junit5.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-testng</artifactId>
-            //            <version>${groovy-testng.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-xml</artifactId>
-            //            <version>${groovy-xml.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.codehaus.groovy</groupId>
-            //            <artifactId>groovy-yaml</artifactId>
-            //            <version>${groovy-yaml.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Apache Maven - https://maven.apache.org/ -->
-            //            <dependency>
-            //            <groupId>org.apache.maven.shared</groupId>
-            //            <artifactId>maven-artifact-transfer</artifactId>
-            //            <version>${maven-artifact-transfer.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.maven.shared</groupId>
-            //            <artifactId>maven-common-artifact-filters</artifactId>
-            //            <version>${maven-common-artifact-filters.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.maven</groupId>
-            //            <artifactId>maven-core</artifactId>
-            //            <version>${maven-core.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.maven.plugin-tools</groupId>
-            //            <artifactId>maven-plugin-tools-api</artifactId>
-            //            <version>${maven-plugin-tools-api.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.sonatype.sisu</groupId>
-            //            <artifactId>sisu-inject-bean</artifactId>
-            //            <version>${sisu-inject-bean.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.sonatype.sisu</groupId>
-            //            <artifactId>sisu-inject-plexus</artifactId>
-            //            <version>${sisu-inject-plexus.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Apache POI - https://poi.apache.org/ -->
-            //            <dependency>
-            //            <groupId>org.apache.poi</groupId>
-            //            <artifactId>poi</artifactId>
-            //            <version>${poi.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Apache Spark - https://spark.apache.org/ -->
-            //            <dependency>
-            //            <groupId>org.apache.spark</groupId>
-            //            <artifactId>spark-core_2.11</artifactId>
-            //            <version>${spark.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <!--
-            //        Conflicts with javax.ws.rs:javax.ws.rs-api
-            //            And this artifact is a ghost anyway somehow...
-            //            Not sure why/how it gets brought in.
-            //            -->
-            //            <groupId>com.sun.jersey</groupId>
-            //            <artifactId>jersey-core</artifactId>
-            //            </exclusion>
-            //            <exclusion>
-            //            <!--
-            //        Conflicts with commons-beanutils:commons-beanutils
-            //            and commons-collections:commons-collections
-            //            -->
-            //            <groupId>commons-beanutils</groupId>
-            //            <artifactId>commons-beanutils-core</artifactId>
-            //            </exclusion>
-            //            <exclusion>
-            //            <!-- Uber-JAR of all netty components -->
-            //            <groupId>io.netty</groupId>
-            //            <artifactId>netty-all</artifactId>
-            //            </exclusion>
-            //            <exclusion>
-            //            <groupId>xml-apis</groupId>
-            //            <artifactId>xml-apis</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //
-            //            <!-- Apache HTTPComponents - https://hc.apache.org/ -->
-            //            <dependency>
-            //            <groupId>org.apache.httpcomponents</groupId>
-            //            <artifactId>httpclient</artifactId>
-            //            <version>${httpclient.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.httpcomponents</groupId>
-            //            <artifactId>httpcore</artifactId>
-            //            <version>${httpcore.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Batik - https://xmlgraphics.apache.org/batik/ -->
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-anim</artifactId>
-            //            <version>${batik-anim.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <groupId>xml-apis</groupId>
-            //            <artifactId>xml-apis</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-awt-util</artifactId>
-            //            <version>${batik-awt-util.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-bridge</artifactId>
-            //            <version>${batik-bridge.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <groupId>xalan</groupId>
-            //            <artifactId>xalan</artifactId>
-            //            </exclusion>
-            //            <exclusion>
-            //            <groupId>xml-apis</groupId>
-            //            <artifactId>xml-apis</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-codec</artifactId>
-            //            <version>${batik-codec.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <groupId>xml-apis</groupId>
-            //            <artifactId>xml-apis</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-constants</artifactId>
-            //            <version>${batik-constants.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-css</artifactId>
-            //            <version>${batik-css.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <groupId>xml-apis</groupId>
-            //            <artifactId>xml-apis</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-dom</artifactId>
-            //            <version>${batik-dom.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <groupId>xalan</groupId>
-            //            <artifactId>xalan</artifactId>
-            //            </exclusion>
-            //            <exclusion>
-            //            <groupId>xml-apis</groupId>
-            //            <artifactId>xml-apis</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-ext</artifactId>
-            //            <version>${batik-ext.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <groupId>xml-apis</groupId>
-            //            <artifactId>xml-apis</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-extension</artifactId>
-            //            <version>${batik-extension.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <groupId>xml-apis</groupId>
-            //            <artifactId>xml-apis</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-gui-util</artifactId>
-            //            <version>${batik-gui-util.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-gvt</artifactId>
-            //            <version>${batik-gvt.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-i18n</artifactId>
-            //            <version>${batik-i18n.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-parser</artifactId>
-            //            <version>${batik-parser.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <groupId>xml-apis</groupId>
-            //            <artifactId>xml-apis</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-rasterizer</artifactId>
-            //            <version>${batik-rasterizer.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-rasterizer-ext</artifactId>
-            //            <version>${batik-rasterizer-ext.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-extensions</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-script</artifactId>
-            //            <version>${batik-script.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <groupId>xml-apis</groupId>
-            //            <artifactId>xml-apis</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-slideshow</artifactId>
-            //            <version>${batik-slideshow.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <groupId>xml-apis</groupId>
-            //            <artifactId>xml-apis</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-squiggle</artifactId>
-            //            <version>${batik-squiggle.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <groupId>xml-apis</groupId>
-            //            <artifactId>xml-apis</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-squiggle-ext</artifactId>
-            //            <version>${batik-squiggle-ext.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-extensions</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-svg-dom</artifactId>
-            //            <version>${batik-svg-dom.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <groupId>xml-apis</groupId>
-            //            <artifactId>xml-apis</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-svggen</artifactId>
-            //            <version>${batik-svggen.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <groupId>xml-apis</groupId>
-            //            <artifactId>xml-apis</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-svgpp</artifactId>
-            //            <version>${batik-svgpp.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-swing</artifactId>
-            //            <version>${batik-swing.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <groupId>xml-apis</groupId>
-            //            <artifactId>xml-apis</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-transcoder</artifactId>
-            //            <version>${batik-transcoder.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <groupId>xml-apis</groupId>
-            //            <artifactId>xml-apis</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-ttf2svg</artifactId>
-            //            <version>${batik-ttf2svg.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-util</artifactId>
-            //            <version>${batik-util.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>batik-xml</artifactId>
-            //            <version>${batik-xml.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.xmlgraphics</groupId>
-            //            <artifactId>xmlgraphics-commons</artifactId>
-            //            <version>${xmlgraphics-commons.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Blosc - https://blosc.org/ -->
-            //            <dependency>
-            //            <groupId>org.lasersonlab</groupId>
-            //            <artifactId>jblosc</artifactId>
-            //            <version>${jblosc.version}</version>
-            //            </dependency>
-            //
-            //            <!-- CDI - http://cdi-spec.org/ -->
-            //            <dependency>
-            //            <groupId>javax.enterprise</groupId>
-            //            <artifactId>cdi-api</artifactId>
-            //            <version>${cdi-api.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Commons BeanUtils - https://commons.apache.org/proper/commons-beanutils/ -->
-            //            <dependency>
-            //            <groupId>commons-beanutils</groupId>
-            //            <artifactId>commons-beanutils</artifactId>
-            //            <version>${commons-beanutils.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Commons Codec - https://commons.apache.org/proper/commons-codec/ -->
-            //            <dependency>
-            //            <groupId>commons-codec</groupId>
-            //            <artifactId>commons-codec</artifactId>
-            //            <version>${commons-codec.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Commons Collections - https://commons.apache.org/proper/commons-collections/ -->
-            //            <dependency>
-            //            <groupId>commons-collections</groupId>
-            //            <artifactId>commons-collections</artifactId>
-            //            <version>${commons-collections.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Commons Compress - https://commons.apache.org/proper/commons-compress/ -->
-            //            <dependency>
-            //            <groupId>org.apache.commons</groupId>
-            //            <artifactId>commons-compress</artifactId>
-            //            <version>${commons-compress.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Commons IO - https://commons.apache.org/proper/commons-io/ -->
-            //            <dependency>
-            //            <groupId>commons-io</groupId>
-            //            <artifactId>commons-io</artifactId>
-            //            <version>${commons-io.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Commons Lang - https://commons.apache.org/proper/commons-lang/ -->
-            //            <dependency>
-            //            <groupId>commons-lang</groupId>
-            //            <artifactId>commons-lang</artifactId>
-            //            <version>${commons-lang.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.apache.commons</groupId>
-            //            <artifactId>commons-lang3</artifactId>
-            //            <version>${commons-lang3.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Commons Logging - https://commons.apache.org/proper/commons-logging/ -->
-            //            <dependency>
-            //            <groupId>commons-logging</groupId>
-            //            <artifactId>commons-logging</artifactId>
-            //            <version>${commons-logging.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Commons Math - https://commons.apache.org/proper/commons-math/ -->
-            //            <dependency>
-            //            <groupId>org.apache.commons</groupId>
-            //            <artifactId>commons-math3</artifactId>
-            //            <version>${commons-math3.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Commons Text - https://commons.apache.org/proper/commons-text/ -->
-            //            <dependency>
-            //            <groupId>org.apache.commons</groupId>
-            //            <artifactId>commons-text</artifactId>
-            //            <version>${commons-text.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Byte Code Generation Library - https://github.com/cglib/cglib -->
-            //            <dependency>
-            //            <groupId>cglib</groupId>
-            //            <artifactId>cglib</artifactId>
-            //            <version>${cglib.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Eclipse Collections - https://www.eclipse.org/collections/ -->
-            //            <dependency>
-            //            <groupId>org.eclipse.collections</groupId>
-            //            <artifactId>eclipse-collections</artifactId>
-            //            <version>${eclipse-collections.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.collections</groupId>
-            //            <artifactId>eclipse-collections-api</artifactId>
-            //            <version>${eclipse-collections-api.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.collections</groupId>
-            //            <artifactId>eclipse-collections-forkjoin</artifactId>
-            //            <version>${eclipse-collections-forkjoin.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.collections</groupId>
-            //            <artifactId>eclipse-collections-testutils</artifactId>
-            //            <version>${eclipse-collections-testutils.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Eclipse SWT - https://www.eclipse.org/swt/ -->
-            //            <dependency>
-            //            <groupId>org.eclipse.swt</groupId>
-            //            <artifactId>org.eclipse.swt.cocoa.macosx</artifactId>
-            //            <version>${org.eclipse.swt.cocoa.macosx.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.swt</groupId>
-            //            <artifactId>org.eclipse.swt.cocoa.macosx.x86_64</artifactId>
-            //            <version>${org.eclipse.swt.cocoa.macosx.x86_64.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.swt</groupId>
-            //            <artifactId>org.eclipse.swt.gtk.aix.ppc</artifactId>
-            //            <version>${org.eclipse.swt.gtk.aix.ppc.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.swt</groupId>
-            //            <artifactId>org.eclipse.swt.gtk.aix.ppc64</artifactId>
-            //            <version>${org.eclipse.swt.gtk.aix.ppc64.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.swt</groupId>
-            //            <artifactId>org.eclipse.swt.gtk.hpux.ia64</artifactId>
-            //            <version>${org.eclipse.swt.gtk.hpux.ia64.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.swt</groupId>
-            //            <artifactId>org.eclipse.swt.gtk.linux.ppc</artifactId>
-            //            <version>${org.eclipse.swt.gtk.linux.ppc.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.swt</groupId>
-            //            <artifactId>org.eclipse.swt.gtk.linux.ppc64</artifactId>
-            //            <version>${org.eclipse.swt.gtk.linux.ppc64.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.swt</groupId>
-            //            <artifactId>org.eclipse.swt.gtk.linux.s390</artifactId>
-            //            <version>${org.eclipse.swt.gtk.linux.s390.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.swt</groupId>
-            //            <artifactId>org.eclipse.swt.gtk.linux.s390x</artifactId>
-            //            <version>${org.eclipse.swt.gtk.linux.s390x.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.swt</groupId>
-            //            <artifactId>org.eclipse.swt.gtk.linux.x86</artifactId>
-            //            <version>${org.eclipse.swt.gtk.linux.x86.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.swt</groupId>
-            //            <artifactId>org.eclipse.swt.gtk.linux.x86_64</artifactId>
-            //            <version>${org.eclipse.swt.gtk.linux.x86_64.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.swt</groupId>
-            //            <artifactId>org.eclipse.swt.gtk.solaris.sparc</artifactId>
-            //            <version>${org.eclipse.swt.gtk.solaris.sparc.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.swt</groupId>
-            //            <artifactId>org.eclipse.swt.gtk.solaris.x86</artifactId>
-            //            <version>${org.eclipse.swt.gtk.solaris.x86.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.swt</groupId>
-            //            <artifactId>org.eclipse.swt.win32.win32.x86</artifactId>
-            //            <version>${org.eclipse.swt.win32.win32.x86.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.swt</groupId>
-            //            <artifactId>org.eclipse.swt.win32.win32.x86_64</artifactId>
-            //            <version>${org.eclipse.swt.win32.win32.x86_64.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Google Cloud Storage - https://github.com/googleapis/google-cloud-java -->
-            //            <dependency>
-            //            <groupId>com.google.cloud</groupId>
-            //            <artifactId>google-cloud-nio</artifactId>
-            //            <version>${google-cloud-nio.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>com.google.cloud</groupId>
-            //            <artifactId>google-cloud-resourcemanager</artifactId>
-            //            <version>${google-cloud-resourcemanager.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>com.google.cloud</groupId>
-            //            <artifactId>google-cloud-storage</artifactId>
-            //            <version>${google-cloud-storage.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Gson - https://code.google.com/p/google-gson/ -->
-            //            <dependency>
-            //            <groupId>com.google.code.gson</groupId>
-            //            <artifactId>gson</artifactId>
-            //            <version>${gson.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Guava - https://github.com/google/guava -->
-            //            <dependency>
-            //            <groupId>com.google.guava</groupId>
-            //            <artifactId>guava</artifactId>
-            //            <version>${guava.version}</version>
-            //            </dependency>
-            //
-            //            <!-- HyperSQL DataBase - http://hsqldb.org/ -->
-            //            <dependency>
-            //            <groupId>hsqldb</groupId>
-            //            <artifactId>hsqldb</artifactId>
-            //            <version>${hsqldb.version}</version>
-            //            </dependency>
-            //
-            //            <!-- iText PDF - https://github.com/itext/itextpdf -->
-            //            <dependency>
-            //            <groupId>com.itextpdf</groupId>
-            //            <artifactId>itextpdf</artifactId>
-            //            <version>${itextpdf.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Jackrabbit WebDAV - https://jackrabbit.apache.org/jcr/components/jackrabbit-webdav-library.html -->
-            //            <dependency>
-            //            <groupId>org.apache.jackrabbit</groupId>
-            //            <artifactId>jackrabbit-webdav</artifactId>
-            //            <version>${jackrabbit-webdav.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <!--
-            //        Conflicts with commons-logging:commons-logging.
-            //            If you depend on jackrabbit-webdav, add either
-            //            commons-logging or jcl-over-slfj to your deps.
-            //            See: http://www.slf4j.org/legacy.html#jcl-over-slf4j
-            //            -->
-            //            <groupId>org.slf4j</groupId>
-            //            <artifactId>jcl-over-slf4j</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //
-            //            <!-- Jackson - https://github.com/FasterXML/jackson -->
-            //            <dependency>
-            //            <groupId>com.fasterxml.jackson.core</groupId>
-            //            <artifactId>jackson-databind</artifactId>
-            //            <version>${jackson-databind.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Java Advanced Imaging - https://java.net/projects/jai-core -->
-            //            <dependency>
-            //            <groupId>com.sun.media</groupId>
-            //            <artifactId>jai-codec</artifactId>
-            //            <version>${jai-codec.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>javax.media</groupId>
-            //            <artifactId>jai-core</artifactId>
-            //            <version>${jai-core.version}</version>
-            //            </dependency>
-            //
-            //            <!-- JAMA - http://math.nist.gov/javanumerics/jama/ -->
-            //            <dependency>
-            //            <groupId>gov.nist.math</groupId>
-            //            <artifactId>jama</artifactId>
-            //            <version>${jama.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Java 3D - https://github.com/scijava/java3d-core -->
-            //            <dependency>
-            //            <groupId>org.scijava</groupId>
-            //            <artifactId>j3dcore</artifactId>
-            //            <version>${j3dcore.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.scijava</groupId>
-            //            <artifactId>j3dutils</artifactId>
-            //            <version>${j3dutils.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.scijava</groupId>
-            //            <artifactId>vecmath</artifactId>
-            //            <version>${vecmath.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Javassist - http://www.javassist.org/ -->
-            //            <dependency>
-            //            <groupId>org.javassist</groupId>
-            //            <artifactId>javassist</artifactId>
-            //            <version>${javassist.version}</version>
-            //            </dependency>
-            //
-            //            <!-- JDOM - http://www.jdom.org/ -->
-            //            <dependency>
-            //            <groupId>org.jdom</groupId>
-            //            <artifactId>jdom2</artifactId>
-            //            <version>${jdom2.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Java Expression Parser - https://github.com/scijava/jep -->
-            //            <dependency>
-            //            <groupId>org.scijava</groupId>
-            //            <artifactId>jep</artifactId>
-            //            <version>${jep.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Jetty - http://eclipse.org/jetty/ -->
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-annotations</artifactId>
-            //            <version>${jetty-annotations.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-client</artifactId>
-            //            <version>${jetty-client.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-continuation</artifactId>
-            //            <version>${jetty-continuation.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-deploy</artifactId>
-            //            <version>${jetty-deploy.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-http</artifactId>
-            //            <version>${jetty-http.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-http-spi</artifactId>
-            //            <version>${jetty-http-spi.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-io</artifactId>
-            //            <version>${jetty-io.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-jaas</artifactId>
-            //            <version>${jetty-jaas.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-jaspi</artifactId>
-            //            <version>${jetty-jaspi.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-jmx</artifactId>
-            //            <version>${jetty-jmx.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-jndi</artifactId>
-            //            <version>${jetty-jndi.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-nosql</artifactId>
-            //            <version>${jetty-nosql.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-plus</artifactId>
-            //            <version>${jetty-plus.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-proxy</artifactId>
-            //            <version>${jetty-proxy.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-rewrite</artifactId>
-            //            <version>${jetty-rewrite.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-security</artifactId>
-            //            <version>${jetty-security.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-server</artifactId>
-            //            <version>${jetty-server.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-servlet</artifactId>
-            //            <version>${jetty-servlet.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-servlets</artifactId>
-            //            <version>${jetty-servlets.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-spring</artifactId>
-            //            <version>${jetty-spring.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-start</artifactId>
-            //            <version>${jetty-start.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-util</artifactId>
-            //            <version>${jetty-util.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-util-ajax</artifactId>
-            //            <version>${jetty-util-ajax.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-webapp</artifactId>
-            //            <version>${jetty-webapp.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.eclipse.jetty</groupId>
-            //            <artifactId>jetty-xml</artifactId>
-            //            <version>${jetty-xml.version}</version>
-            //            </dependency>
-            //
-            //            <!-- JFreeChart - http://www.jfree.org/jfreechart/ -->
-            //            <dependency>
-            //            <groupId>org.jfree</groupId>
-            //            <artifactId>jfreechart</artifactId>
-            //            <version>${jfreechart.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <groupId>xml-apis</groupId>
-            //            <artifactId>xml-apis</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //
-            //            <!-- JFreeSVG - http://www.jfree.org/jfreesvg/ -->
-            //            <dependency>
-            //            <groupId>org.jfree</groupId>
-            //            <artifactId>jfreesvg</artifactId>
-            //            <version>${jfreesvg.version}</version>
-            //            </dependency>
-            //
-            //            <!-- JGraphT - https://github.com/jgrapht/jgrapht -->
-            //            <dependency>
-            //            <groupId>org.jgrapht</groupId>
-            //            <artifactId>jgrapht-core</artifactId>
-            //            <version>${jgrapht-core.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.jgrapht</groupId>
-            //            <artifactId>jgrapht-demo</artifactId>
-            //            <version>${jgrapht-demo.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.jgrapht</groupId>
-            //            <artifactId>jgrapht-ext</artifactId>
-            //            <version>${jgrapht-ext.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.jgrapht</groupId>
-            //            <artifactId>jgrapht-guava</artifactId>
-            //            <version>${jgrapht-guava.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.jgrapht</groupId>
-            //            <artifactId>jgrapht-io</artifactId>
-            //            <version>${jgrapht-io.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.jgrapht</groupId>
-            //            <artifactId>jgrapht-opt</artifactId>
-            //            <version>${jgrapht-opt.version}</version>
-            //            </dependency>
-            //
-            //            <!-- JGraphX - https://github.com/jgraph/jgraphx -->
-            //            <dependency>
-            //            <groupId>com.github.vlsi.mxgraph</groupId>
-            //            <artifactId>jgraphx</artifactId>
-            //            <version>${jgraphx.version}</version>
-            //            </dependency>
-            //
-            //            <!-- JHDF5 - https://wiki-bsse.ethz.ch/label/JHDF5/hdf5 -->
-            //            <dependency>
-            //            <groupId>cisd</groupId>
-            //            <artifactId>jhdf5</artifactId>
-            //            <version>${jhdf5.version}</version>
-            //            </dependency>
-            //
-            //            <!-- JNA - https://github.com/twall/jna -->
-            //            <dependency>
-            //            <groupId>net.java.dev.jna</groupId>
-            //            <artifactId>jna</artifactId>
-            //            <version>${jna.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Joda-Time - http://www.joda.org/joda-time/ -->
-            //            <dependency>
-            //            <groupId>joda-time</groupId>
-            //            <artifactId>joda-time</artifactId>
-            //            <version>${joda-time.version}</version>
-            //            </dependency>
-            //
-            //            <!-- JOGL - https://jogamp.org/jogl/ -->
-            //            <dependency>
-            //            <groupId>org.jogamp.gluegen</groupId>
-            //            <artifactId>gluegen-rt-main</artifactId>
-            //            <version>${gluegen-rt-main.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.jogamp.joal</groupId>
-            //            <artifactId>joal-main</artifactId>
-            //            <version>${joal-main.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.jogamp.jocl</groupId>
-            //            <artifactId>jocl-main</artifactId>
-            //            <version>${jocl-main.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.jogamp.jogl</groupId>
-            //            <artifactId>jogl-all-main</artifactId>
-            //            <version>${jogl-all-main.version}</version>
-            //            </dependency>
-            //
-            //            <!-- JOML - http://joml-ci.github.io/JOML/ -->
-            //            <dependency>
-            //            <groupId>org.joml</groupId>
-            //            <artifactId>joml</artifactId>
-            //            <version>${joml.version}</version>
-            //            </dependency>
-            //
-            //            <!-- JPedal - http://jpedal.org/ (defunct) -->
-            //            <dependency>
-            //            <groupId>org.jpedal</groupId>
-            //            <artifactId>jpedalSTD</artifactId>
-            //            <version>${jpedalSTD.version}</version>
-            //            </dependency>
-            //
-            //            <!-- JSch - http://www.jcraft.com/jsch/ -->
-            //            <dependency>
-            //            <groupId>com.jcraft</groupId>
-            //            <artifactId>jsch</artifactId>
-            //            <version>${jsch.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Jython - https://jython.org/ -->
-            //            <dependency>
-            //            <groupId>org.python</groupId>
-            //            <artifactId>jython-slim</artifactId>
-            //            <version>${jython-slim.version}</version>
-            //            </dependency>
-            //
-            //            <!-- JZlib - http://www.jcraft.com/jzlib/ -->
-            //            <dependency>
-            //            <groupId>com.jcraft</groupId>
-            //            <artifactId>jzlib</artifactId>
-            //            <version>${jzlib.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Kotlin - https://kotlinlang.org/ -->
-            //            <dependency>
-            //            <groupId>org.jetbrains.kotlin</groupId>
-            //            <artifactId>kotlin-compiler-embeddable</artifactId>
-            //            <version>${kotlin-compiler-embeddable.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.jetbrains.kotlin</groupId>
-            //            <artifactId>kotlin-daemon-embeddable</artifactId>
-            //            <version>${kotlin-daemon-embeddable.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.jetbrains.kotlin</groupId>
-            //            <artifactId>kotlin-reflect</artifactId>
-            //            <version>${kotlin-reflect.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.jetbrains.kotlin</groupId>
-            //            <artifactId>kotlin-script-runtime</artifactId>
-            //            <version>${kotlin-script-runtime.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.jetbrains.kotlin</groupId>
-            //            <artifactId>kotlin-script-util</artifactId>
-            //            <version>${kotlin-script-util.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.jetbrains.kotlin</groupId>
-            //            <artifactId>kotlin-scripting-common</artifactId>
-            //            <version>${kotlin-scripting-common.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.jetbrains.kotlin</groupId>
-            //            <artifactId>kotlin-scripting-compiler-embeddable</artifactId>
-            //            <version>${kotlin-scripting-compiler-embeddable.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.jetbrains.kotlin</groupId>
-            //            <artifactId>kotlin-scripting-jvm</artifactId>
-            //            <version>${kotlin-scripting-jvm.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.jetbrains.kotlin</groupId>
-            //            <artifactId>kotlin-stdlib</artifactId>
-            //            <version>${kotlin-stdlib.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.jetbrains.kotlin</groupId>
-            //            <artifactId>kotlin-stdlib-common</artifactId>
-            //            <version>${kotlin-stdlib-common.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.jetbrains.kotlin</groupId>
-            //            <artifactId>kotlin-stdlib-jdk8</artifactId>
-            //            <version>${kotlin-stdlib-jdk8.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Logback - http://logback.qos.ch/ -->
-            //            <dependency>
-            //            <groupId>ch.qos.logback</groupId>
-            //            <artifactId>logback-classic</artifactId>
-            //            <version>${logback-classic.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>ch.qos.logback</groupId>
-            //            <artifactId>logback-core</artifactId>
-            //            <version>${logback-core.version}</version>
-            //            </dependency>
-            //
-            //            <!-- LZ4 compression for Java - https://github.com/lz4/lz4-java -->
-            //            <dependency>
-            //            <groupId>org.lz4</groupId>
-            //            <artifactId>lz4-java</artifactId>
-            //            <version>${lz4-java.version}</version>
-            //            </dependency>
-            //
-            //            <!-- MapDB - http://www.mapdb.org/ -->
-            //            <dependency>
-            //            <groupId>org.mapdb</groupId>
-            //            <artifactId>mapdb</artifactId>
-            //            <version>${mapdb.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <!--
-            //        Conflicts with org.lz4:lz4-java.
-            //            You may need to add it to your deps.
-            //            -->
-            //            <groupId>net.jpountz.lz4</groupId>
-            //            <artifactId>lz4</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //
-            //            <!-- MigLayout - http://www.miglayout.com/ -->
-            //            <dependency>
-            //            <groupId>com.miglayout</groupId>
-            //            <artifactId>miglayout-core</artifactId>
-            //            <version>${miglayout-core.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>com.miglayout</groupId>
-            //            <artifactId>miglayout-swing</artifactId>
-            //            <version>${miglayout-swing.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>com.miglayout</groupId>
-            //            <artifactId>miglayout-swt</artifactId>
-            //            <version>${miglayout-swt.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Mines JTK - https://github.com/dhale/jtk -->
-            //            <dependency>
-            //            <groupId>edu.mines</groupId>
-            //            <artifactId>mines-jtk</artifactId>
-            //            <version>${mines-jtk.version}</version>
-            //            </dependency>
-            //
-            //            <!-- oj! Algorithms - https://github.com/optimatika/ojAlgo -->
-            //            <dependency>
-            //            <groupId>org.ojalgo</groupId>
-            //            <artifactId>ojalgo</artifactId>
-            //            <version>${ojalgo.version}</version>
-            //            </dependency>
-            //
-            //            <!-- OpenCSV - http://opencsv.sourceforge.net/ -->
-            //            <dependency>
-            //            <groupId>com.opencsv</groupId>
-            //            <artifactId>opencsv</artifactId>
-            //            <version>${opencsv.version}</version>
-            //            </dependency>
-            //
-            //            <!-- picocli - http://picocli.info/ -->
-            //            <dependency>
-            //            <groupId>info.picocli</groupId>
-            //            <artifactId>picocli</artifactId>
-            //            <version>${picocli.version}</version>
-            //            </dependency>
-            //
-            //            <!-- PostgreSQL JDBC Driver - https://jdbc.postgresql.org/ -->
-            //            <dependency>
-            //            <groupId>org.postgresql</groupId>
-            //            <artifactId>postgresql</artifactId>
-            //            <version>${postgresql.version}</version>
-            //            </dependency>
-            //
-            //            <!-- RSyntaxTextArea - http://bobbylight.github.io/RSyntaxTextArea/ -->
-            //            <dependency>
-            //            <groupId>com.fifesoft</groupId>
-            //            <artifactId>rsyntaxtextarea</artifactId>
-            //            <version>${rsyntaxtextarea.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>com.fifesoft</groupId>
-            //            <artifactId>autocomplete</artifactId>
-            //            <version>${autocomplete.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>com.fifesoft</groupId>
-            //            <artifactId>languagesupport</artifactId>
-            //            <version>${languagesupport.version}</version>
-            //            </dependency>
-            //
-            //            <!-- SLF4J - http://slf4j.org/ -->
-            //            <dependency>
-            //            <groupId>org.slf4j</groupId>
-            //            <artifactId>slf4j-api</artifactId>
-            //            <version>${slf4j-api.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.slf4j</groupId>
-            //            <artifactId>slf4j-ext</artifactId>
-            //            <version>${slf4j-ext.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.slf4j</groupId>
-            //            <artifactId>slf4j-jcl</artifactId>
-            //            <version>${slf4j-jcl.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.slf4j</groupId>
-            //            <artifactId>slf4j-jdk14</artifactId>
-            //            <version>${slf4j-jdk14.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.slf4j</groupId>
-            //            <artifactId>slf4j-nop</artifactId>
-            //            <version>${slf4j-nop.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.slf4j</groupId>
-            //            <artifactId>slf4j-simple</artifactId>
-            //            <version>${slf4j-simple.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.slf4j</groupId>
-            //            <artifactId>jcl-over-slf4j</artifactId>
-            //            <version>${jcl-over-slf4j.version}</version>
-            //            </dependency>
-            //
-            //            <!-- SnakeYAML - https://bitbucket.org/asomov/snakeyaml -->
-            //            <dependency>
-            //            <groupId>org.yaml</groupId>
-            //            <artifactId>snakeyaml</artifactId>
-            //            <version>${snakeyaml.version}</version>
-            //            </dependency>
-            //
-            //            <!-- SnakeYAML Engine - https://bitbucket.org/asomov/snakeyaml-engine -->
-            //            <dependency>
-            //            <groupId>org.snakeyaml</groupId>
-            //            <artifactId>snakeyaml-engine</artifactId>
-            //            <version>${snakeyaml-engine.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Spring - https://spring.io/ -->
-            //            <dependency>
-            //            <groupId>org.springframework</groupId>
-            //            <artifactId>spring-aop</artifactId>
-            //            <version>${spring-aop.version}</version>
-            //            </dependency>
-            //
-            //            <!-- TensorFlow - https://www.tensorflow.org/ -->
-            //            <dependency>
-            //            <groupId>org.tensorflow</groupId>
-            //            <artifactId>tensorflow</artifactId>
-            //            <version>${tensorflow.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.tensorflow</groupId>
-            //            <artifactId>libtensorflow</artifactId>
-            //            <version>${libtensorflow.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.tensorflow</groupId>
-            //            <artifactId>libtensorflow_jni</artifactId>
-            //            <version>${libtensorflow_jni.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.tensorflow</groupId>
-            //            <artifactId>libtensorflow_jni_gpu</artifactId>
-            //            <version>${libtensorflow_jni_gpu.version}</version>
-            //            </dependency>
-            //            <dependency>
-            //            <groupId>org.tensorflow</groupId>
-            //            <artifactId>proto</artifactId>
-            //            <version>${proto.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Trove - http://trove.starlight-systems.com/ -->
-            //            <dependency>
-            //            <groupId>net.sf.trove4j</groupId>
-            //            <artifactId>trove4j</artifactId>
-            //            <version>${trove4j.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Weka - http://www.cs.waikato.ac.nz/ml/weka/ -->
-            //            <dependency>
-            //            <groupId>nz.ac.waikato.cms.weka</groupId>
-            //            <artifactId>weka-dev</artifactId>
-            //            <version>${weka-dev.version}</version>
-            //            <exclusions>
-            //            <exclusion>
-            //            <groupId>com.github.fommil.netlib</groupId>
-            //            <artifactId>all</artifactId>
-            //            </exclusion>
-            //            <exclusion>
-            //            <!-- Conflicts with com.github.vbmacher:java-cup -->
-            //            <groupId>com.github.vbmacher</groupId>
-            //            <artifactId>java-cup-runtime</artifactId>
-            //            </exclusion>
-            //            <exclusion>
-            //            <groupId>com.googlecode.netlib-java</groupId>
-            //            <artifactId>netlib-java</artifactId>
-            //            </exclusion>
-            //            <exclusion>
-            //            <groupId>nz.ac.waikato.cms.weka.thirdparty</groupId>
-            //            <artifactId>java-cup-11b</artifactId>
-            //            </exclusion>
-            //            <exclusion>
-            //            <groupId>nz.ac.waikato.cms.weka.thirdparty</groupId>
-            //            <artifactId>java-cup-11b-runtime</artifactId>
-            //            </exclusion>
-            //            <exclusion>
-            //            <groupId>net.sourceforge.f2j</groupId>
-            //            <artifactId>arpack_combined_all</artifactId>
-            //            </exclusion>
-            //            </exclusions>
-            //            </dependency>
-            //
-            //            <!-- XZ for Java - https://tukaani.org/xz/java.html -->
-            //            <dependency>
-            //            <groupId>org.tukaani</groupId>
-            //            <artifactId>xz</artifactId>
-            //            <version>${xz.version}</version>
-            //            </dependency>
-            //
-            //            <!-- Test scope dependencies -->
+            // Standard Fiji projects
+            addFiji()
 
-            create("misc").apply {
+            val misc = create("misc").apply {
+
+                // External Fiji projects
+
+                // SNT - https://github.com/morphonets/SNT
+                alias("snt").to("org.morphonets:SNT:3.1.112")
+
+                // JITK TPS - https://github.com/saalfeldlab/jitk-tps
+                alias("jitkTps").to("jitk:jitk-tps:3.0.1")
+
+                // BigWarp - https://github.com/saalfeldlab/bigwarp
+                alias("bigwarpFiji").to("sc.fiji:bigwarp_fiji:6.0.0")
+
+                // MPI-CBG - https://github.com/axtimwalde/mpicbg
+                alias("mpicbg").to("mpicbg:mpicbg:1.4.1")
+
+                // TrakEM2 TPS - https://github.com/saalfeldlab/trakem2-tps
+                alias("trakem2Tps").to("sc.fiji:trakem2_tps:1.1.4")
+
+                // Z-Spacing correction - https://github.com/saalfeldlab/z-spacing
+                alias("zSpacing").to("sc.fiji:z_spacing:1.1.1")
+
+                // BigDataViewer - https://github.com/bigdataviewer
+                create("bigDataViewer").apply {
+                    alias("core").to("sc.fiji:bigdataviewer-core:9.0.6")
+                    alias("server").to("sc.fiji:bigdataviewer-server:3.0.0")
+                    alias("visTools").to("sc.fiji:bigdataviewer-vistools:1.0.0-beta-21")
+                    alias("fiji").to("sc.fiji:bigdataviewer_fiji:6.2.0")
+                    alias("spimData").to("sc.fiji:spim_data:2.2.4")
+                }
+
+                // TrakEM2 - https://github.com/trakem2
+                create("trakEM2").apply {
+                    alias("nit").to("sc.fiji:T2-NIT:1.1.3")
+                    alias("treeLineGraph").to("sc.fiji:T2-TreelineGraph:1.1.3")
+                    alias("core").to("sc.fiji:TrakEM2_:1.3.4")
+                    alias("vectorString").to("sc.fiji:VectorString:2.0.2")
+                    alias("transform").to("sc.fiji:trakem2-transform:1.0.1")
+                }
+
+                // N5 - https://github.com/saalfeldlab/n5
+                create("n5").apply {
+                    alias("labelMultisets").to("net.imglib2:imglib2-label-multisets:0.9.0")
+                    alias("core").to("org.janelia.saalfeldlab:n5:2.2.1")
+                    alias("awsS3").to("org.janelia.saalfeldlab:n5-aws-s3:3.1.3")
+                    alias("blosc").to("org.janelia.saalfeldlab:n5-blosc:1.1.0")
+                    alias("googleCloud").to("org.janelia.saalfeldlab:n5-google-cloud:3.2.2")
+                    alias("hdf5").to("org.janelia.saalfeldlab:n5-hdf5:1.1.0")
+                    alias("imglib2").to("org.janelia.saalfeldlab:n5-imglib2:3.5.1")
+                    alias("viewerFiji").to("org.janelia.saalfeldlab:n5-viewer_fiji:2.2.0")
+                    alias("zarr").to("org.janelia.saalfeldlab:n5-zarr:0.0.4")
+                }
+
+                // BoneJ - http://bonej.org/
+                create("boneJ").apply {
+                    val version = "7.0.7"
+                    alias("plugins").to("org.bonej:bonej-plugins:$version")
+                    alias("ops").to("org.bonej:bonej-ops:$version")
+                    alias("legacyPlugins").to("org.bonej:bonej-legacy-plugins_:$version")
+                    alias("legacyUtil").to("org.bonej:bonej-legacy-util_:$version")
+                    alias("utilities").to("org.bonej:bonej-utilities:$version")
+                }
+
+                // Open Microscopy Environment - https://github.com/ome
+                create("ome").apply {
+
+                    // Metakit - https://github.com/ome/ome-metakit
+                    alias("metakit").to("org.openmicroscopy:metakit:5.3.2")
+
+                    // OME Common Java - https://github.com/ome/ome-common-java
+                    alias("common").to("org.openmicroscopy:ome-common:6.0.4")
+
+                    // OME POI - https://github.com/ome/ome-poi
+                    alias("poi").to("org.openmicroscopy:ome-poi:5.3.3")
+
+                    // OME Model - https://github.com/ome/ome-model
+                    alias("xml").to("org.openmicroscopy:ome-xml:6.1.0")
+
+                    // Glencoe Software jxrlib - https://github.com/glencoesoftware/jxrlib
+                    alias("jxrlibAll").to("ome:jxrlib-all:0.2.4")
+
+                    // Bio-Formats - https://github.com/ome/bioformats
+                    val version = "6.5.1"
+                    alias("bioFormatsPlugins").to("ome:bio-formats_plugins:$version")
+                    alias("formatsApi").to("ome:formats-api:$version")
+                    alias("formatsBsd").to("ome:formats-bsd:$version")
+                    alias("formatsGpl").to("ome:formats-gpl:$version")
+                }
+
+                create("omero").apply {
+
+                    // OMERO Blitz - https://github.com/ome/omero-blitz
+                    alias("blitz").to("org.openmicroscopy:omero-blitz:5.5.6")
+
+                    // OMERO Common - https://github.com/ome/omero-common
+                    alias("common").to("org.openmicroscopy:omero-common:5.5.5")
+
+                    // OMERO DSL Plugin - https://github.com/ome/omero-dsl-plugin
+                    alias("dslPlugin").to("org.openmicroscopy:omero-dsl-plugin:5.5.0")
+
+                    // OMERO Gateway - https://github.com/ome/omero-gateway-java
+                    alias("gateway").to("org.openmicroscopy:omero-gateway:5.6.3")
+
+                    // OMERO Model - https://github.com/ome/omero-model
+                    alias("model").to("org.openmicroscopy:omero-model:5.6.0")
+
+                    // OMERO Renderer - https://github.com/ome/omero-renderer
+                    alias("renderer").to("org.openmicroscopy:omero-renderer:5.5.5")
+
+                    // OMERO ROMIO - https://github.com/ome/omero-romio
+                    alias("romio").to("org.openmicroscopy:omero-romio:5.6.0")
+
+                    // OMERO Server - https://github.com/ome/omero-server
+                    alias("server").to("org.openmicroscopy:omero-server:5.5.6")
+                }
+
+                // Other SciJava components
+
+                // MorphoLibJ - https://github.com/ijpb/MorphoLibJ
+                alias("morphoLibJ").to("fr.inra.ijpb:MorphoLibJ_:1.4.2.1")
+
+                // BigStitcher - https://github.com/PreibischLab/BigStitcher
+                alias("bigStitcher").to("net.preibisch:BigStitcher:0.5.8")
+
+                // multiview-reconstruction - https://github.com/PreibischLab/multiview-reconstruction
+                alias("multiviewReconstruction").to("net.preibisch:multiview-reconstruction:0.7.2")
+
+                // multiview-simulation - https://github.com/PreibischLab/multiview-simulation
+                alias("multiviewSimulation").to("net.preibisch:multiview-simulation:0.2.0")
+
+                // CoreMem - https://github.com/ClearControl/CoreMem
+                alias("coreMem").to("net.clearcontrol:coremem:0.4.8")
+
+                // ClearGL - https://github.com/ClearVolume/ClearGL
+                alias("cleargl").to("net.clearvolume:cleargl:2.2.10")
+
+                // Scenery - https://github.com/scenerygraphics/scenery
+                alias("scenery").to("graphics.scenery:scenery:0.7.0-beta-7")
+
+                // SciView - https://github.com/scenerygraphics/SciView
+                alias("sciview").to("sc.iview:sciview:0.2.0-beta-5")
+
+                // Third party components
+
+                // Amazon S3 - https://aws.amazon.com/sdkforjava
+                alias("awsJdkS3").to("com.amazonaws:aws-java-sdk-s3:1.11.796")
+
+                // Apache Groovy - https://groovy-lang.org/
+                create("groovy").apply {
+                    val version = "3.0.4"
+                    val root = "org.codehaus.groovy:groovy"
+                    alias("core").to("$root:$version")
+                    alias("ant").to("$root-ant:$version")
+                    alias("astBuilder").to("$root-astbuilder:$version")
+                    alias("bsf").to("$root-bsf:$version")
+                    alias("cliCommons").to("$root-cli-commons:$version")
+                    alias("cliPicocli").to("$root-cli-picocli:$version")
+                    alias("console").to("$root-console:$version")
+                    alias("datetime").to("$root-datetime:$version")
+                    alias("docgenerator").to("$root-docgenerator:$version")
+                    alias("doc").to("$root-groovydoc:$version")
+                    alias("sh").to("$root-groovysh:$version")
+                    alias("jaxb").to("$root-jaxb:$version")
+                    alias("jmx").to("$root-jmx:$version")
+                    alias("json").to("$root-json:$version")
+                    alias("macro").to("$root-macro:$version")
+                    alias("nio").to("$root-nio:$version")
+                    alias("servlet").to("$root-servlet:$version")
+                    alias("sql").to("$root-sql:$version")
+                    alias("templates").to("$root-templates:$version")
+                    alias("test").to("$root-test:$version")
+                    alias("testJunit5").to("$root-test-junit5:$version")
+                    alias("testNg").to("$root-testng:$version")
+                    alias("xml").to("$root-xml:$version")
+                    alias("yaml").to("$root-yaml:$version")
+                }
+
+
+                create("apache").apply {
+
+                    // Apache Maven - https://maven.apache.org/
+
+                    alias("mavenArtifactTransfer").to("org.apache.maven.shared:maven-artifact-transfer:0.12.0")
+                    alias("mavenCommonArtifactFilters").to("org.apache.maven.shared:maven-common-artifact-filters:3.1.0")
+                    alias("mavenCore").to("org.apache.maven:maven-core:3.6.3")
+                    alias("mavenPluginsToolsApi").to("org.apache.maven.plugin-tools:maven-plugin-tools-api:3.6.0")
+                    alias("sisuInjectBean").to("org.sonatype.sisu:sisu-inject-bean:2.6.0")
+                    alias("sisuInjectPlexus").to("org.sonatype.sisu:sisu-inject-plexus:2.6.0")
+
+                    // Apache POI - https://poi.apache.org/
+                    alias("poi").to("org.apache.poi:poi:3.17")
+
+                    // Apache Spark - https://spark.apache.org/
+                    alias("spark").to("org.apache.spark:spark-core_2.11:2.3.1")
+
+                    // Apache HTTPComponents - https://hc.apache.org/
+                    alias("httpClient").to("org.apache.httpcomponents:httpclient:4.5.12")
+                    alias("httpCore").to("org.apache.httpcomponents:httpcore:4.4.13")
+                }
+
+                // Batik - https://xmlgraphics.apache.org/batik/
+                create("batik").apply {
+                    val version = "1.13"
+                    val root = "org.apache.xmlgraphics:batik"
+                    alias("anim").to("$root-anim:$version")
+                    alias("awtUtil").to("$root-awt-util:$version")
+                    alias("bridge").to("$root-bridge:$version")
+                    alias("codec").to("$root-codec:$version")
+                    alias("constants").to("$root-costants:$version")
+                    alias("css").to("$root-css:$version")
+                    alias("dom").to("$root-dom:$version")
+                    alias("ext").to("$root-ext:$version")
+                    alias("extensions").to("$root-extentions:$version")
+                    alias("guiUtil").to("$root-gui-util:$version")
+                    alias("gvt").to("$root-gvt:$version")
+                    alias("i18n").to("$root-i18n:$version")
+                    alias("parser").to("$root-parser:$version")
+                    alias("rasterizer").to("$root-rasterizer:$version")
+                    alias("rasterizerExt").to("$root-rasterizer-ext:$version")
+                    alias("script").to("$root-script:$version")
+                    alias("slideshow").to("$root-slideshow:$version")
+                    alias("squiggle").to("$root-squiggle:$version")
+                    alias("squiggleExt").to("$root-squiggle-ext:$version")
+                    alias("svgDom").to("$root-svg-dom:$version")
+                    alias("svgGen").to("$root-svggen:$version")
+                    alias("svgPP").to("$root-svgpp:$version")
+                    alias("swing").to("$root-swing:$version")
+                    alias("transcoder").to("$root-transcoder:$version")
+                    alias("ttf2svg").to("$root-ttf2svg:$version")
+                    alias("util").to("$root-util:$version")
+                    alias("xml").to("$root-xml:$version")
+                    alias("common").to("org.apache.xmlgraphics:xmlgraphics-commons:2.4")
+                }
+
+                // Blosc - https://blosc.org/
+                alias("jblosc").to("org.lasersonlab:jblosc:1.0.1")
+
+                // CDI - http://cdi-spec.org/
+                alias("cdi").to("javax.enterprise:cdi-api:1.2")
+
+                create("commons").apply {
+                    // Commons BeanUtils - https://commons.apache.org/proper/commons-beanutils/
+                    alias("beanutils").to("commons-beanutils:commons-beanutils:1.9.4")
+                    // Commons Codec - https://commons.apache.org/proper/commons-codec/
+                    alias("codec").to("commons-codec:commons-codec:1.14")
+
+                    // Commons Collections - https://commons.apache.org/proper/commons-collections/
+                    alias("collections").to("commons-collections:commons-collections:3.2.2")
+
+                    // Commons Compress - https://commons.apache.org/proper/commons-compress/
+                    alias("compress").to("org.apache.commons:commons-compress:1.20")
+
+                    // Commons IO - https://commons.apache.org/proper/commons-io/
+                    alias("io").to("commons-io:commons-io:2.7")
+
+                    // Commons Lang - https://commons.apache.org/proper/commons-lang/
+                    alias("lang").to("commons-lang:commons-lang:2.6")
+                    alias("lang3").to("commons-lang:commons-lang3:3.10")
+
+                    // Commons Logging - https://commons.apache.org/proper/commons-logging/
+                    alias("logging").to("commons-logging:commons-logging:1.2")
+
+                    // Commons Math - https://commons.apache.org/proper/commons-math/
+                    alias("math3").to("org.apache.commons:commons-math3:3.6.1")
+
+                    // Commons Text - https://commons.apache.org/proper/commons-text/
+                    alias("text").to("org.apache.commons:commons-text:1.8")
+                }
+
+                // Byte Code Generation Library - https://github.com/cglib/cglib
+                alias("cglib").to("cglib:cglib:3.3.0")
+
+                // Eclipse Collections - https://www.eclipse.org/collections/
+                create("eclipse.collections").apply {
+                    val version = "10.4.0"
+                    val root = "org.eclipse.collections:eclipse-collections"
+                    alias("core").to("$root:$version")
+                    alias("api").to("$root-api:$version")
+                    alias("forkjoin").to("$root-forkjoin:$version")
+                    alias("testutils").to("$root-testutils:$version")
+                }
+                // Eclipse SWT - https://www.eclipse.org/swt/
+                create("eclipse.swt").apply {
+                    val version = "4.3"
+                    val root = "org.eclipse.swt:org.eclipse.swt"
+                    alias("cocoaMacosx").to("$root.cocoa.macosx:$version")
+                    //            <groupId>org.eclipse.swt</groupId>
+                    //            <artifactId>org.eclipse.swt.cocoa.macosx.x86_64</artifactId>
+                    //            <version>${org.eclipse.swt.cocoa.macosx.x86_64.version}</version>
+                    //            </dependency>
+                    //            <dependency>
+                    //            <groupId>org.eclipse.swt</groupId>
+                    //            <artifactId>org.eclipse.swt.gtk.aix.ppc</artifactId>
+                    //            <version>${org.eclipse.swt.gtk.aix.ppc.version}</version>
+                    //            </dependency>
+                    //            <dependency>
+                    //            <groupId>org.eclipse.swt</groupId>
+                    //            <artifactId>org.eclipse.swt.gtk.aix.ppc64</artifactId>
+                    //            <version>${org.eclipse.swt.gtk.aix.ppc64.version}</version>
+                    //            </dependency>
+                    //            <dependency>
+                    //            <groupId>org.eclipse.swt</groupId>
+                    //            <artifactId>org.eclipse.swt.gtk.hpux.ia64</artifactId>
+                    //            <version>${org.eclipse.swt.gtk.hpux.ia64.version}</version>
+                    //            </dependency>
+                    //            <dependency>
+                    //            <groupId>org.eclipse.swt</groupId>
+                    //            <artifactId>org.eclipse.swt.gtk.linux.ppc</artifactId>
+                    //            <version>${org.eclipse.swt.gtk.linux.ppc.version}</version>
+                    //            </dependency>
+                    //            <dependency>
+                    //            <groupId>org.eclipse.swt</groupId>
+                    //            <artifactId>org.eclipse.swt.gtk.linux.ppc64</artifactId>
+                    //            <version>${org.eclipse.swt.gtk.linux.ppc64.version}</version>
+                    //            </dependency>
+                    //            <dependency>
+                    //            <groupId>org.eclipse.swt</groupId>
+                    //            <artifactId>org.eclipse.swt.gtk.linux.s390</artifactId>
+                    //            <version>${org.eclipse.swt.gtk.linux.s390.version}</version>
+                    //            </dependency>
+                    //            <dependency>
+                    //            <groupId>org.eclipse.swt</groupId>
+                    //            <artifactId>org.eclipse.swt.gtk.linux.s390x</artifactId>
+                    //            <version>${org.eclipse.swt.gtk.linux.s390x.version}</version>
+                    //            </dependency>
+                    //            <dependency>
+                    //            <groupId>org.eclipse.swt</groupId>
+                    //            <artifactId>org.eclipse.swt.gtk.linux.x86</artifactId>
+                    //            <version>${org.eclipse.swt.gtk.linux.x86.version}</version>
+                    //            </dependency>
+                    //            <dependency>
+                    //            <groupId>org.eclipse.swt</groupId>
+                    //            <artifactId>org.eclipse.swt.gtk.linux.x86_64</artifactId>
+                    //            <version>${org.eclipse.swt.gtk.linux.x86_64.version}</version>
+                    //            </dependency>
+                    //            <dependency>
+                    //            <groupId>org.eclipse.swt</groupId>
+                    //            <artifactId>org.eclipse.swt.gtk.solaris.sparc</artifactId>
+                    //            <version>${org.eclipse.swt.gtk.solaris.sparc.version}</version>
+                    //            </dependency>
+                    //            <dependency>
+                    //            <groupId>org.eclipse.swt</groupId>
+                    //            <artifactId>org.eclipse.swt.gtk.solaris.x86</artifactId>
+                    //            <version>${org.eclipse.swt.gtk.solaris.x86.version}</version>
+                    //            </dependency>
+                    //            <dependency>
+                    //            <groupId>org.eclipse.swt</groupId>
+                    //            <artifactId>org.eclipse.swt.win32.win32.x86</artifactId>
+                    //            <version>${org.eclipse.swt.win32.win32.x86.version}</version>
+                    //            </dependency>
+                    //            <dependency>
+                    //            <groupId>org.eclipse.swt</groupId>
+                    //            <artifactId>org.eclipse.swt.win32.win32.x86_64</artifactId>
+                    //            <version>${org.eclipse.swt.win32.win32.x86_64.version}</version>
+                    //            </dependency>
+                }
+                //            <!-- Google Cloud Storage - https://github.com/googleapis/google-cloud-java -->
+                //            <dependency>
+                //            <groupId>com.google.cloud</groupId>
+                //            <artifactId>google-cloud-nio</artifactId>
+                //            <version>${google-cloud-nio.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>com.google.cloud</groupId>
+                //            <artifactId>google-cloud-resourcemanager</artifactId>
+                //            <version>${google-cloud-resourcemanager.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>com.google.cloud</groupId>
+                //            <artifactId>google-cloud-storage</artifactId>
+                //            <version>${google-cloud-storage.version}</version>
+                //            </dependency>
+                //
+                //            <!-- Gson - https://code.google.com/p/google-gson/ -->
+                //            <dependency>
+                //            <groupId>com.google.code.gson</groupId>
+                //            <artifactId>gson</artifactId>
+                //            <version>${gson.version}</version>
+                //            </dependency>
+                //
+                //            <!-- Guava - https://github.com/google/guava -->
+                //            <dependency>
+                //            <groupId>com.google.guava</groupId>
+                //            <artifactId>guava</artifactId>
+                //            <version>${guava.version}</version>
+                //            </dependency>
+                //
+                //            <!-- HyperSQL DataBase - http://hsqldb.org/ -->
+                //            <dependency>
+                //            <groupId>hsqldb</groupId>
+                //            <artifactId>hsqldb</artifactId>
+                //            <version>${hsqldb.version}</version>
+                //            </dependency>
+                //
+                //            <!-- iText PDF - https://github.com/itext/itextpdf -->
+                //            <dependency>
+                //            <groupId>com.itextpdf</groupId>
+                //            <artifactId>itextpdf</artifactId>
+                //            <version>${itextpdf.version}</version>
+                //            </dependency>
+                //
+                //            <!-- Jackrabbit WebDAV - https://jackrabbit.apache.org/jcr/components/jackrabbit-webdav-library.html -->
+                //            <dependency>
+                //            <groupId>org.apache.jackrabbit</groupId>
+                //            <artifactId>jackrabbit-webdav</artifactId>
+                //            <version>${jackrabbit-webdav.version}</version>
+                //            <exclusions>
+                //            <exclusion>
+                //            <!--
+                //        Conflicts with commons-logging:commons-logging.
+                //            If you depend on jackrabbit-webdav, add either
+                //            commons-logging or jcl-over-slfj to your deps.
+                //            See: http://www.slf4j.org/legacy.html#jcl-over-slf4j
+                //            -->
+                //            <groupId>org.slf4j</groupId>
+                //            <artifactId>jcl-over-slf4j</artifactId>
+                //            </exclusion>
+                //            </exclusions>
+                //            </dependency>
+                //
+                //            <!-- Jackson - https://github.com/FasterXML/jackson -->
+                //            <dependency>
+                //            <groupId>com.fasterxml.jackson.core</groupId>
+                //            <artifactId>jackson-databind</artifactId>
+                //            <version>${jackson-databind.version}</version>
+                //            </dependency>
+                //
+                //            <!-- Java Advanced Imaging - https://java.net/projects/jai-core -->
+                //            <dependency>
+                //            <groupId>com.sun.media</groupId>
+                //            <artifactId>jai-codec</artifactId>
+                //            <version>${jai-codec.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>javax.media</groupId>
+                //            <artifactId>jai-core</artifactId>
+                //            <version>${jai-core.version}</version>
+                //            </dependency>
+                //
+                //            <!-- JAMA - http://math.nist.gov/javanumerics/jama/ -->
+                //            <dependency>
+                //            <groupId>gov.nist.math</groupId>
+                //            <artifactId>jama</artifactId>
+                //            <version>${jama.version}</version>
+                //            </dependency>
+                //
+                //            <!-- Java 3D - https://github.com/scijava/java3d-core -->
+                //            <dependency>
+                //            <groupId>org.scijava</groupId>
+                //            <artifactId>j3dcore</artifactId>
+                //            <version>${j3dcore.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.scijava</groupId>
+                //            <artifactId>j3dutils</artifactId>
+                //            <version>${j3dutils.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.scijava</groupId>
+                //            <artifactId>vecmath</artifactId>
+                //            <version>${vecmath.version}</version>
+                //            </dependency>
+                //
+                //            <!-- Javassist - http://www.javassist.org/ -->
+                //            <dependency>
+                //            <groupId>org.javassist</groupId>
+                //            <artifactId>javassist</artifactId>
+                //            <version>${javassist.version}</version>
+                //            </dependency>
+                //
+                //            <!-- JDOM - http://www.jdom.org/ -->
+                //            <dependency>
+                //            <groupId>org.jdom</groupId>
+                //            <artifactId>jdom2</artifactId>
+                //            <version>${jdom2.version}</version>
+                //            </dependency>
+                //
+                //            <!-- Java Expression Parser - https://github.com/scijava/jep -->
+                //            <dependency>
+                //            <groupId>org.scijava</groupId>
+                //            <artifactId>jep</artifactId>
+                //            <version>${jep.version}</version>
+                //            </dependency>
+                //
+                //            <!-- Jetty - http://eclipse.org/jetty/ -->
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-annotations</artifactId>
+                //            <version>${jetty-annotations.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-client</artifactId>
+                //            <version>${jetty-client.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-continuation</artifactId>
+                //            <version>${jetty-continuation.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-deploy</artifactId>
+                //            <version>${jetty-deploy.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-http</artifactId>
+                //            <version>${jetty-http.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-http-spi</artifactId>
+                //            <version>${jetty-http-spi.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-io</artifactId>
+                //            <version>${jetty-io.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-jaas</artifactId>
+                //            <version>${jetty-jaas.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-jaspi</artifactId>
+                //            <version>${jetty-jaspi.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-jmx</artifactId>
+                //            <version>${jetty-jmx.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-jndi</artifactId>
+                //            <version>${jetty-jndi.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-nosql</artifactId>
+                //            <version>${jetty-nosql.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-plus</artifactId>
+                //            <version>${jetty-plus.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-proxy</artifactId>
+                //            <version>${jetty-proxy.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-rewrite</artifactId>
+                //            <version>${jetty-rewrite.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-security</artifactId>
+                //            <version>${jetty-security.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-server</artifactId>
+                //            <version>${jetty-server.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-servlet</artifactId>
+                //            <version>${jetty-servlet.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-servlets</artifactId>
+                //            <version>${jetty-servlets.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-spring</artifactId>
+                //            <version>${jetty-spring.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-start</artifactId>
+                //            <version>${jetty-start.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-util</artifactId>
+                //            <version>${jetty-util.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-util-ajax</artifactId>
+                //            <version>${jetty-util-ajax.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-webapp</artifactId>
+                //            <version>${jetty-webapp.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.eclipse.jetty</groupId>
+                //            <artifactId>jetty-xml</artifactId>
+                //            <version>${jetty-xml.version}</version>
+                //            </dependency>
+                //
+                //            <!-- JFreeChart - http://www.jfree.org/jfreechart/ -->
+                //            <dependency>
+                //            <groupId>org.jfree</groupId>
+                //            <artifactId>jfreechart</artifactId>
+                //            <version>${jfreechart.version}</version>
+                //            <exclusions>
+                //            <exclusion>
+                //            <groupId>xml-apis</groupId>
+                //            <artifactId>xml-apis</artifactId>
+                //            </exclusion>
+                //            </exclusions>
+                //            </dependency>
+                //
+                //            <!-- JFreeSVG - http://www.jfree.org/jfreesvg/ -->
+                //            <dependency>
+                //            <groupId>org.jfree</groupId>
+                //            <artifactId>jfreesvg</artifactId>
+                //            <version>${jfreesvg.version}</version>
+                //            </dependency>
+                //
+                //            <!-- JGraphT - https://github.com/jgrapht/jgrapht -->
+                //            <dependency>
+                //            <groupId>org.jgrapht</groupId>
+                //            <artifactId>jgrapht-core</artifactId>
+                //            <version>${jgrapht-core.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.jgrapht</groupId>
+                //            <artifactId>jgrapht-demo</artifactId>
+                //            <version>${jgrapht-demo.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.jgrapht</groupId>
+                //            <artifactId>jgrapht-ext</artifactId>
+                //            <version>${jgrapht-ext.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.jgrapht</groupId>
+                //            <artifactId>jgrapht-guava</artifactId>
+                //            <version>${jgrapht-guava.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.jgrapht</groupId>
+                //            <artifactId>jgrapht-io</artifactId>
+                //            <version>${jgrapht-io.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.jgrapht</groupId>
+                //            <artifactId>jgrapht-opt</artifactId>
+                //            <version>${jgrapht-opt.version}</version>
+                //            </dependency>
+                //
+                //            <!-- JGraphX - https://github.com/jgraph/jgraphx -->
+                //            <dependency>
+                //            <groupId>com.github.vlsi.mxgraph</groupId>
+                //            <artifactId>jgraphx</artifactId>
+                //            <version>${jgraphx.version}</version>
+                //            </dependency>
+                //
+                //            <!-- JHDF5 - https://wiki-bsse.ethz.ch/label/JHDF5/hdf5 -->
+                //            <dependency>
+                //            <groupId>cisd</groupId>
+                //            <artifactId>jhdf5</artifactId>
+                //            <version>${jhdf5.version}</version>
+                //            </dependency>
+                //
+                //            <!-- JNA - https://github.com/twall/jna -->
+                //            <dependency>
+                //            <groupId>net.java.dev.jna</groupId>
+                //            <artifactId>jna</artifactId>
+                //            <version>${jna.version}</version>
+                //            </dependency>
+                //
+                //            <!-- Joda-Time - http://www.joda.org/joda-time/ -->
+                //            <dependency>
+                //            <groupId>joda-time</groupId>
+                //            <artifactId>joda-time</artifactId>
+                //            <version>${joda-time.version}</version>
+                //            </dependency>
+                //
+                //            <!-- JOGL - https://jogamp.org/jogl/ -->
+                //            <dependency>
+                //            <groupId>org.jogamp.gluegen</groupId>
+                //            <artifactId>gluegen-rt-main</artifactId>
+                //            <version>${gluegen-rt-main.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.jogamp.joal</groupId>
+                //            <artifactId>joal-main</artifactId>
+                //            <version>${joal-main.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.jogamp.jocl</groupId>
+                //            <artifactId>jocl-main</artifactId>
+                //            <version>${jocl-main.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.jogamp.jogl</groupId>
+                //            <artifactId>jogl-all-main</artifactId>
+                //            <version>${jogl-all-main.version}</version>
+                //            </dependency>
+                //
+                //            <!-- JOML - http://joml-ci.github.io/JOML/ -->
+                //            <dependency>
+                //            <groupId>org.joml</groupId>
+                //            <artifactId>joml</artifactId>
+                //            <version>${joml.version}</version>
+                //            </dependency>
+                //
+                //            <!-- JPedal - http://jpedal.org/ (defunct) -->
+                //            <dependency>
+                //            <groupId>org.jpedal</groupId>
+                //            <artifactId>jpedalSTD</artifactId>
+                //            <version>${jpedalSTD.version}</version>
+                //            </dependency>
+                //
+                //            <!-- JSch - http://www.jcraft.com/jsch/ -->
+                //            <dependency>
+                //            <groupId>com.jcraft</groupId>
+                //            <artifactId>jsch</artifactId>
+                //            <version>${jsch.version}</version>
+                //            </dependency>
+                //
+                //            <!-- Jython - https://jython.org/ -->
+                //            <dependency>
+                //            <groupId>org.python</groupId>
+                //            <artifactId>jython-slim</artifactId>
+                //            <version>${jython-slim.version}</version>
+                //            </dependency>
+                //
+                //            <!-- JZlib - http://www.jcraft.com/jzlib/ -->
+                //            <dependency>
+                //            <groupId>com.jcraft</groupId>
+                //            <artifactId>jzlib</artifactId>
+                //            <version>${jzlib.version}</version>
+                //            </dependency>
+                //
+                //            <!-- Kotlin - https://kotlinlang.org/ -->
+                //            <dependency>
+                //            <groupId>org.jetbrains.kotlin</groupId>
+                //            <artifactId>kotlin-compiler-embeddable</artifactId>
+                //            <version>${kotlin-compiler-embeddable.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.jetbrains.kotlin</groupId>
+                //            <artifactId>kotlin-daemon-embeddable</artifactId>
+                //            <version>${kotlin-daemon-embeddable.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.jetbrains.kotlin</groupId>
+                //            <artifactId>kotlin-reflect</artifactId>
+                //            <version>${kotlin-reflect.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.jetbrains.kotlin</groupId>
+                //            <artifactId>kotlin-script-runtime</artifactId>
+                //            <version>${kotlin-script-runtime.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.jetbrains.kotlin</groupId>
+                //            <artifactId>kotlin-script-util</artifactId>
+                //            <version>${kotlin-script-util.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.jetbrains.kotlin</groupId>
+                //            <artifactId>kotlin-scripting-common</artifactId>
+                //            <version>${kotlin-scripting-common.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.jetbrains.kotlin</groupId>
+                //            <artifactId>kotlin-scripting-compiler-embeddable</artifactId>
+                //            <version>${kotlin-scripting-compiler-embeddable.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.jetbrains.kotlin</groupId>
+                //            <artifactId>kotlin-scripting-jvm</artifactId>
+                //            <version>${kotlin-scripting-jvm.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.jetbrains.kotlin</groupId>
+                //            <artifactId>kotlin-stdlib</artifactId>
+                //            <version>${kotlin-stdlib.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.jetbrains.kotlin</groupId>
+                //            <artifactId>kotlin-stdlib-common</artifactId>
+                //            <version>${kotlin-stdlib-common.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.jetbrains.kotlin</groupId>
+                //            <artifactId>kotlin-stdlib-jdk8</artifactId>
+                //            <version>${kotlin-stdlib-jdk8.version}</version>
+                //            </dependency>
+                //
+                //            <!-- Logback - http://logback.qos.ch/ -->
+                //            <dependency>
+                //            <groupId>ch.qos.logback</groupId>
+                //            <artifactId>logback-classic</artifactId>
+                //            <version>${logback-classic.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>ch.qos.logback</groupId>
+                //            <artifactId>logback-core</artifactId>
+                //            <version>${logback-core.version}</version>
+                //            </dependency>
+                //
+                //            <!-- LZ4 compression for Java - https://github.com/lz4/lz4-java -->
+                //            <dependency>
+                //            <groupId>org.lz4</groupId>
+                //            <artifactId>lz4-java</artifactId>
+                //            <version>${lz4-java.version}</version>
+                //            </dependency>
+                //
+                //            <!-- MapDB - http://www.mapdb.org/ -->
+                //            <dependency>
+                //            <groupId>org.mapdb</groupId>
+                //            <artifactId>mapdb</artifactId>
+                //            <version>${mapdb.version}</version>
+                //            <exclusions>
+                //            <exclusion>
+                //            <!--
+                //        Conflicts with org.lz4:lz4-java.
+                //            You may need to add it to your deps.
+                //            -->
+                //            <groupId>net.jpountz.lz4</groupId>
+                //            <artifactId>lz4</artifactId>
+                //            </exclusion>
+                //            </exclusions>
+                //            </dependency>
+                //
+                //            <!-- MigLayout - http://www.miglayout.com/ -->
+                //            <dependency>
+                //            <groupId>com.miglayout</groupId>
+                //            <artifactId>miglayout-core</artifactId>
+                //            <version>${miglayout-core.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>com.miglayout</groupId>
+                //            <artifactId>miglayout-swing</artifactId>
+                //            <version>${miglayout-swing.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>com.miglayout</groupId>
+                //            <artifactId>miglayout-swt</artifactId>
+                //            <version>${miglayout-swt.version}</version>
+                //            </dependency>
+                //
+                //            <!-- Mines JTK - https://github.com/dhale/jtk -->
+                //            <dependency>
+                //            <groupId>edu.mines</groupId>
+                //            <artifactId>mines-jtk</artifactId>
+                //            <version>${mines-jtk.version}</version>
+                //            </dependency>
+                //
+                //            <!-- oj! Algorithms - https://github.com/optimatika/ojAlgo -->
+                //            <dependency>
+                //            <groupId>org.ojalgo</groupId>
+                //            <artifactId>ojalgo</artifactId>
+                //            <version>${ojalgo.version}</version>
+                //            </dependency>
+                //
+                //            <!-- OpenCSV - http://opencsv.sourceforge.net/ -->
+                //            <dependency>
+                //            <groupId>com.opencsv</groupId>
+                //            <artifactId>opencsv</artifactId>
+                //            <version>${opencsv.version}</version>
+                //            </dependency>
+                //
+                //            <!-- picocli - http://picocli.info/ -->
+                //            <dependency>
+                //            <groupId>info.picocli</groupId>
+                //            <artifactId>picocli</artifactId>
+                //            <version>${picocli.version}</version>
+                //            </dependency>
+                //
+                //            <!-- PostgreSQL JDBC Driver - https://jdbc.postgresql.org/ -->
+                //            <dependency>
+                //            <groupId>org.postgresql</groupId>
+                //            <artifactId>postgresql</artifactId>
+                //            <version>${postgresql.version}</version>
+                //            </dependency>
+                //
+                //            <!-- RSyntaxTextArea - http://bobbylight.github.io/RSyntaxTextArea/ -->
+                //            <dependency>
+                //            <groupId>com.fifesoft</groupId>
+                //            <artifactId>rsyntaxtextarea</artifactId>
+                //            <version>${rsyntaxtextarea.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>com.fifesoft</groupId>
+                //            <artifactId>autocomplete</artifactId>
+                //            <version>${autocomplete.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>com.fifesoft</groupId>
+                //            <artifactId>languagesupport</artifactId>
+                //            <version>${languagesupport.version}</version>
+                //            </dependency>
+                //
+                //            <!-- SLF4J - http://slf4j.org/ -->
+                //            <dependency>
+                //            <groupId>org.slf4j</groupId>
+                //            <artifactId>slf4j-api</artifactId>
+                //            <version>${slf4j-api.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.slf4j</groupId>
+                //            <artifactId>slf4j-ext</artifactId>
+                //            <version>${slf4j-ext.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.slf4j</groupId>
+                //            <artifactId>slf4j-jcl</artifactId>
+                //            <version>${slf4j-jcl.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.slf4j</groupId>
+                //            <artifactId>slf4j-jdk14</artifactId>
+                //            <version>${slf4j-jdk14.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.slf4j</groupId>
+                //            <artifactId>slf4j-nop</artifactId>
+                //            <version>${slf4j-nop.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.slf4j</groupId>
+                //            <artifactId>slf4j-simple</artifactId>
+                //            <version>${slf4j-simple.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.slf4j</groupId>
+                //            <artifactId>jcl-over-slf4j</artifactId>
+                //            <version>${jcl-over-slf4j.version}</version>
+                //            </dependency>
+                //
+                //            <!-- SnakeYAML - https://bitbucket.org/asomov/snakeyaml -->
+                //            <dependency>
+                //            <groupId>org.yaml</groupId>
+                //            <artifactId>snakeyaml</artifactId>
+                //            <version>${snakeyaml.version}</version>
+                //            </dependency>
+                //
+                //            <!-- SnakeYAML Engine - https://bitbucket.org/asomov/snakeyaml-engine -->
+                //            <dependency>
+                //            <groupId>org.snakeyaml</groupId>
+                //            <artifactId>snakeyaml-engine</artifactId>
+                //            <version>${snakeyaml-engine.version}</version>
+                //            </dependency>
+                //
+                //            <!-- Spring - https://spring.io/ -->
+                //            <dependency>
+                //            <groupId>org.springframework</groupId>
+                //            <artifactId>spring-aop</artifactId>
+                //            <version>${spring-aop.version}</version>
+                //            </dependency>
+                //
+                //            <!-- TensorFlow - https://www.tensorflow.org/ -->
+                //            <dependency>
+                //            <groupId>org.tensorflow</groupId>
+                //            <artifactId>tensorflow</artifactId>
+                //            <version>${tensorflow.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.tensorflow</groupId>
+                //            <artifactId>libtensorflow</artifactId>
+                //            <version>${libtensorflow.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.tensorflow</groupId>
+                //            <artifactId>libtensorflow_jni</artifactId>
+                //            <version>${libtensorflow_jni.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.tensorflow</groupId>
+                //            <artifactId>libtensorflow_jni_gpu</artifactId>
+                //            <version>${libtensorflow_jni_gpu.version}</version>
+                //            </dependency>
+                //            <dependency>
+                //            <groupId>org.tensorflow</groupId>
+                //            <artifactId>proto</artifactId>
+                //            <version>${proto.version}</version>
+                //            </dependency>
+                //
+                //            <!-- Trove - http://trove.starlight-systems.com/ -->
+                //            <dependency>
+                //            <groupId>net.sf.trove4j</groupId>
+                //            <artifactId>trove4j</artifactId>
+                //            <version>${trove4j.version}</version>
+                //            </dependency>
+                //
+                //            <!-- Weka - http://www.cs.waikato.ac.nz/ml/weka/ -->
+                //            <dependency>
+                //            <groupId>nz.ac.waikato.cms.weka</groupId>
+                //            <artifactId>weka-dev</artifactId>
+                //            <version>${weka-dev.version}</version>
+                //            <exclusions>
+                //            <exclusion>
+                //            <groupId>com.github.fommil.netlib</groupId>
+                //            <artifactId>all</artifactId>
+                //            </exclusion>
+                //            <exclusion>
+                //            <!-- Conflicts with com.github.vbmacher:java-cup -->
+                //            <groupId>com.github.vbmacher</groupId>
+                //            <artifactId>java-cup-runtime</artifactId>
+                //            </exclusion>
+                //            <exclusion>
+                //            <groupId>com.googlecode.netlib-java</groupId>
+                //            <artifactId>netlib-java</artifactId>
+                //            </exclusion>
+                //            <exclusion>
+                //            <groupId>nz.ac.waikato.cms.weka.thirdparty</groupId>
+                //            <artifactId>java-cup-11b</artifactId>
+                //            </exclusion>
+                //            <exclusion>
+                //            <groupId>nz.ac.waikato.cms.weka.thirdparty</groupId>
+                //            <artifactId>java-cup-11b-runtime</artifactId>
+                //            </exclusion>
+                //            <exclusion>
+                //            <groupId>net.sourceforge.f2j</groupId>
+                //            <artifactId>arpack_combined_all</artifactId>
+                //            </exclusion>
+                //            </exclusions>
+                //            </dependency>
+                //
+                //            <!-- XZ for Java - https://tukaani.org/xz/java.html -->
+                //            <dependency>
+                //            <groupId>org.tukaani</groupId>
+                //            <artifactId>xz</artifactId>
+                //            <version>${xz.version}</version>
+                //            </dependency>
+                //
+                //            <!-- Test scope dependencies -->
 
                 // JUnit 4 - https://junit.org/junit4/
                 alias("junit").to("junit:junit:4.13")
@@ -3101,13 +1376,6 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                 //            <scope>test</scope>
                 //            </dependency>
                 //
-                //            <!-- JUnit Benchmarks - https://github.com/scijava/junit-benchmarks -->
-                //            <dependency>
-                //            <groupId>org.scijava</groupId>
-                //            <artifactId>junit-benchmarks</artifactId>
-                //            <version>${junit-benchmarks.version}</version>
-                //            <scope>test</scope>
-                //            </dependency>
                 //
                 //            <!-- JMockit - https://jmockit.github.io/ -->
                 //            <dependency>

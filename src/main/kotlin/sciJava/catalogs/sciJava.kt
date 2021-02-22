@@ -7,55 +7,6 @@ fun MutableVersionCatalogContainer.addSciJava() {
 
     create("sciJava").apply {
 
-        //            <!-- JUnit Benchmarks - https://github.com/scijava/junit-benchmarks -->
-        //            <junit-benchmarks.version>0.7.4-scijava</junit-benchmarks.version>
-        //
-        //            <!-- SciJava UI: AWT - https://github.com/scijava/scijava-ui-awt -->
-        //            <scijava-ui-awt.version>0.1.7</scijava-ui-awt.version>
-        //
-        //            <!-- SciJava UI: Swing - https://github.com/scijava/scijava-ui-swing -->
-        //            <scijava-ui-swing.version>0.13.2</scijava-ui-swing.version>
-        //
-        //            <!-- Scripting: BeanShell - https://github.com/scijava/scripting-beanshell -->
-        //            <scripting-beanshell.version>0.3.4</scripting-beanshell.version>
-        //
-        //            <!-- Scripting: Clojure - https://github.com/scijava/scripting-clojure -->
-        //            <scripting-clojure.version>0.1.6</scripting-clojure.version>
-        //
-        //            <!-- Scripting: Groovy - https://github.com/scijava/scripting-groovy -->
-        //            <scripting-groovy.version>0.3.0</scripting-groovy.version>
-        //
-        //            <!-- Scripting: Java - https://github.com/scijava/scripting-java -->
-        //            <scripting-java.version>0.4.1</scripting-java.version>
-        //
-        //            <!-- Scripting: JavaScript - https://github.com/scijava/scripting-javascript -->
-        //            <scripting-javascript.version>0.5.0</scripting-javascript.version>
-        //
-        //            <!-- Scripting: JRuby - https://github.com/scijava/scripting-jruby -->
-        //            <scripting-jruby.version>0.3.1</scripting-jruby.version>
-        //
-        //            <!-- Scripting: Jython - https://github.com/scijava/scripting-jython -->
-        //            <scripting-jython.version>1.0.0</scripting-jython.version>
-        //
-        //            <!-- Scripting: Kotlin - https://github.com/scijava/scripting-kotlin -->
-        //            <scripting-kotlin.version>0.1.1</scripting-kotlin.version>
-        //
-        //            <!-- Scripting: MATLAB - https://github.com/scijava/scripting-matlab -->
-        //            <scripting-matlab.version>0.5.2</scripting-matlab.version>
-        //
-        //            <!-- Scripting: Renjin - https://github.com/scijava/scripting-renjin -->
-        //            <scripting-renjin.version>0.2.3</scripting-renjin.version>
-        //
-        //            <!-- Scripting: Scala - https://github.com/scijava/scripting-scala -->
-        //            <scripting-scala.version>0.2.2</scripting-scala.version>
-        //
-        //            <!-- Swing Checkbox Tree - https://github.com/scijava/swing-checkbox-tree -->
-        //            <swing-checkbox-tree.version>1.0.2</swing-checkbox-tree.version>
-        //
-        //            <!-- UI Behaviour - https://github.com/scijava/ui-behaviour -->
-        //            <ui-behaviour.version>2.0.3</ui-behaviour.version>
-        //
-
         // Batch Processor - https://github.com/scijava/batch-processor
         alias("batchProcessor").to("org.scijava:batch-processor:0.4.1")
 
@@ -116,112 +67,56 @@ fun MutableVersionCatalogContainer.addSciJava() {
         // SciJava Table - https://github.com/scijava/scijava-table
         alias("table").to("org.scijava:scijava-table:0.7.0")
 
-        //            <!-- SciJava UI: AWT - https://github.com/scijava/scijava-ui-awt -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>scijava-ui-awt</artifactId>
-        //            <version>${scijava-ui-awt.version}</version>
-        //            </dependency>
-        //
-        //            <!-- SciJava UI: Swing - https://github.com/scijava/scijava-ui-swing -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>scijava-ui-swing</artifactId>
-        //            <version>${scijava-ui-swing.version}</version>
-        //            </dependency>
-        //
+        // SciJava UI: AWT - https://github.com/scijava/scijava-ui-awt
+        alias("uiAwt").to("org.scijava:scijava-ui-awt:0.1.7")
+
+        // SciJava UI: Swing - https://github.com/scijava/scijava-ui-swing
+        alias("uiSwing").to("org.scijava:scijava-ui-swing:0.13.2")
+
         // Script Editor - https://github.com/scijava/script-editor
         alias("scriptEditor").to("org.scijava:script-editor:0.5.6")
 
-        //            <!-- Scripting: BeanShell - https://github.com/scijava/scripting-beanshell -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>scripting-beanshell</artifactId>
-        //            <version>${scripting-beanshell.version}</version>
-        //            </dependency>
-        //
-        //            <!-- Scripting: Clojure - https://github.com/scijava/scripting-clojure -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>scripting-clojure</artifactId>
-        //            <version>${scripting-clojure.version}</version>
-        //            </dependency>
-        //
-        //            <!-- Scripting: Groovy - https://github.com/scijava/scripting-groovy -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>scripting-groovy</artifactId>
-        //            <version>${scripting-groovy.version}</version>
-        //            </dependency>
-        //
-        //            <!-- Scripting: Java - https://github.com/scijava/scripting-java -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>scripting-java</artifactId>
-        //            <version>${scripting-java.version}</version>
-        //            </dependency>
-        //
-        //            <!-- Scripting: JavaScript - https://github.com/scijava/scripting-javascript -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>scripting-javascript</artifactId>
-        //            <version>${scripting-javascript.version}</version>
-        //            </dependency>
-        //
-        //            <!-- Scripting: JRuby - https://github.com/scijava/scripting-jruby -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>scripting-jruby</artifactId>
-        //            <version>${scripting-jruby.version}</version>
-        //            </dependency>
-        //
-        //            <!-- Scripting: Jython - https://github.com/scijava/scripting-jython -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>scripting-jython</artifactId>
-        //            <version>${scripting-jython.version}</version>
-        //            </dependency>
-        //
-        //            <!-- Scripting: Kotlin - https://github.com/scijava/scripting-kotlin -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>scripting-kotlin</artifactId>
-        //            <version>${scripting-kotlin.version}</version>
-        //            </dependency>
-        //
-        //            <!-- Scripting: MATLAB - https://github.com/scijava/scripting-matlab -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>scripting-matlab</artifactId>
-        //            <version>${scripting-matlab.version}</version>
-        //            </dependency>
-        //
-        //            <!-- Scripting: Renjin - https://github.com/scijava/scripting-renjin -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>scripting-renjin</artifactId>
-        //            <version>${scripting-renjin.version}</version>
-        //            </dependency>
-        //
-        //            <!-- Scripting: Scala - https://github.com/scijava/scripting-scala -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>scripting-scala</artifactId>
-        //            <version>${scripting-scala.version}</version>
-        //            </dependency>
-        //
-        //            <!-- Swing Checkbox Tree - https://github.com/scijava/swing-checkbox-tree -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>swing-checkbox-tree</artifactId>
-        //            <version>${swing-checkbox-tree.version}</version>
-        //            </dependency>
-        //
-        //            <!-- UI Behaviour - https://github.com/scijava/ui-behaviour -->
-        //            <dependency>
-        //            <groupId>org.scijava</groupId>
-        //            <artifactId>ui-behaviour</artifactId>
-        //            <version>${ui-behaviour.version}</version>
-        //            </dependency>
+        // Scripting: BeanShell - https://github.com/scijava/scripting-beanshell
+        alias("scriptingBeanshell").to("org.scijava:scripting-beanshell:0.3.4")
+
+        // Scripting: Clojure - https://github.com/scijava/scripting-clojure
+        alias("scriptingClojure").to("org.scijava:scripting-clojure:0.1.6")
+
+        // Scripting: Groovy - https://github.com/scijava/scripting-groovy
+        alias("scriptingGroovy").to("org.scijava:scripting-groovy:0.3.0")
+
+        // Scripting: Java - https://github.com/scijava/scripting-java
+        alias("scriptingJava").to("org.scijava:scripting-java:0.4.1")
+
+        // Scripting: JavaScript - https://github.com/scijava/scripting-javascript
+        alias("scriptingJavascript").to("org.scijava:scripting-javascript:0.5.0")
+
+        // Scripting: JRuby - https://github.com/scijava/scripting-jruby
+        alias("scriptingRuby").to("org.scijava:scripting-jruby:0.3.1")
+
+        // Scripting: Jython - https://github.com/scijava/scripting-jython
+        alias("scriptingJython").to("org.scijava:scripting-jython:1.0.0")
+
+        // Scripting: Kotlin - https://github.com/scijava/scripting-kotlin
+        alias("scriptingKotlin").to("org.scijava:scripting-kotlin:0.1.1")
+
+        // Scripting: MATLAB - https://github.com/scijava/scripting-matlab
+        alias("scriptingMatlab").to("org.scijava:scripting-matlab:0.5.2")
+
+        // Scripting: Renjin - https://github.com/scijava/scripting-renjin
+        alias("scriptingRenjin").to("org.scijava:scripting-renjin:0.2.3")
+
+        // Scripting: Scala - https://github.com/scijava/scripting-scala
+        alias("scriptingScala").to("org.scijava:scripting-scala:0.2.2")
+
+        // Swing Checkbox Tree - https://github.com/scijava/swing-checkbox-tree
+        alias("swingCheckboxTree").to("org.scijava:swing-checkbox-tree:1.0.2")
+
+        // UI Behaviour - https://github.com/scijava/ui-behaviour
+        alias("uiBehaviour").to("org.scijava:ui-behaviour:2.0.3")
+
+
+        // JUnit Benchmarks - https://github.com/scijava/junit-benchmarks
+        alias("junitBenchmarks").to("org.scijava:junit-benchmarks:0.7.4-scijava")
     }
 }
