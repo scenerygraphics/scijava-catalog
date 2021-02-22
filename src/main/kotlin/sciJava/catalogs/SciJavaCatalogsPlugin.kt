@@ -497,38 +497,38 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                 }
 
                 // Batik - https://xmlgraphics.apache.org/batik/
-                create("batik").apply {
-                    val version = "1.13"
-                    val root = "org.apache.xmlgraphics:batik"
-                    alias("anim").to("$root-anim:$version")
-                    alias("awtUtil").to("$root-awt-util:$version")
-                    alias("bridge").to("$root-bridge:$version")
-                    alias("codec").to("$root-codec:$version")
-                    alias("constants").to("$root-costants:$version")
-                    alias("css").to("$root-css:$version")
-                    alias("dom").to("$root-dom:$version")
-                    alias("ext").to("$root-ext:$version")
-                    alias("extensions").to("$root-extentions:$version")
-                    alias("guiUtil").to("$root-gui-util:$version")
-                    alias("gvt").to("$root-gvt:$version")
-                    alias("i18n").to("$root-i18n:$version")
-                    alias("parser").to("$root-parser:$version")
-                    alias("rasterizer").to("$root-rasterizer:$version")
-                    alias("rasterizerExt").to("$root-rasterizer-ext:$version")
-                    alias("script").to("$root-script:$version")
-                    alias("slideshow").to("$root-slideshow:$version")
-                    alias("squiggle").to("$root-squiggle:$version")
-                    alias("squiggleExt").to("$root-squiggle-ext:$version")
-                    alias("svgDom").to("$root-svg-dom:$version")
-                    alias("svgGen").to("$root-svggen:$version")
-                    alias("svgPP").to("$root-svgpp:$version")
-                    alias("swing").to("$root-swing:$version")
-                    alias("transcoder").to("$root-transcoder:$version")
-                    alias("ttf2svg").to("$root-ttf2svg:$version")
-                    alias("util").to("$root-util:$version")
-                    alias("xml").to("$root-xml:$version")
-                    alias("common").to("org.apache.xmlgraphics:xmlgraphics-commons:2.4")
-                }
+//                create("batik").apply {
+//                    val version = "1.13"
+//                    val root = "org.apache.xmlgraphics:batik"
+//                    alias("anim").to("$root-anim:$version")
+//                    alias("awtUtil").to("$root-awt-util:$version")
+//                    alias("bridge").to("$root-bridge:$version")
+//                    alias("codec").to("$root-codec:$version")
+//                    alias("constants").to("$root-costants:$version")
+//                    alias("css").to("$root-css:$version")
+//                    alias("dom").to("$root-dom:$version")
+//                    alias("ext").to("$root-ext:$version")
+//                    alias("extensions").to("$root-extentions:$version")
+//                    alias("guiUtil").to("$root-gui-util:$version")
+//                    alias("gvt").to("$root-gvt:$version")
+//                    alias("i18n").to("$root-i18n:$version")
+//                    alias("parser").to("$root-parser:$version")
+//                    alias("rasterizer").to("$root-rasterizer:$version")
+//                    alias("rasterizerExt").to("$root-rasterizer-ext:$version")
+//                    alias("script").to("$root-script:$version")
+//                    alias("slideshow").to("$root-slideshow:$version")
+//                    alias("squiggle").to("$root-squiggle:$version")
+//                    alias("squiggleExt").to("$root-squiggle-ext:$version")
+//                    alias("svgDom").to("$root-svg-dom:$version")
+//                    alias("svgGen").to("$root-svggen:$version")
+//                    alias("svgPP").to("$root-svgpp:$version")
+//                    alias("swing").to("$root-swing:$version")
+//                    alias("transcoder").to("$root-transcoder:$version")
+//                    alias("ttf2svg").to("$root-ttf2svg:$version")
+//                    alias("util").to("$root-util:$version")
+//                    alias("xml").to("$root-xml:$version")
+//                    alias("common").to("org.apache.xmlgraphics:xmlgraphics-commons:2.4")
+//                }
 
                 // Blosc - https://blosc.org/
                 alias("jblosc").to("org.lasersonlab:jblosc:1.0.1")
