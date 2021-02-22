@@ -507,7 +507,7 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
 //                    alias("constants").to("$root-costants:$version")
                     alias("css").to("$root-css:$version")
                     alias("dom").to("$root-dom:$version")
-                    alias("ext").to("$root-ext:$version")
+//                    alias("ext").to("$root-ext:$version")
                     alias("extensions").to("$root-extentions:$version")
                     alias("guiUtil").to("$root-gui-util:$version")
                     alias("gvt").to("$root-gvt:$version")
