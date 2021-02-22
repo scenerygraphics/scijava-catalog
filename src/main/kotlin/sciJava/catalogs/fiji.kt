@@ -35,7 +35,7 @@ fun MutableVersionCatalogContainer.addFiji() {
         alias("directionality").to("sc.fiji:Directionality_:2.3.0")
         alias("fsAlignTrakEM2").to("sc.fiji:FS_Align_TrakEM2:2.0.3")
         alias("featureDetection").to("sc.fiji:Feature_Detection:2.0.2")
-        alias("_3dBlobSegmentation").to("sc.fiji:3D_Blob_Segmentation:3.0.1")
+//        alias("_3dBlobSegmentation").to("sc.fiji:3D_Blob_Segmentation:3.0.1")
         alias("archipelago").to("sc.fiji:Fiji_Archipelago:2.0.1")
         alias("developer").to("sc.fiji:Fiji_Developer:2.0.7")
         alias("packageMaker").to("sc.fiji:Fiji_Package_Maker:2.1.1")
