@@ -497,10 +497,10 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                 }
 
                 // Batik - https://xmlgraphics.apache.org/batik/
-//                create("batik").apply {
-//                    val version = "1.13"
-//                    val root = "org.apache.xmlgraphics:batik"
-//                    alias("anim").to("$root-anim:$version")
+                create("batik").apply {
+                    val version = "1.13"
+                    val root = "org.apache.xmlgraphics:batik"
+                    alias("anim").to("$root-anim:$version")
 //                    alias("awtUtil").to("$root-awt-util:$version")
 //                    alias("bridge").to("$root-bridge:$version")
 //                    alias("codec").to("$root-codec:$version")
@@ -528,7 +528,7 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
 //                    alias("util").to("$root-util:$version")
 //                    alias("xml").to("$root-xml:$version")
 //                    alias("common").to("org.apache.xmlgraphics:xmlgraphics-commons:2.4")
-//                }
+                }
 
                 // Blosc - https://blosc.org/
                 alias("jblosc").to("org.lasersonlab:jblosc:1.0.1")
