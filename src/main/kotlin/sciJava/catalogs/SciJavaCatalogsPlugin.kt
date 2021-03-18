@@ -7,6 +7,8 @@ import org.gradle.api.Project
 import org.gradle.api.Plugin
 import org.gradle.api.initialization.Settings
 
+val pomScijava = "30.0.1-SNAPSHOT"
+
 /**
  * A simple 'hello world' plugin.
  */
@@ -505,11 +507,11 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                     alias("awtUtil").to("$root-awt-util:$version")
                     alias("bridge").to("$root-bridge:$version")
                     alias("codec").to("$root-codec:$version")
-//                    alias("constants").to("$root-costants:$version")
-//                    alias("css").to("$root-css:$version")
-//                    alias("dom").to("$root-dom:$version")
-//                    alias("ext").to("$root-ext:$version")
-//                    alias("extensions").to("$root-extentions:$version")
+                    //                    alias("constants").to("$root-costants:$version")
+                    //                    alias("css").to("$root-css:$version")
+                    //                    alias("dom").to("$root-dom:$version")
+                    //                    alias("ext").to("$root-ext:$version")
+                    //                    alias("extensions").to("$root-extentions:$version")
                     alias("guiUtil").to("$root-gui-util:$version")
                     alias("gvt").to("$root-gvt:$version")
                     alias("i18n").to("$root-i18n:$version")
