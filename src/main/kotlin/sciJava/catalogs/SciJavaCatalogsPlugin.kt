@@ -7,7 +7,7 @@ import org.gradle.api.Project
 import org.gradle.api.Plugin
 import org.gradle.api.initialization.Settings
 
-val pomScijava = "30.0.1-SNAPSHOT"
+val pomScijavaVersion = "30.0.1-SNAPSHOT"
 
 /**
  * A simple 'hello world' plugin.
