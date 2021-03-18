@@ -74,7 +74,7 @@ fun MutableVersionCatalogContainer.addSciJava() {
         alias("uiSwing").to("org.scijava:scijava-ui-swing:0.13.2")
 
         // Script Editor - https://github.com/scijava/script-editor
-        alias("scriptEditor").to("org.scijava:script-editor:0.5.6")
+        alias("scriptEditor").to("org.scijava:script-editor:0.5.9")
 
         // Scripting: BeanShell - https://github.com/scijava/scripting-beanshell
         alias("scriptingBeanshell").to("org.scijava:scripting-beanshell:0.3.4")
