@@ -339,14 +339,15 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                 // N5 - https://github.com/saalfeldlab/n5
                 create("n5").apply {
                     alias("labelMultisets").to("net.imglib2:imglib2-label-multisets:0.9.0")
-                    alias("core").to("org.janelia.saalfeldlab:n5:2.2.1")
-                    alias("awsS3").to("org.janelia.saalfeldlab:n5-aws-s3:3.1.3")
+                    alias("core").to("org.janelia.saalfeldlab:n5:2.3.0")
+                    alias("awsS3").to("org.janelia.saalfeldlab:n5-aws-s3:3.2.0")
                     alias("blosc").to("org.janelia.saalfeldlab:n5-blosc:1.1.0")
-                    alias("googleCloud").to("org.janelia.saalfeldlab:n5-google-cloud:3.2.2")
-                    alias("hdf5").to("org.janelia.saalfeldlab:n5-hdf5:1.1.0")
+                    alias("googleCloud").to("org.janelia.saalfeldlab:n5-google-cloud:3.3.1")
+                    alias("hdf5").to("org.janelia.saalfeldlab:n5-hdf5:1.2.0")
+                    alias("ij").to("org.janelia.saalfeldlab:n5-ij:1.0.0")
                     alias("imglib2").to("org.janelia.saalfeldlab:n5-imglib2:3.5.1")
-                    alias("viewerFiji").to("org.janelia.saalfeldlab:n5-viewer_fiji:2.2.0")
-                    alias("zarr").to("org.janelia.saalfeldlab:n5-zarr:0.0.4")
+                    alias("viewerFiji").to("org.janelia.saalfeldlab:n5-viewer_fiji:4.0.0")
+                    alias("zarr").to("org.janelia.saalfeldlab:n5-zarr:0.0.6")
                 }
 
                 // BoneJ - http://bonej.org/
@@ -504,9 +505,9 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                     alias("awtUtil").to("$root-awt-util:$version")
                     alias("bridge").to("$root-bridge:$version")
                     alias("codec").to("$root-codec:$version")
-                    alias("constants_").to("$root-costants:$version")
+//                    alias("constants").to("$root-costants:$version")
 //                    alias("css").to("$root-css:$version")
-                    alias("dom").to("$root-dom:$version")
+//                    alias("dom").to("$root-dom:$version")
 //                    alias("ext").to("$root-ext:$version")
 //                    alias("extensions").to("$root-extentions:$version")
                     alias("guiUtil").to("$root-gui-util:$version")
@@ -569,7 +570,7 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                 alias("cglib").to("cglib:cglib:3.3.0")
 
                 // Eclipse Collections - https://www.eclipse.org/collections/
-                create("eclipse.collections").apply {
+                create("eclipseCollections").apply {
                     val version = "10.4.0"
                     val root = "org.eclipse.collections:eclipse-collections"
                     alias("core").to("$root:$version")
@@ -578,79 +579,24 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                     alias("testutils").to("$root-testutils:$version")
                 }
                 // Eclipse SWT - https://www.eclipse.org/swt/
-                create("eclipse.swt").apply {
+                create("eclipseSwt").apply {
                     val version = "4.3"
                     val root = "org.eclipse.swt:org.eclipse.swt"
                     alias("cocoaMacosx").to("$root.cocoa.macosx:$version")
-                    //            <groupId>org.eclipse.swt</groupId>
-                    //            <artifactId>org.eclipse.swt.cocoa.macosx.x86_64</artifactId>
-                    //            <version>${org.eclipse.swt.cocoa.macosx.x86_64.version}</version>
-                    //            </dependency>
-                    //            <dependency>
-                    //            <groupId>org.eclipse.swt</groupId>
-                    //            <artifactId>org.eclipse.swt.gtk.aix.ppc</artifactId>
-                    //            <version>${org.eclipse.swt.gtk.aix.ppc.version}</version>
-                    //            </dependency>
-                    //            <dependency>
-                    //            <groupId>org.eclipse.swt</groupId>
-                    //            <artifactId>org.eclipse.swt.gtk.aix.ppc64</artifactId>
-                    //            <version>${org.eclipse.swt.gtk.aix.ppc64.version}</version>
-                    //            </dependency>
-                    //            <dependency>
-                    //            <groupId>org.eclipse.swt</groupId>
-                    //            <artifactId>org.eclipse.swt.gtk.hpux.ia64</artifactId>
-                    //            <version>${org.eclipse.swt.gtk.hpux.ia64.version}</version>
-                    //            </dependency>
-                    //            <dependency>
-                    //            <groupId>org.eclipse.swt</groupId>
-                    //            <artifactId>org.eclipse.swt.gtk.linux.ppc</artifactId>
-                    //            <version>${org.eclipse.swt.gtk.linux.ppc.version}</version>
-                    //            </dependency>
-                    //            <dependency>
-                    //            <groupId>org.eclipse.swt</groupId>
-                    //            <artifactId>org.eclipse.swt.gtk.linux.ppc64</artifactId>
-                    //            <version>${org.eclipse.swt.gtk.linux.ppc64.version}</version>
-                    //            </dependency>
-                    //            <dependency>
-                    //            <groupId>org.eclipse.swt</groupId>
-                    //            <artifactId>org.eclipse.swt.gtk.linux.s390</artifactId>
-                    //            <version>${org.eclipse.swt.gtk.linux.s390.version}</version>
-                    //            </dependency>
-                    //            <dependency>
-                    //            <groupId>org.eclipse.swt</groupId>
-                    //            <artifactId>org.eclipse.swt.gtk.linux.s390x</artifactId>
-                    //            <version>${org.eclipse.swt.gtk.linux.s390x.version}</version>
-                    //            </dependency>
-                    //            <dependency>
-                    //            <groupId>org.eclipse.swt</groupId>
-                    //            <artifactId>org.eclipse.swt.gtk.linux.x86</artifactId>
-                    //            <version>${org.eclipse.swt.gtk.linux.x86.version}</version>
-                    //            </dependency>
-                    //            <dependency>
-                    //            <groupId>org.eclipse.swt</groupId>
-                    //            <artifactId>org.eclipse.swt.gtk.linux.x86_64</artifactId>
-                    //            <version>${org.eclipse.swt.gtk.linux.x86_64.version}</version>
-                    //            </dependency>
-                    //            <dependency>
-                    //            <groupId>org.eclipse.swt</groupId>
-                    //            <artifactId>org.eclipse.swt.gtk.solaris.sparc</artifactId>
-                    //            <version>${org.eclipse.swt.gtk.solaris.sparc.version}</version>
-                    //            </dependency>
-                    //            <dependency>
-                    //            <groupId>org.eclipse.swt</groupId>
-                    //            <artifactId>org.eclipse.swt.gtk.solaris.x86</artifactId>
-                    //            <version>${org.eclipse.swt.gtk.solaris.x86.version}</version>
-                    //            </dependency>
-                    //            <dependency>
-                    //            <groupId>org.eclipse.swt</groupId>
-                    //            <artifactId>org.eclipse.swt.win32.win32.x86</artifactId>
-                    //            <version>${org.eclipse.swt.win32.win32.x86.version}</version>
-                    //            </dependency>
-                    //            <dependency>
-                    //            <groupId>org.eclipse.swt</groupId>
-                    //            <artifactId>org.eclipse.swt.win32.win32.x86_64</artifactId>
-                    //            <version>${org.eclipse.swt.win32.win32.x86_64.version}</version>
-                    //            </dependency>
+                    alias("cocoaMacosx64").to("$root.cocoa.macosx.x86_64:$version")
+                    alias("gtkAixPpc").to("$root.gtk.aix.ppc:$version")
+                    alias("gtkAixPpc64").to("$root.gtk.aix.ppc64:$version")
+                    alias("gtkHpux").to("$root.gtk.hpux.ia64:$version")
+                    alias("gtkLinuxPpc").to("$root.gtk.linux.ppc:$version")
+                    alias("gtkLinuxPpc64").to("$root.gtk.linux.ppc64:$version")
+                    alias("gtkLinuxS390").to("$root.gtk.linux.s390:$version")
+                    alias("gtkLinuxS390x").to("$root.gtk.linux.s390x:$version")
+                    alias("gtkLinux32").to("$root.gtk.linux.x86:$version")
+                    alias("gtkLinux64").to("$root.gtk.linux.x86_64:$version")
+                    alias("gtkSolarisSparc").to("$root.gtk.solaris.sparc:$version")
+                    alias("gtkSolaris32").to("$root.gtk.solaris.x86:$version")
+                    alias("win32").to("$root.win32.win32.x86:$version")
+                    alias("win64").to("$root.win32.win32.x86_64:$version")
                 }
                 //            <!-- Google Cloud Storage - https://github.com/googleapis/google-cloud-java -->
                 //            <dependency>

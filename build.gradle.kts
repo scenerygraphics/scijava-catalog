@@ -17,12 +17,10 @@ plugins {
 }
 
 group = "sciJava.catalogs"
-version = "0.0.1"
+version = "0.1.0"
 
 repositories {
-    // Use jcenter for resolving dependencies.
-    // You can declare any Maven/Ivy/file repository here.
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
@@ -39,13 +37,23 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 }
 
-gradlePlugin {
-    // Define the plugin
-    val greeting by plugins.creating {
-        id = "sciJava.catalogs"
-        implementationClass = "sciJava.catalogs.SciJavaCatalogsPlugin"
+publishing {
+//    publications.create<MavenPublication>("maven") {
+//        from(components["javaPlatform"])
+//    }
+    repositories.maven {
+        url = uri("$rootDir/../mary")
+        //            url = uri("../mary")
     }
 }
+
+//gradlePlugin {
+//    // Define the plugin
+//    val greeting by plugins.creating {
+//        id = "sciJava.catalogs"
+//        implementationClass = "sciJava.catalogs.SciJavaCatalogsPlugin"
+//    }
+//}
 
 // Add a source set for the functional test suite
 val functionalTestSourceSet = sourceSets.create("functionalTest") {
