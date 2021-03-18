@@ -344,9 +344,9 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                     alias("blosc").to("org.janelia.saalfeldlab:n5-blosc:1.1.0")
                     alias("googleCloud").to("org.janelia.saalfeldlab:n5-google-cloud:3.3.1")
                     alias("hdf5").to("org.janelia.saalfeldlab:n5-hdf5:1.2.0")
-                    alias("ij").to("org.janelia.saalfeldlab:n5-ij:1.0.0")
+                    alias("ij").to("org.janelia.saalfeldlab:n5-ij:1.1.1")
                     alias("imglib2").to("org.janelia.saalfeldlab:n5-imglib2:3.5.1")
-                    alias("viewerFiji").to("org.janelia.saalfeldlab:n5-viewer_fiji:4.0.0")
+                    alias("viewerFiji").to("org.janelia.saalfeldlab:n5-viewer_fiji:4.0.1")
                     alias("zarr").to("org.janelia.saalfeldlab:n5-zarr:0.0.6")
                 }
 
