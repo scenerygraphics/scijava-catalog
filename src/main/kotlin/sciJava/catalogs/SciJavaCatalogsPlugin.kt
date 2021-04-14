@@ -320,10 +320,10 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
 
                 // BigDataViewer - https://github.com/bigdataviewer
                 create("bigDataViewer").apply {
-                    alias("core").to("sc.fiji:bigdataviewer-core:9.0.6")
+                    alias("core").to("sc.fiji:bigdataviewer-core:10.2.0")
                     alias("server").to("sc.fiji:bigdataviewer-server:3.0.0")
-                    alias("visTools").to("sc.fiji:bigdataviewer-vistools:1.0.0-beta-21")
-                    alias("fiji").to("sc.fiji:bigdataviewer_fiji:6.2.0")
+                    alias("visTools").to("sc.fiji:bigdataviewer-vistools:1.0.0-beta-27")
+                    alias("fiji").to("sc.fiji:bigdataviewer_fiji:6.2.1")
                     alias("spimData").to("sc.fiji:spim_data:2.2.4")
                 }
 
