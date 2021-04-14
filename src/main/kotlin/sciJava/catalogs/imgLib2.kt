@@ -29,7 +29,7 @@ fun MutableVersionCatalogContainer.addImgLib2() {
         alias("realTransform").to("net.imglib2:imglib2-realtransform:3.1.0")
 
         // ImgLib2 ROI - https://github.com/imglib/imglib2-roi
-        alias("roi").to("net.imglib2:imglib2-roi:0.10.4")
+        alias("roi").to("net.imglib2:imglib2-roi:0.11.0")
 
         // ImgLib2 Scripting - https://github.com/imglib/imglib2-script
         alias("script").to("net.imglib2:imglib2-script:0.2.4")
