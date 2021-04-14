@@ -339,14 +339,14 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                 // N5 - https://github.com/saalfeldlab/n5
                 create("n5").apply {
                     alias("labelMultisets").to("net.imglib2:imglib2-label-multisets:0.9.0")
-                    alias("core").to("org.janelia.saalfeldlab:n5:2.3.0")
+                    alias("core").to("org.janelia.saalfeldlab:n5:2.5.0")
                     alias("awsS3").to("org.janelia.saalfeldlab:n5-aws-s3:3.2.0")
                     alias("blosc").to("org.janelia.saalfeldlab:n5-blosc:1.1.0")
-                    alias("googleCloud").to("org.janelia.saalfeldlab:n5-google-cloud:3.3.1")
-                    alias("hdf5").to("org.janelia.saalfeldlab:n5-hdf5:1.2.0")
-                    alias("ij").to("org.janelia.saalfeldlab:n5-ij:1.1.1")
-                    alias("imglib2").to("org.janelia.saalfeldlab:n5-imglib2:3.5.1")
-                    alias("viewerFiji").to("org.janelia.saalfeldlab:n5-viewer_fiji:4.0.1")
+                    alias("googleCloud").to("org.janelia.saalfeldlab:n5-google-cloud:3.3.2")
+                    alias("hdf5").to("org.janelia.saalfeldlab:n5-hdf5:1.3.0")
+                    alias("ij").to("org.janelia.saalfeldlab:n5-ij:2.0.0")
+                    alias("imglib2").to("org.janelia.saalfeldlab:n5-imglib2:4.0.0")
+                    alias("viewerFiji").to("org.janelia.saalfeldlab:n5-viewer_fiji:4.2.1")
                     alias("zarr").to("org.janelia.saalfeldlab:n5-zarr:0.0.6")
                 }
 
