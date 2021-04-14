@@ -14,7 +14,7 @@ fun MutableVersionCatalogContainer.addImagej() {
         alias("ij").to("net.imagej:ij:1.53d")
 
         // ImageJ 1.x patcher - https://github.com/imagej/ij1-patcher
-        alias("ij1Patcher").to("net.imagej:ij1-patcher:1.2.0")
+        alias("ij1Patcher").to("net.imagej:ij1-patcher:1.2.1")
 
         // ImageJ Common - https://github.com/imagej/imagej-common
         alias("common").to("net.imagej:imagej-common:0.34.0")
