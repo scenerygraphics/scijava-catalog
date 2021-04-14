@@ -307,7 +307,7 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                 alias("jitkTps").to("jitk:jitk-tps:3.0.1")
 
                 // BigWarp - https://github.com/saalfeldlab/bigwarp
-                alias("bigwarpFiji").to("sc.fiji:bigwarp_fiji:6.0.0")
+                alias("bigwarpFiji").to("sc.fiji:bigwarp_fiji:6.1.0")
 
                 // MPI-CBG - https://github.com/axtimwalde/mpicbg
                 alias("mpicbg").to("mpicbg:mpicbg:1.4.1")
