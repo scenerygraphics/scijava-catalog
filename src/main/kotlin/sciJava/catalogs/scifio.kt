@@ -7,7 +7,7 @@ fun MutableVersionCatalogContainer.addScifio() {
     create("scifio").apply {
 
         // SCIFIO - https://github.com/scifio/scifio
-        alias("scifio").to("io.scif:scifio:0.41.1")
+        alias("scifio").to("io.scif:scifio:0.41.2")
 
         // SCIFIO-BF-compat - https://github.com/scifio/scifio-bf-compat
         alias("bfCompat").to("io.scif:scifio-bf-compat:4.1.0")
