@@ -379,7 +379,7 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                     alias("jxrlibAll").to("ome:jxrlib-all:0.2.4")
 
                     // Bio-Formats - https://github.com/ome/bioformats
-                    val version = "6.5.1"
+                    val version = "6.6.1"
                     alias("bioFormatsPlugins").to("ome:bio-formats_plugins:$version")
                     alias("formatsApi").to("ome:formats-api:$version")
                     alias("formatsBsd").to("ome:formats-bsd:$version")
