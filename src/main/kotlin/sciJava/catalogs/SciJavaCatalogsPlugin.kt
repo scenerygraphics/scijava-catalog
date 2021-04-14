@@ -7,8 +7,6 @@ import org.gradle.api.Project
 import org.gradle.api.Plugin
 import org.gradle.api.initialization.Settings
 
-val pomScijavaVersion = "30.0.1-SNAPSHOT"
-
 /**
  * A simple 'hello world' plugin.
  */
@@ -354,7 +352,7 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
 
                 // BoneJ - http://bonej.org/
                 create("boneJ").apply {
-                    val version = "7.0.7"
+                    val version = "7.0.9"
                     alias("plugins").to("org.bonej:bonej-plugins:$version")
                     alias("ops").to("org.bonej:bonej-ops:$version")
                     alias("legacyPlugins").to("org.bonej:bonej-legacy-plugins_:$version")
@@ -424,7 +422,7 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                 alias("bigStitcher").to("net.preibisch:BigStitcher:0.5.8")
 
                 // multiview-reconstruction - https://github.com/PreibischLab/multiview-reconstruction
-                alias("multiviewReconstruction").to("net.preibisch:multiview-reconstruction:0.7.2")
+                alias("multiviewReconstruction").to("net.preibisch:multiview-reconstruction:0.9.3")
 
                 // multiview-simulation - https://github.com/PreibischLab/multiview-simulation
                 alias("multiviewSimulation").to("net.preibisch:multiview-simulation:0.2.0")

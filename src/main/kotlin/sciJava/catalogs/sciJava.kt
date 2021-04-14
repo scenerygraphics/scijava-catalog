@@ -23,7 +23,7 @@ fun MutableVersionCatalogContainer.addSciJava() {
         alias("cache").to("org.scijava:scijava-cache:0.1.2")
 
         // SciJava Common - https://github.com/scijava/scijava-common
-        alias("common").to("org.scijava:scijava-common:2.85.0")
+        alias("common").to("org.scijava:scijava-common:2.86.1")
 
         // SciJava Config - https://github.com/scijava/scijava-config
         alias("config").to("org.scijava:scijava-config:2.0.2")

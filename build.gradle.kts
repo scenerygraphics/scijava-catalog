@@ -16,8 +16,8 @@ plugins {
     `maven-publish`
 }
 
-group = "sciJava.catalogs"
-version = "0.1.0"
+group = "sciJava.catalog"
+version = "30.0.1-SNAPSHOT"
 
 repositories {
     mavenCentral()
