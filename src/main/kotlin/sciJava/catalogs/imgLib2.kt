@@ -20,7 +20,7 @@ fun MutableVersionCatalogContainer.addImgLib2() {
         alias("algorithmGpl").to("net.imglib2:imglib2-algorithm-gpl:0.2.5")
 
         // ImgLib2 Cache - https://github.com/imglib/imglib2-cache
-        alias("cache").to("net.imglib2:imglib2-cache:1.0.0-beta-15")
+        alias("cache").to("net.imglib2:imglib2-cache:1.0.0-beta-16")
 
         // ImgLib2 IJ - https://github.com/imglib/imglib2-ij
         alias("ij").to("net.imglib2:imglib2-ij:2.0.0-beta-46")
