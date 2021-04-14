@@ -1288,41 +1288,18 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                 //            <!-- Test scope dependencies -->
 
                 // JUnit 4 - https://junit.org/junit4/
-                alias("junit").to("junit:junit:4.13")
+                alias("junit4").to("junit:junit:4.13.2")
 
-                //            <!-- JUnit 5 - https://junit.org/junit5/ -->
-                //            <dependency>
-                //            <groupId>org.junit.jupiter</groupId>
-                //            <artifactId>junit-jupiter-api</artifactId>
-                //            <version>${junit-jupiter-api.version}</version>
-                //            <scope>test</scope>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.junit.jupiter</groupId>
-                //            <artifactId>junit-jupiter-engine</artifactId>
-                //            <version>${junit-jupiter-engine.version}</version>
-                //            <scope>test</scope>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.junit.jupiter</groupId>
-                //            <artifactId>junit-jupiter-migrationsupport</artifactId>
-                //            <version>${junit-jupiter-migrationsupport.version}</version>
-                //            <scope>test</scope>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.junit.jupiter</groupId>
-                //            <artifactId>junit-jupiter-params</artifactId>
-                //            <version>${junit-jupiter-params.version}</version>
-                //            <scope>test</scope>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.junit.vintage</groupId>
-                //            <artifactId>junit-vintage-engine</artifactId>
-                //            <version>${junit-vintage-engine.version}</version>
-                //            <scope>test</scope>
-                //            </dependency>
-                //
-                //
+                // JUnit 5 - https://junit.org/junit5/
+                create("junit5") {
+                    val version = "5.7.1"
+                    alias("api").to("org.junit.jupiter:junit-jupiter-api:$version")
+                    alias("engine").to("org.junit.jupiter:junit-jupiter-engine:$version")
+                    alias("migrationSupport").to("org.junit.jupiter:junit-jupiter-migrationsupport:$version")
+                    alias("params").to("org.junit.jupiter:junit-jupiter-params:$version")
+                    alias("vintageEngine").to("org.junit.vintage:junit-vintage-engine:$version")
+                }
+
                 //            <!-- JMockit - https://jmockit.github.io/ -->
                 //            <dependency>
                 //            <groupId>org.jmockit</groupId>
