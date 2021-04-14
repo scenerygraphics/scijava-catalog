@@ -352,7 +352,7 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
 
                 // BoneJ - http://bonej.org/
                 create("boneJ").apply {
-                    val version = "7.0.10"
+                    val version = "7.0.11"
                     alias("plugins").to("org.bonej:bonej-plugins:$version")
                     alias("ops").to("org.bonej:bonej-ops:$version")
                     alias("legacyPlugins").to("org.bonej:bonej-legacy-plugins_:$version")
