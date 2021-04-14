@@ -331,7 +331,7 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                 create("trakEM2").apply {
                     alias("nit").to("sc.fiji:T2-NIT:1.1.3")
                     alias("treeLineGraph").to("sc.fiji:T2-TreelineGraph:1.1.3")
-                    alias("core").to("sc.fiji:TrakEM2_:1.3.4")
+                    alias("core").to("sc.fiji:TrakEM2_:1.3.5")
                     alias("vectorString").to("sc.fiji:VectorString:2.0.2")
                     alias("transform").to("sc.fiji:trakem2-transform:1.0.1")
                 }
