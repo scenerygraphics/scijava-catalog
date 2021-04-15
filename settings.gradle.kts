@@ -8,5 +8,3 @@
  */
 
 rootProject.name = "sciJava-catalogs"
-
-enableFeaturePreview("VERSION_CATALOGS")

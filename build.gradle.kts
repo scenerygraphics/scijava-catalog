@@ -19,7 +19,7 @@ plugins {
 }
 
 group = "sciJava.catalogs"
-version = "30.0.0+3"
+version = "30.0.0+4"
 
 repositories {
     // Use jcenter for resolving dependencies.
