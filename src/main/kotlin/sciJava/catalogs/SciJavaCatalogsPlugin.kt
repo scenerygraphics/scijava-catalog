@@ -14,6 +14,7 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
 
     override fun apply(settings: Settings) {
 
+        settings.enableFeaturePreview("VERSION_CATALOGS")
         // Register a task
         //        project.tasks.register("greeting") { task ->
         //            task.doLast {
