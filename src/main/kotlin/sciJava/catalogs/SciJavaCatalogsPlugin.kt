@@ -148,138 +148,118 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                                     <!-- Joda-Time - https://www.joda.org/joda-time/ -->
                                     <joda-time.version>2.10.6</joda-time.version>
 
-                                    <!-- JOGL - https://jogamp.org/jogl/ -->
-                                    <jogl.version>2.3.2</jogl.version>
-                                    <gluegen-rt-main.version>${jogl.version}</gluegen-rt-main.version>
-                                    <joal-main.version>${jogl.version}</joal-main.version>
-                                    <jocl-main.version>${jogl.version}</jocl-main.version>
-                                    <jogl-all-main.version>${jogl.version}</jogl-all-main.version>
+                                                    <!-- JPedal - http://jpedal.org/ (defunct) -->
+                                                    <jpedal.version>2.80b11</jpedal.version>
+                                                    <jpedalSTD.version>${jpedal.version}</jpedalSTD.version>
 
-                                    <!-- JOML - https://joml-ci.github.io/JOML/ -->
-                                    <joml.version>1.9.25</joml.version>
+                                                    <!-- JSch - http://www.jcraft.com/jsch/ -->
+                                                    <jsch.version>0.1.55</jsch.version>
 
-                                    <!-- JPedal - http://jpedal.org/ (defunct) -->
-                                    <jpedal.version>2.80b11</jpedal.version>
-                                    <jpedalSTD.version>${jpedal.version}</jpedalSTD.version>
+                                                    <!-- JUnit 5 - https://junit.org/junit5/ -->
+                                                    <junit-jupiter.version>5.6.2</junit-jupiter.version>
+                                                    <junit-jupiter-api.version>${junit-jupiter.version}</junit-jupiter-api.version>
+                                                    <junit-jupiter-engine.version>${junit-jupiter.version}</junit-jupiter-engine.version>
+                                                    <junit-jupiter-migrationsupport.version>${junit-jupiter.version}</junit-jupiter-migrationsupport.version>
+                                                    <junit-jupiter-params.version>${junit-jupiter.version}</junit-jupiter-params.version>
+                                                    <junit-vintage-engine.version>${junit-jupiter.version}</junit-vintage-engine.version>
 
-                                    <!-- JSch - http://www.jcraft.com/jsch/ -->
-                                    <jsch.version>0.1.55</jsch.version>
+                                                    <!-- Jython - https://jython.org/ -->
+                                                    <jython.version>2.7.2</jython.version>
+                                                    <jython-slim.version>${jython.version}</jython-slim.version>
 
-                                    <!-- JUnit 5 - https://junit.org/junit5/ -->
-                                    <junit-jupiter.version>5.6.2</junit-jupiter.version>
-                                    <junit-jupiter-api.version>${junit-jupiter.version}</junit-jupiter-api.version>
-                                    <junit-jupiter-engine.version>${junit-jupiter.version}</junit-jupiter-engine.version>
-                                    <junit-jupiter-migrationsupport.version>${junit-jupiter.version}</junit-jupiter-migrationsupport.version>
-                                    <junit-jupiter-params.version>${junit-jupiter.version}</junit-jupiter-params.version>
-                                    <junit-vintage-engine.version>${junit-jupiter.version}</junit-vintage-engine.version>
+                                                    <!-- JZlib - http://www.jcraft.com/jzlib/ -->
+                                                    <jzlib.version>1.1.3</jzlib.version>
 
-                                    <!-- Jython - https://jython.org/ -->
-                                    <jython.version>2.7.2</jython.version>
-                                    <jython-slim.version>${jython.version}</jython-slim.version>
-
-                                    <!-- JZlib - http://www.jcraft.com/jzlib/ -->
-                                    <jzlib.version>1.1.3</jzlib.version>
-
-                                    <!-- Kotlin - https://kotlinlang.org/ -->
-                                    <!-- NB: kotlin.version is defined in pom-scijava-base. -->
-                                    <kotlin-compiler-embeddable.version>${kotlin.version}</kotlin-compiler-embeddable.version>
-                                    <kotlin-daemon-embeddable.version>${kotlin.version}</kotlin-daemon-embeddable.version>
-                                    <kotlin-reflect.version>${kotlin.version}</kotlin-reflect.version>
-                                    <kotlin-script-runtime.version>${kotlin.version}</kotlin-script-runtime.version>
-                                    <kotlin-script-util.version>${kotlin.version}</kotlin-script-util.version>
-                                    <kotlin-scripting-common.version>${kotlin.version}</kotlin-scripting-common.version>
-                                    <kotlin-scripting-compiler-embeddable.version>${kotlin.version}</kotlin-scripting-compiler-embeddable.version>
-                                    <kotlin-scripting-jvm.version>${kotlin.version}</kotlin-scripting-jvm.version>
-                                    <kotlin-stdlib.version>${kotlin.version}</kotlin-stdlib.version>
-                                    <kotlin-stdlib-common.version>${kotlin.version}</kotlin-stdlib-common.version>
-                                    <kotlin-stdlib-jdk8.version>${kotlin.version}</kotlin-stdlib-jdk8.version>
+                                                    <!-- Kotlin - https://kotlinlang.org/ -->
+                                                    <!-- NB: kotlin.version is defined in pom-scijava-base. -->
+                                                    <kotlin-compiler-embeddable.version>${kotlin.version}</kotlin-compiler-embeddable.version>
+                                                    <kotlin-daemon-embeddable.version>${kotlin.version}</kotlin-daemon-embeddable.version>
+                                                    <kotlin-reflect.version>${kotlin.version}</kotlin-reflect.version>
+                                                    <kotlin-script-runtime.version>${kotlin.version}</kotlin-script-runtime.version>
+                                                    <kotlin-script-util.version>${kotlin.version}</kotlin-script-util.version>
+                                                    <kotlin-scripting-common.version>${kotlin.version}</kotlin-scripting-common.version>
+                                                    <kotlin-scripting-compiler-embeddable.version>${kotlin.version}</kotlin-scripting-compiler-embeddable.version>
+                                                    <kotlin-scripting-jvm.version>${kotlin.version}</kotlin-scripting-jvm.version>
+                                                    <kotlin-stdlib.version>${kotlin.version}</kotlin-stdlib.version>
+                                                    <kotlin-stdlib-common.version>${kotlin.version}</kotlin-stdlib-common.version>
+                                                    <kotlin-stdlib-jdk8.version>${kotlin.version}</kotlin-stdlib-jdk8.version>
 
 
-                                    <!-- Logback - https://logback.qos.ch/ -->
-                                    <logback.version>1.2.3</logback.version>
-                                    <logback-classic.version>${logback.version}</logback-classic.version>
-                                    <logback-core.version>${logback.version}</logback-core.version>
+                                                    <!-- Logback - https://logback.qos.ch/ -->
+                                                    <logback.version>1.2.3</logback.version>
+                                                    <logback-classic.version>${logback.version}</logback-classic.version>
+                                                    <logback-core.version>${logback.version}</logback-core.version>
 
-                                    <!-- LZ4 compression for Java - https://github.com/lz4/lz4-java -->
-                                    <lz4-java.version>1.7.1</lz4-java.version>
+                                                    <!-- LZ4 compression for Java - https://github.com/lz4/lz4-java -->
+                                                    <lz4-java.version>1.7.1</lz4-java.version>
 
-                                    <!-- MapDB - https://www.mapdb.org/ -->
-                                    <mapdb.version>3.0.8</mapdb.version>
+                                                    <!-- MapDB - https://www.mapdb.org/ -->
+                                                    <mapdb.version>3.0.8</mapdb.version>
 
-                                    <!-- MigLayout - http://www.miglayout.com/ -->
-                                    <miglayout.version>5.2</miglayout.version>
-                                    <miglayout-core.version>${miglayout.version}</miglayout-core.version>
-                                    <miglayout-swing.version>${miglayout.version}</miglayout-swing.version>
-                                    <miglayout-swt.version>${miglayout.version}</miglayout-swt.version>
+                                                    <!-- MigLayout - http://www.miglayout.com/ -->
+                                                    <miglayout.version>5.2</miglayout.version>
+                                                    <miglayout-core.version>${miglayout.version}</miglayout-core.version>
+                                                    <miglayout-swing.version>${miglayout.version}</miglayout-swing.version>
+                                                    <miglayout-swt.version>${miglayout.version}</miglayout-swt.version>
 
-                                    <!-- Mines JTK - https://github.com/dhale/jtk -->
-                                    <mines-jtk.version>20151125</mines-jtk.version>
+                                                    <!-- Mines JTK - https://github.com/dhale/jtk -->
+                                                    <mines-jtk.version>20151125</mines-jtk.version>
 
-                                    <!-- Mockito - https://site.mockito.org/ -->
-                                    <mockito.version>2.19.0</mockito.version>
-                                    <mockito-core.version>${mockito.version}</mockito-core.version>
+                                                    <!-- Mockito - https://site.mockito.org/ -->
+                                                    <mockito.version>2.19.0</mockito.version>
+                                                    <mockito-core.version>${mockito.version}</mockito-core.version>
 
-                                    <!-- oj! Algorithms - https://github.com/optimatika/ojAlgo -->
-                                    <ojalgo.version>45.1.1</ojalgo.version>
+                                                    <!-- oj! Algorithms - https://github.com/optimatika/ojAlgo -->
+                                                    <ojalgo.version>45.1.1</ojalgo.version>
 
-                                    <!-- OpenCSV - http://opencsv.sourceforge.net/ -->
-                                    <opencsv.version>5.2</opencsv.version>
+                                                    <!-- OpenCSV - http://opencsv.sourceforge.net/ -->
+                                                    <opencsv.version>5.2</opencsv.version>
 
-                                    <!-- picocli - https://picocli.info/ -->
-                                    <picocli.version>4.3.2</picocli.version>
+                                                    <!-- picocli - https://picocli.info/ -->
+                                                    <picocli.version>4.3.2</picocli.version>
 
-                                    <!-- PostgreSQL JDBC Driver - https://jdbc.postgresql.org/ -->
-                                    <postgresql.version>42.2.12</postgresql.version>
+                                                    <!-- PostgreSQL JDBC Driver - https://jdbc.postgresql.org/ -->
+                                                    <postgresql.version>42.2.12</postgresql.version>
 
-                                    <!-- RSyntaxTextArea - https://bobbylight.github.io/RSyntaxTextArea/ -->
-                                    <rsyntaxtextarea.version>3.1.1</rsyntaxtextarea.version>
-                                    <autocomplete.version>3.1.0</autocomplete.version>
-                                    <languagesupport.version>3.1.0</languagesupport.version>
+                                                    <!-- RSyntaxTextArea - https://bobbylight.github.io/RSyntaxTextArea/ -->
+                                                    <rsyntaxtextarea.version>3.1.1</rsyntaxtextarea.version>
+                                                    <autocomplete.version>3.1.0</autocomplete.version>
+                                                    <languagesupport.version>3.1.0</languagesupport.version>
 
-                                    <!-- SLF4J - http://slf4j.org/ -->
-                                    <slf4j.version>1.7.30</slf4j.version>
-                                    <slf4j-api.version>${slf4j.version}</slf4j-api.version>
-                                    <slf4j-ext.version>${slf4j.version}</slf4j-ext.version>
-                                    <slf4j-jcl.version>${slf4j.version}</slf4j-jcl.version>
-                                    <slf4j-jdk14.version>${slf4j.version}</slf4j-jdk14.version>
-                                    <slf4j-nop.version>${slf4j.version}</slf4j-nop.version>
-                                    <slf4j-simple.version>${slf4j.version}</slf4j-simple.version>
-                                    <jcl-over-slf4j.version>${slf4j.version}</jcl-over-slf4j.version>
+                                                    <!-- SnakeYAML - https://bitbucket.org/asomov/snakeyaml -->
+                                                    <snakeyaml.version>1.26</snakeyaml.version>
 
-                                    <!-- SnakeYAML - https://bitbucket.org/asomov/snakeyaml -->
-                                    <snakeyaml.version>1.26</snakeyaml.version>
+                                                    <!-- SnakeYAML Engine - https://bitbucket.org/asomov/snakeyaml-engine -->
+                                                    <snakeyaml-engine.version>2.1</snakeyaml-engine.version>
 
-                                    <!-- SnakeYAML Engine - https://bitbucket.org/asomov/snakeyaml-engine -->
-                                    <snakeyaml-engine.version>2.1</snakeyaml-engine.version>
+                                                    <!-- Spring - https://spring.io/ -->
+                                                    <!--
+                                                NB: 3.2.9.RELEASE is the last version not to depend properly on
+                                                    aopalliance:aopalliance, rather than including org.aopalliance
+                                                    classes unshadowed!
+                                                    -->
+                                                    <spring-aop.version>3.2.9.RELEASE</spring-aop.version>
 
-                                    <!-- Spring - https://spring.io/ -->
-                                    <!--
-                                NB: 3.2.9.RELEASE is the last version not to depend properly on
-                                    aopalliance:aopalliance, rather than including org.aopalliance
-                                    classes unshadowed!
-                                    -->
-                                    <spring-aop.version>3.2.9.RELEASE</spring-aop.version>
+                                                    <!-- TensorFlow - https://www.tensorflow.org/ -->
+                                                    <tensorflow.version>1.12.0</tensorflow.version>
+                                                    <libtensorflow.version>${tensorflow.version}</libtensorflow.version>
+                                                    <libtensorflow_jni.version>${tensorflow.version}</libtensorflow_jni.version>
+                                                    <libtensorflow_jni_gpu.version>${tensorflow.version}</libtensorflow_jni_gpu.version>
+                                                    <proto.version>${tensorflow.version}</proto.version>
 
-                                    <!-- TensorFlow - https://www.tensorflow.org/ -->
-                                    <tensorflow.version>1.12.0</tensorflow.version>
-                                    <libtensorflow.version>${tensorflow.version}</libtensorflow.version>
-                                    <libtensorflow_jni.version>${tensorflow.version}</libtensorflow_jni.version>
-                                    <libtensorflow_jni_gpu.version>${tensorflow.version}</libtensorflow_jni_gpu.version>
-                                    <proto.version>${tensorflow.version}</proto.version>
+                                                    <!-- Trove - http://trove.starlight-systems.com/ -->
+                                                    <trove4j.version>3.0.3</trove4j.version>
 
-                                    <!-- Trove - http://trove.starlight-systems.com/ -->
-                                    <trove4j.version>3.0.3</trove4j.version>
+                                                    <!-- Weka - https://www.cs.waikato.ac.nz/ml/weka/ -->
+                                                    <weka.version>3.9.4</weka.version>
+                                                    <weka-dev.version>${weka.version}</weka-dev.version>
 
-                                    <!-- Weka - https://www.cs.waikato.ac.nz/ml/weka/ -->
-                                    <weka.version>3.9.4</weka.version>
-                                    <weka-dev.version>${weka.version}</weka-dev.version>
+                                                    <!-- XZ for Java - https://tukaani.org/xz/java.html -->
+                                                    <xz.version>1.8</xz.version>
+                                                    </properties>
 
-                                    <!-- XZ for Java - https://tukaani.org/xz/java.html -->
-                                    <xz.version>1.8</xz.version>
-                                    </properties>
-
-                                    <dependencyManagement>
-                                    <dependencies>*/
+                                                    <dependencyManagement>
+                                                    <dependencies>*/
 
             // SciJava - https://github.com/scijava
             addSciJava()
@@ -505,10 +485,10 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                     alias("bridge").to("$root-bridge:$version")
                     alias("codec").to("$root-codec:$version")
                     alias("constants_").to("$root-costants:$version")
-//                    alias("css").to("$root-css:$version")
+                    //                    alias("css").to("$root-css:$version")
                     alias("dom").to("$root-dom:$version")
-//                    alias("ext").to("$root-ext:$version")
-//                    alias("extensions").to("$root-extentions:$version")
+                    //                    alias("ext").to("$root-ext:$version")
+                    //                    alias("extensions").to("$root-extentions:$version")
                     alias("guiUtil").to("$root-gui-util:$version")
                     alias("gvt").to("$root-gvt:$version")
                     alias("i18n").to("$root-i18n:$version")
@@ -569,7 +549,7 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                 alias("cglib").to("cglib:cglib:3.3.0")
 
                 // Eclipse Collections - https://www.eclipse.org/collections/
-                create("eclipse.collections").apply {
+                create("eclipseCollections").apply {
                     val version = "10.4.0"
                     val root = "org.eclipse.collections:eclipse-collections"
                     alias("core").to("$root:$version")
@@ -578,7 +558,7 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                     alias("testutils").to("$root-testutils:$version")
                 }
                 // Eclipse SWT - https://www.eclipse.org/swt/
-                create("eclipse.swt").apply {
+                create("eclipseSwt").apply {
                     val version = "4.3"
                     val root = "org.eclipse.swt:org.eclipse.swt"
                     alias("cocoaMacosx").to("$root.cocoa.macosx:$version")
@@ -986,36 +966,20 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                 //            <artifactId>joda-time</artifactId>
                 //            <version>${joda-time.version}</version>
                 //            </dependency>
-                //
-                //            <!-- JOGL - https://jogamp.org/jogl/ -->
-                //            <dependency>
-                //            <groupId>org.jogamp.gluegen</groupId>
-                //            <artifactId>gluegen-rt-main</artifactId>
-                //            <version>${gluegen-rt-main.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.jogamp.joal</groupId>
-                //            <artifactId>joal-main</artifactId>
-                //            <version>${joal-main.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.jogamp.jocl</groupId>
-                //            <artifactId>jocl-main</artifactId>
-                //            <version>${jocl-main.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.jogamp.jogl</groupId>
-                //            <artifactId>jogl-all-main</artifactId>
-                //            <version>${jogl-all-main.version}</version>
-                //            </dependency>
-                //
-                //            <!-- JOML - http://joml-ci.github.io/JOML/ -->
-                //            <dependency>
-                //            <groupId>org.joml</groupId>
-                //            <artifactId>joml</artifactId>
-                //            <version>${joml.version}</version>
-                //            </dependency>
-                //
+
+
+                // JOGL - https: //jogamp.org/jogl/
+                create("jogamp").apply {
+                    val version = "2.3.2"
+                    alias("gluegen").to("org.jogamp.gluegen:gluegen-rt-main:$version")
+                    alias("joal").to("org.jogamp.joal:joal-main:$version")
+                    alias("jocl").to("org.jogamp.jocl:jocl-main:$version")
+                    alias("jogl").to("org.jogamp.jogl:jogl-all-main:$version")
+                }
+
+                // JOML - http://joml-ci.github.io/JOML/
+                alias("joml").to("org.joml:joml:1.9.25")
+
                 //            <!-- JPedal - http://jpedal.org/ (defunct) -->
                 //            <dependency>
                 //            <groupId>org.jpedal</groupId>
@@ -1205,44 +1169,19 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                 //            <artifactId>languagesupport</artifactId>
                 //            <version>${languagesupport.version}</version>
                 //            </dependency>
-                //
-                //            <!-- SLF4J - http://slf4j.org/ -->
-                //            <dependency>
-                //            <groupId>org.slf4j</groupId>
-                //            <artifactId>slf4j-api</artifactId>
-                //            <version>${slf4j-api.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.slf4j</groupId>
-                //            <artifactId>slf4j-ext</artifactId>
-                //            <version>${slf4j-ext.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.slf4j</groupId>
-                //            <artifactId>slf4j-jcl</artifactId>
-                //            <version>${slf4j-jcl.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.slf4j</groupId>
-                //            <artifactId>slf4j-jdk14</artifactId>
-                //            <version>${slf4j-jdk14.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.slf4j</groupId>
-                //            <artifactId>slf4j-nop</artifactId>
-                //            <version>${slf4j-nop.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.slf4j</groupId>
-                //            <artifactId>slf4j-simple</artifactId>
-                //            <version>${slf4j-simple.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.slf4j</groupId>
-                //            <artifactId>jcl-over-slf4j</artifactId>
-                //            <version>${jcl-over-slf4j.version}</version>
-                //            </dependency>
-                //
+
+                // SLF4J - http://slf4j.org/
+                create("slf4j").apply {
+                    val version = "1.7.30"
+                    alias("api").to("org.slf4j:slf4j-api:$version")
+                    alias("ext").to("org.slf4j:slf4j-ext:$version")
+                    alias("jcl").to("org.slf4j:slf4j-jcl:$version")
+                    alias("jdk14").to("org.slf4j:slf4j-jdk14:$version")
+                    alias("nop").to("org.slf4j:slf4j-nop:$version")
+                    alias("simple").to("org.slf4j:slf4j-simple:$version")
+                    alias("jclOverSlf4j").to("org.slf4j:jcl-over-slf4j:$version")
+                }
+
                 //            <!-- SnakeYAML - https://bitbucket.org/asomov/snakeyaml -->
                 //            <dependency>
                 //            <groupId>org.yaml</groupId>

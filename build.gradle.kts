@@ -14,10 +14,12 @@ plugins {
     id("org.jetbrains.kotlin.jvm") version "1.4.30"
 
     `maven-publish`
+
+    `java-library`
 }
 
 group = "sciJava.catalogs"
-version = "30.0.0"
+version = "30.0.0+2"
 
 repositories {
     // Use jcenter for resolving dependencies.
@@ -63,4 +65,16 @@ val functionalTest by tasks.registering(Test::class) {
 val check by tasks.getting(Task::class) {
     // Run the functional tests as part of `check`
     dependsOn(functionalTest)
+}
+
+publishing {
+    publications.create<MavenPublication>("maven") {
+        from(components["java"])
+        suppressPomMetadataWarningsFor("runtimeElements")
+    }
+    repositories {
+        maven {
+            url = uri("$rootDir/../mary")
+        }
+    }
 }
