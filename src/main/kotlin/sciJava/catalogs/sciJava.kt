@@ -115,8 +115,16 @@ fun MutableVersionCatalogContainer.addSciJava() {
         // UI Behaviour - https://github.com/scijava/ui-behaviour
         alias("uiBehaviour").to("org.scijava:ui-behaviour:2.0.3")
 
-
         // JUnit Benchmarks - https://github.com/scijava/junit-benchmarks
         alias("junitBenchmarks").to("org.scijava:junit-benchmarks:0.7.4-scijava")
+
+        bundle("all", listOf("batchProcessor", "minimaven", "libLoader", "parsington", "cache", "common",
+                             "config", "grab", "ioHttp", "java3d", "listeners", "logSlf4j", "optional",
+                             "pluginsCommands", "pluginsIoTable", "pluginsPlatforms", "pluginsTextMarkdown",
+                             "pluginsTextPlain", "search", "table", "uiAwt", "uiSwing", "scriptEditor",
+                             "scriptingBeanshell", "scriptingClojure", "scriptingGroovy", "scriptingJava",
+                             "scriptingJavascript", "scriptingRuby", "scriptingJython", "scriptingKotlin",
+                             "scriptingMatlab", "scriptingRenjin", "scriptingScala", "swingCheckboxTree",
+                             "uiBehaviour", "junitBenchmarks"))
     }
 }

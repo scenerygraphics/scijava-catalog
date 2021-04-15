@@ -26,5 +26,7 @@ fun MutableVersionCatalogContainer.addScifio() {
 
         // SCIFIO-OME-XML - https://github.com/scifio/scifio-ome-xml
         alias("omeXml").to("io.scif:scifio-ome-xml:0.16.1")
+
+        bundle("all", listOf("scifio", "bfCompat", "cli", "hdf5", "jaiImageIO", "lifesci", "omeXml"))
     }
 }

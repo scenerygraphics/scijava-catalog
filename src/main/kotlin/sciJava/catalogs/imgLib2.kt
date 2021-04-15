@@ -42,6 +42,6 @@ fun MutableVersionCatalogContainer.addImgLib2() {
 
         val full = arrayListOf("core", "algorithms", "algorithmFft", "algorithmGpl", "cache", "ij", "realTransform",
             "roi", "script", "ui", "unsafe")
-        bundle("full", full)
+        bundle("all", full)
     }
 }
