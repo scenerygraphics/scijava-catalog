@@ -213,7 +213,7 @@ fun MutableVersionCatalogContainer.batik() {
         alias("css").to("$root-css:$version")
         alias("dom").to("$root-dom:$version")
         alias("ext").to("$root-ext:$version")
-        alias("extensions").to("$root-extentions:$version")
+        alias("extensionS").to("$root-extentions:$version")
         alias("guiUtil").to("$root-gui-util:$version")
         alias("gvt").to("$root-gvt:$version")
         alias("i18n").to("$root-i18n:$version")
@@ -234,14 +234,14 @@ fun MutableVersionCatalogContainer.batik() {
         alias("xml").to("$root-xml:$version")
         alias("common").to("org.apache.xmlgraphics:xmlgraphics-commons:2.4")
 
-        bundle("all", listOf("anim", "awtUtil", "bridge", "codec", "constants", "css", "dom", "ext", "extensions",
-                             "guiUtil", "gvt", "i18n", "parser", "rasterizer", "rasterizerExt", "script", "slideshow",
-                             "squiggle", "squiggleExt", "svgDom", "svgGen", "svgPP", "swing", "transcoder", "ttf2svg",
-                             "util", "xml", "common"))
+        bundle("all", listOf("anim", "awtUtil", "bridge", "codec", "constants", "css", "dom", "ext",
+                             "extensionS", "guiUtil", "gvt", "i18n", "parser", "rasterizer", "rasterizerExt",
+                             "script", "slideshow", "squiggle", "squiggleExt", "svgDom", "svgGen", "svgPP", "swing",
+                             "transcoder", "ttf2svg", "util", "xml", "common"))
     }
 }
 
-fun MutableVersionCatalogContainer.common() {
+fun MutableVersionCatalogContainer.commons() {
 
     create("commons").apply {
 
@@ -315,8 +315,8 @@ fun MutableVersionCatalogContainer.eclipseSwt() {
         alias("gtkLinux64").to("$root.gtk.linux.x86_64:$version")
         alias("gtkSolarisSparc").to("$root.gtk.solaris.sparc:$version")
         alias("gtkSolaris86").to("$root.gtk.solaris.x86:$version")
-        alias("win32").to("$root.win32.win32.x86")
-        alias("win64").to("$root.win32.win32.x86_64")
+        alias("win32").to("$root.win32.win32.x86:$version")
+        alias("win64").to("$root.win32.win32.x86_64:$version")
 
 
         bundle("all", listOf("cocoaMacosx", "cocoaMacosx64", "gtkAixPpc", "gtkAixPpc64", "gtkHpuxIa64",
@@ -336,5 +336,238 @@ fun MutableVersionCatalogContainer.googleCloud() {
 
 
         bundle("all", listOf("nio", "resourceManager", "storage"))
+    }
+}
+
+fun MutableVersionCatalogContainer.jetty() {
+
+    // Jetty - https://www.eclipse.org/jetty/
+    val version = "9.4.29.v20200521"
+
+    create("jetty").apply {
+        val root = "org.eclipse.jetty:jetty"
+
+        alias("annotations").to("$root-annotations:$version")
+        //                NB: We do not manage jetty-ant. It depends on ant with old groupId (ant),
+        //                which conflicts with other dependencies using new groupId (org.apache.ant).
+        alias("client").to("$root-client:$version")
+        alias("continuation").to("$root-continuation:$version")
+        alias("deploy").to("$root-deploy:$version")
+        alias("http").to("$root-http:$version")
+        alias("httpSpi").to("$root-http-spi:$version")
+        alias("io").to("$root-io:$version")
+        alias("jaas").to("$root-jaas:$version")
+        alias("jaspi").to("$root-jaspi:$version")
+        alias("jmx").to("$root-jmx:$version")
+        alias("jndi").to("$root-jndi:$version")
+        //                NB: We do not manage jetty-jspc-maven-plugin or jetty-maven-plugin.
+        //                Their dependencies include several artifacts conflicting with elsewhere :
+        //                * classworlds:classworlds vs. org.codehaus.plexus:plexus-classworlds
+        //                * javax.annotation:jsr250-api vs. javax.annotation:javax.annotation-api
+        //                * javax.websocket:javax.websocket-api vs. javax.websocket:javax.websocket-client-api
+        //                * org.mortbay.jasper:apache-el vs. javax.el:javax.el-api
+        alias("nosql").to("$root-nosql:$version")
+        alias("plus").to("$root-plus:$version")
+        alias("proxy").to("$root-proxy:$version")
+        alias("rewrite").to("$root-rewrite:$version")
+        //        NB: We do not manage jetty-runner. It is an unshaded uber-JAR.
+        alias("security").to("$root-security:$version")
+        alias("server").to("$root-server:$version")
+        alias("servlet").to("$root-servlet:$version")
+        alias("servlets").to("$root-servlets:$version")
+        alias("spring").to("$root-spring:$version")
+        alias("start").to("$root-start:$version")
+        alias("util").to("$root-util:$version")
+        alias("utilAjax").to("$root-util-ajax:$version")
+        alias("webapp").to("$root-webapp:$version")
+        alias("xml").to("$root-xml:$version")
+
+
+        bundle("all", listOf("annotations", "client", "continuation", "deploy", "http", "httpSpi", "io", "jaas",
+                             "jaspi", "jmx", "jndi", "nosql", "plus", "proxy", "rewrite", "security", "server",
+                             "servlet", "servlets", "spring", "start", "util", "utilAjax", "webapp", "xml"))
+    }
+}
+
+fun MutableVersionCatalogContainer.jGraphT() {
+
+    // JGraphT - https://github.com/jgrapht/jgrapht
+    create("jGraphT").apply {
+
+        val all = listOf("core", "demo", "ext", "guava", "io", "opt")
+        for (s in all)
+            alias(s).to("org.jgrapht:jgrapht-$s:1.4.0")
+
+        bundle("all", all)
+    }
+}
+
+fun MutableVersionCatalogContainer.jogamp() {
+
+    // JOGL - https: //jogamp.org/jogl/
+    create("jogamp").apply {
+
+        val version = "2.3.2"
+        alias("gluegen").to("org.jogamp.gluegen:gluegen-rt-main:$version")
+        alias("joal").to("org.jogamp.joal:joal-main:$version")
+        alias("jocl").to("org.jogamp.jocl:jocl-main:$version")
+        alias("jogl").to("org.jogamp.jogl:jogl-all-main:$version")
+
+        bundle("all", listOf("gluegen", "joal", "jocl", "jogl"))
+    }
+}
+
+fun MutableVersionCatalogContainer.kotlin() {
+
+    // Kotlin - https://kotlinlang.org/
+
+    val version = "1.4.21"
+
+    create("kotlin").apply {
+
+        val root = "org.jetbrains.kotlin:kotlin"
+
+        alias("compilerEmbeddable").to("$root-embeddable:$version")
+        alias("daemonEmbeddable").to("$root-daemon-embeddable:$version")
+        alias("reflect").to("$root-reflect:$version")
+        alias("scriptRuntime").to("$root-script-runtime:$version")
+        alias("scriptUtil").to("$root-script-util:$version")
+        alias("scriptCommon").to("$root-script-common:$version")
+        alias("scriptingCompilerEmbeddable").to("$root-scripting-compiler-embeddable:$version")
+        alias("scriptingJvm").to("$root-scripting-jvm:$version")
+        alias("stdlib").to("$root-stdlib:$version")
+        alias("stdlibCommon").to("$root-stdlib-common:$version")
+        alias("stdlibJdk8").to("$root-stdlib-jdk8:$version")
+
+
+        bundle("all", listOf("compilerEmbeddable", "daemonEmbeddable", "reflect", "scriptRuntime", "scriptUtil",
+                             "scriptCommon", "scriptingCompilerEmbeddable", "scriptingJvm", "stdlib", "stdlibCommon",
+                             "stdlibJdk8"))
+    }
+}
+
+fun MutableVersionCatalogContainer.logBack() {
+
+    // Logback - https://logback.qos.ch/
+    create("logBack").apply {
+
+        val all = listOf("classic", "core")
+        for (s in all)
+            alias(s).to("ch.qos.logback:logback-$s:1.2.3")
+
+        bundle("all", all)
+    }
+
+}
+
+fun MutableVersionCatalogContainer.migLayout() {
+
+    // MigLayout - http://www.miglayout.com/
+    create("migLayout").apply {
+
+        val all = listOf("core", "swing", "swt")
+        for (s in all)
+            alias(s).to("com.miglayout:miglayout-$s:5.2")
+
+        bundle("all", all)
+    }
+}
+
+fun MutableVersionCatalogContainer.rSyntaxTextArea() {
+
+    // RSyntaxTextArea - http://bobbylight.github.io/RSyntaxTextArea/
+    create("rSyntaxTextArea").apply {
+
+        val root = "com.fifesoft"
+        alias("core").to("$root:rsyntaxtextarea:3.1.1")
+        alias("autocomplete").to("$root:autocomplete:3.1.0")
+        alias("languagesupport").to("$root:languagesupport:3.1.0")
+
+        bundle("all", listOf("core", "autocomplete", "languagesupport"))
+    }
+}
+
+fun MutableVersionCatalogContainer.slf4j() {
+
+    // SLF4J - http://slf4j.org/
+    create("slf4j").apply {
+
+        val version = "1.7.30"
+        val root = "org.slf4j:slf4j"
+        alias("api").to("$root-api:$version")
+        alias("ext").to("$root-ext:$version")
+        alias("jcl").to("$root-jcl:$version")
+        alias("jdk14").to("$root-jdk14:$version")
+        alias("nop").to("$root-nop:$version")
+        alias("simple").to("$root-simple:$version")
+        alias("jclOverSlf4j").to("org.slf4j:jcl-over-slf4j:$version")
+
+        bundle("all", listOf("api", "ext", "jcl", "jdk14", "nop", "simple", "jclOverSlf4j"))
+    }
+}
+
+fun MutableVersionCatalogContainer.snakeYAML() {
+
+    create("snakeYAML").apply {
+
+        val root = "org.yaml:snakeyaml"
+
+        // SnakeYAML - https://bitbucket.org/asomov/snakeyaml
+        alias("core").to("$root:1.26")
+
+        // SnakeYAML Engine - https://bitbucket.org/asomov/snakeyaml-engine
+        alias("engine").to("$root-engine:2.1")
+
+
+        bundle("all", listOf("core", "engine"))
+    }
+}
+
+fun MutableVersionCatalogContainer.tensorFlow() {
+
+    create("tensorFlow").apply {
+
+        val group = "org.tensorflow"
+        val version = "1.12.0"
+        // TensorFlow - https://www.tensorflow.org/
+        alias("core").to("$group:tensorflow:$version")
+        alias("lib").to("$group:libtensorflow:$version")
+        alias("libJni").to("$group:libtensorflow_jni:$version")
+        alias("libJniGpu").to("$group:libtensorflow_jni_gpu:$version")
+        alias("proto").to("$group:proto:$version")
+
+        bundle("all", listOf("core", "lib", "libJni", "libJniGpu", "proto"))
+    }
+}
+
+fun MutableVersionCatalogContainer.junit5() {
+
+    create("junit5").apply {
+
+        val version = "5.6.2"
+        val jupiter = "org.junit.jupiter:junit-jupiter"
+        // JUnit 5 - https://junit.org/junit5/
+        alias("api").to("$jupiter-api:$version")
+        alias("engine").to("$jupiter-engine:$version")
+        alias("migrationsupport").to("$jupiter-migrationsupport:$version")
+        alias("params").to("$jupiter-params:$version")
+        alias("vintage").to("org.junit.vintage:junit-vintage-engine:$version")
+
+        bundle("all", listOf("api", "engine", "migrationsupport", "params", "vintage"))
+    }
+}
+
+fun MutableVersionCatalogContainer.jmh() {
+
+    // JMH - http://openjdk.java.net/projects/code-tools/jmh/
+    create("jmh").apply {
+
+        val version = "1.23"
+        val root = "org.openjdk.jmh:jmh"
+
+        alias("core").to("$root-core:$version")
+        alias("generatorAnnprocess").to("$root-generator-annprocess:$version")
+
+        bundle("all", listOf("core", "generatorAnnprocess"))
     }
 }

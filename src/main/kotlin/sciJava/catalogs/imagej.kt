@@ -93,7 +93,7 @@ fun MutableVersionCatalogContainer.addImagej() {
         //                          "pluginsBatch", "pluginsCommands", "pluginsTools", "pluginsUploaderSsh",
         //                          "pluginsUploaderWebdav", "scripting", "uiAwt", "uiSwing", "updater")
         //        bundle("base", base)
-        bundle("full", listOf("core", "ij", "ij1Patcher", "common", "deprecated", "launcher", "legacy", "matlab",
+        bundle("all", listOf("core", "ij", "ij1Patcher", "common", "deprecated", "launcher", "legacy", "matlab",
                               "mesh", "meshIo", "notebook", "omero", "omeroLegacy", "opencv", "ops", "pluginsBatch",
                               "pluginsCommands", "pluginsTools", "pluginsUploaderSsh", "pluginsUploaderWebdav",
                               "scripting", "server", "tensorflow", "uiAwt", "uiSwing", "updater", "opFinder"))

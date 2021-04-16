@@ -24,237 +24,6 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
 
         settings.dependencyResolutionManagement.versionCatalogs.apply {
 
-            /*
-<!-- Gson - https://code.google.com/p/google-gson/ -->
-                                    <gson.version>2.8.6</gson.version>
-
-                                    <!-- Guava - https://github.com/google/guava -->
-                                    <guava.version>21.0</guava.version>
-
-                                    <!-- HyperSQL DataBase - http://hsqldb.org/ -->
-                                    <hsqldb.version>1.8.0.10</hsqldb.version>
-
-                                    <!-- iText PDF - https://github.com/itext/itextpdf -->
-                                    <itextpdf.version>5.5.13.1</itextpdf.version>
-
-                                    <!-- Jackrabbit WebDAV - https://jackrabbit.apache.org/jcr/components/jackrabbit-webdav-library.html -->
-                                    <jackrabbit-webdav.version>2.21.1</jackrabbit-webdav.version>
-
-                                    <!-- Jackson - https://github.com/FasterXML/jackson -->
-                                    <jackson-databind.version>2.11.0</jackson-databind.version>
-
-                                    <!-- Java Advanced Imaging - https://java.net/projects/jai-core -->
-                                    <jai.version>1.1.3</jai.version>
-                                    <jai-codec.version>${jai.version}</jai-codec.version>
-                                    <jai-core.version>${jai.version}</jai-core.version>
-
-                                    <!-- JAMA - https://math.nist.gov/javanumerics/jama/ -->
-                                    <jama.version>1.0.3</jama.version>
-
-                                    <!-- Java 3D - https://github.com/scijava/java3d-core -->
-                                    <java3d.version>1.6.0-scijava-2</java3d.version>
-                                    <j3dcore.version>${java3d.version}</j3dcore.version>
-                                    <j3dutils.version>${java3d.version}</j3dutils.version>
-                                    <vecmath.version>${java3d.version}</vecmath.version>
-
-                                    <!-- Javassist - https://www.javassist.org/ -->
-                                    <javassist.version>3.27.0-GA</javassist.version>
-
-                                    <!-- JDOM - http://www.jdom.org/ -->
-                                    <jdom2.version>2.0.6</jdom2.version>
-
-                                    <!-- Java Expression Parser - https://github.com/scijava/jep -->
-                                    <jep.version>2.4.2</jep.version>
-
-                                    <!-- Jetty - https://www.eclipse.org/jetty/ -->
-                                    <jetty.version>9.4.29.v20200521</jetty.version>
-                                    <jetty-annotations.version>${jetty.version}</jetty-annotations.version>
-                                    <!--
-                                NB: We do not manage jetty-ant. It depends on ant with old groupId (ant),
-                                    which conflicts with other dependencies using new groupId (org.apache.ant).
-                                    -->
-                                    <jetty-client.version>${jetty.version}</jetty-client.version>
-                                    <jetty-continuation.version>${jetty.version}</jetty-continuation.version>
-                                    <jetty-deploy.version>${jetty.version}</jetty-deploy.version>
-                                    <jetty-http.version>${jetty.version}</jetty-http.version>
-                                    <jetty-http-spi.version>${jetty.version}</jetty-http-spi.version>
-                                    <jetty-io.version>${jetty.version}</jetty-io.version>
-                                    <jetty-jaas.version>${jetty.version}</jetty-jaas.version>
-                                    <jetty-jaspi.version>${jetty.version}</jetty-jaspi.version>
-                                    <jetty-jmx.version>${jetty.version}</jetty-jmx.version>
-                                    <jetty-jndi.version>${jetty.version}</jetty-jndi.version>
-                                    <!--
-                                NB: We do not manage jetty-jspc-maven-plugin or jetty-maven-plugin.
-                                    Their dependencies include several artifacts conflicting with elsewhere:
-                                    * classworlds:classworlds vs. org.codehaus.plexus:plexus-classworlds
-                                    * javax.annotation:jsr250-api vs. javax.annotation:javax.annotation-api
-                                    * javax.websocket:javax.websocket-api vs. javax.websocket:javax.websocket-client-api
-                                    * org.mortbay.jasper:apache-el vs. javax.el:javax.el-api
-                                    -->
-                                    <jetty-nosql.version>${jetty.version}</jetty-nosql.version>
-                                    <jetty-plus.version>${jetty.version}</jetty-plus.version>
-                                    <jetty-proxy.version>${jetty.version}</jetty-proxy.version>
-                                    <jetty-rewrite.version>${jetty.version}</jetty-rewrite.version>
-                                    <!-- NB: We do not manage jetty-runner. It is an unshaded uber-JAR. -->
-                                    <jetty-security.version>${jetty.version}</jetty-security.version>
-                                    <jetty-server.version>${jetty.version}</jetty-server.version>
-                                    <jetty-servlet.version>${jetty.version}</jetty-servlet.version>
-                                    <jetty-servlets.version>${jetty.version}</jetty-servlets.version>
-                                    <jetty-spring.version>${jetty.version}</jetty-spring.version>
-                                    <jetty-start.version>${jetty.version}</jetty-start.version>
-                                    <jetty-util.version>${jetty.version}</jetty-util.version>
-                                    <jetty-util-ajax.version>${jetty.version}</jetty-util-ajax.version>
-                                    <jetty-webapp.version>${jetty.version}</jetty-webapp.version>
-                                    <jetty-xml.version>${jetty.version}</jetty-xml.version>
-
-                                    <!-- JFreeChart - http://www.jfree.org/jfreechart/ -->
-                                    <jfreechart.version>1.5.0</jfreechart.version>
-
-                                    <!-- JFreeSVG - http://www.jfree.org/jfreesvg/ -->
-                                    <jfreesvg.version>3.4</jfreesvg.version>
-
-                                    <!-- JGraphT - https://github.com/jgrapht/jgrapht -->
-                                    <jgrapht.version>1.4.0</jgrapht.version>
-                                    <jgrapht-core.version>${jgrapht.version}</jgrapht-core.version>
-                                    <jgrapht-demo.version>${jgrapht.version}</jgrapht-demo.version>
-                                    <jgrapht-ext.version>${jgrapht.version}</jgrapht-ext.version>
-                                    <jgrapht-guava.version>${jgrapht.version}</jgrapht-guava.version>
-                                    <jgrapht-io.version>${jgrapht.version}</jgrapht-io.version>
-                                    <jgrapht-opt.version>${jgrapht.version}</jgrapht-opt.version>
-
-                                    <!-- JGraphX - https://github.com/jgraph/jgraphx -->
-                                    <jgraphx.version>4.1.0</jgraphx.version>
-
-                                    <!-- JHDF5 - https://wiki-bsse.ethz.ch/label/JHDF5/hdf5 -->
-                                    <jhdf5.version>14.12.6</jhdf5.version>
-
-                                    <!-- JMH - https://openjdk.java.net/projects/code-tools/jmh/ -->
-                                    <jmh.version>1.23</jmh.version>
-                                    <jmh-core.version>${jmh.version}</jmh-core.version>
-                                    <jmh-generator-annprocess.version>${jmh.version}</jmh-generator-annprocess.version>
-
-                                    <!-- JMockit - https://jmockit.github.io/ -->
-                                    <jmockit.version>1.49</jmockit.version>
-
-                                    <!-- JNA - https://github.com/twall/jna -->
-                                    <jna.version>4.5.2</jna.version>
-
-                                    <!-- Joda-Time - https://www.joda.org/joda-time/ -->
-                                    <joda-time.version>2.10.6</joda-time.version>
-
-                                                    <!-- JPedal - http://jpedal.org/ (defunct) -->
-                                                    <jpedal.version>2.80b11</jpedal.version>
-                                                    <jpedalSTD.version>${jpedal.version}</jpedalSTD.version>
-
-                                                    <!-- JSch - http://www.jcraft.com/jsch/ -->
-                                                    <jsch.version>0.1.55</jsch.version>
-
-                                                    <!-- JUnit 5 - https://junit.org/junit5/ -->
-                                                    <junit-jupiter.version>5.6.2</junit-jupiter.version>
-                                                    <junit-jupiter-api.version>${junit-jupiter.version}</junit-jupiter-api.version>
-                                                    <junit-jupiter-engine.version>${junit-jupiter.version}</junit-jupiter-engine.version>
-                                                    <junit-jupiter-migrationsupport.version>${junit-jupiter.version}</junit-jupiter-migrationsupport.version>
-                                                    <junit-jupiter-params.version>${junit-jupiter.version}</junit-jupiter-params.version>
-                                                    <junit-vintage-engine.version>${junit-jupiter.version}</junit-vintage-engine.version>
-
-                                                    <!-- Jython - https://jython.org/ -->
-                                                    <jython.version>2.7.2</jython.version>
-                                                    <jython-slim.version>${jython.version}</jython-slim.version>
-
-                                                    <!-- JZlib - http://www.jcraft.com/jzlib/ -->
-                                                    <jzlib.version>1.1.3</jzlib.version>
-
-                                                    <!-- Kotlin - https://kotlinlang.org/ -->
-                                                    <!-- NB: kotlin.version is defined in pom-scijava-base. -->
-                                                    <kotlin-compiler-embeddable.version>${kotlin.version}</kotlin-compiler-embeddable.version>
-                                                    <kotlin-daemon-embeddable.version>${kotlin.version}</kotlin-daemon-embeddable.version>
-                                                    <kotlin-reflect.version>${kotlin.version}</kotlin-reflect.version>
-                                                    <kotlin-script-runtime.version>${kotlin.version}</kotlin-script-runtime.version>
-                                                    <kotlin-script-util.version>${kotlin.version}</kotlin-script-util.version>
-                                                    <kotlin-scripting-common.version>${kotlin.version}</kotlin-scripting-common.version>
-                                                    <kotlin-scripting-compiler-embeddable.version>${kotlin.version}</kotlin-scripting-compiler-embeddable.version>
-                                                    <kotlin-scripting-jvm.version>${kotlin.version}</kotlin-scripting-jvm.version>
-                                                    <kotlin-stdlib.version>${kotlin.version}</kotlin-stdlib.version>
-                                                    <kotlin-stdlib-common.version>${kotlin.version}</kotlin-stdlib-common.version>
-                                                    <kotlin-stdlib-jdk8.version>${kotlin.version}</kotlin-stdlib-jdk8.version>
-
-
-                                                    <!-- Logback - https://logback.qos.ch/ -->
-                                                    <logback.version>1.2.3</logback.version>
-                                                    <logback-classic.version>${logback.version}</logback-classic.version>
-                                                    <logback-core.version>${logback.version}</logback-core.version>
-
-                                                    <!-- LZ4 compression for Java - https://github.com/lz4/lz4-java -->
-                                                    <lz4-java.version>1.7.1</lz4-java.version>
-
-                                                    <!-- MapDB - https://www.mapdb.org/ -->
-                                                    <mapdb.version>3.0.8</mapdb.version>
-
-                                                    <!-- MigLayout - http://www.miglayout.com/ -->
-                                                    <miglayout.version>5.2</miglayout.version>
-                                                    <miglayout-core.version>${miglayout.version}</miglayout-core.version>
-                                                    <miglayout-swing.version>${miglayout.version}</miglayout-swing.version>
-                                                    <miglayout-swt.version>${miglayout.version}</miglayout-swt.version>
-
-                                                    <!-- Mines JTK - https://github.com/dhale/jtk -->
-                                                    <mines-jtk.version>20151125</mines-jtk.version>
-
-                                                    <!-- Mockito - https://site.mockito.org/ -->
-                                                    <mockito.version>2.19.0</mockito.version>
-                                                    <mockito-core.version>${mockito.version}</mockito-core.version>
-
-                                                    <!-- oj! Algorithms - https://github.com/optimatika/ojAlgo -->
-                                                    <ojalgo.version>45.1.1</ojalgo.version>
-
-                                                    <!-- OpenCSV - http://opencsv.sourceforge.net/ -->
-                                                    <opencsv.version>5.2</opencsv.version>
-
-                                                    <!-- picocli - https://picocli.info/ -->
-                                                    <picocli.version>4.3.2</picocli.version>
-
-                                                    <!-- PostgreSQL JDBC Driver - https://jdbc.postgresql.org/ -->
-                                                    <postgresql.version>42.2.12</postgresql.version>
-
-                                                    <!-- RSyntaxTextArea - https://bobbylight.github.io/RSyntaxTextArea/ -->
-                                                    <rsyntaxtextarea.version>3.1.1</rsyntaxtextarea.version>
-                                                    <autocomplete.version>3.1.0</autocomplete.version>
-                                                    <languagesupport.version>3.1.0</languagesupport.version>
-
-                                                    <!-- SnakeYAML - https://bitbucket.org/asomov/snakeyaml -->
-                                                    <snakeyaml.version>1.26</snakeyaml.version>
-
-                                                    <!-- SnakeYAML Engine - https://bitbucket.org/asomov/snakeyaml-engine -->
-                                                    <snakeyaml-engine.version>2.1</snakeyaml-engine.version>
-
-                                                    <!-- Spring - https://spring.io/ -->
-                                                    <!--
-                                                NB: 3.2.9.RELEASE is the last version not to depend properly on
-                                                    aopalliance:aopalliance, rather than including org.aopalliance
-                                                    classes unshadowed!
-                                                    -->
-                                                    <spring-aop.version>3.2.9.RELEASE</spring-aop.version>
-
-                                                    <!-- TensorFlow - https://www.tensorflow.org/ -->
-                                                    <tensorflow.version>1.12.0</tensorflow.version>
-                                                    <libtensorflow.version>${tensorflow.version}</libtensorflow.version>
-                                                    <libtensorflow_jni.version>${tensorflow.version}</libtensorflow_jni.version>
-                                                    <libtensorflow_jni_gpu.version>${tensorflow.version}</libtensorflow_jni_gpu.version>
-                                                    <proto.version>${tensorflow.version}</proto.version>
-
-                                                    <!-- Trove - http://trove.starlight-systems.com/ -->
-                                                    <trove4j.version>3.0.3</trove4j.version>
-
-                                                    <!-- Weka - https://www.cs.waikato.ac.nz/ml/weka/ -->
-                                                    <weka.version>3.9.4</weka.version>
-                                                    <weka-dev.version>${weka.version}</weka-dev.version>
-
-                                                    <!-- XZ for Java - https://tukaani.org/xz/java.html -->
-                                                    <xz.version>1.8</xz.version>
-                                                    </properties>
-
-                                                    <dependencyManagement>
-                                                    <dependencies>*/
-
             // SciJava - https://github.com/scijava
             addSciJava()
 
@@ -292,6 +61,8 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                 // Z-Spacing correction - https://github.com/saalfeldlab/z-spacing
                 alias("zSpacing").to("sc.fiji:z_spacing:1.1.1")
             }
+
+            val miscBundle = arrayListOf("snt", "jitkTps", "bigwarpFiji", "mpicbg", "trakem2Tps", "zSpacing")
 
             bigDataViewer()
 
@@ -337,6 +108,10 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
 
                 // Amazon S3 - https://aws.amazon.com/sdkforjava
                 alias("awsJdkS3").to("com.amazonaws:aws-java-sdk-s3:1.11.796")
+
+
+                miscBundle += listOf("morphoLibJ", "bigStitcher", "multiviewReconstruction", "multiviewSimulation",
+                                     "coreMem", "cleargl", "scenery", "sciview", "awsJdkS3")
             }
 
             groovy()
@@ -352,15 +127,20 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
 
                 // CDI - http://cdi-spec.org/
                 alias("cdi").to("javax.enterprise:cdi-api:1.2")
+
+
+                miscBundle += listOf("jblosc", "cdi")
             }
 
-            common()
+            commons()
 
             misc.apply {
 
                 // Byte Code Generation Library - https://github.com/cglib/cglib
                 alias("cglib").to("cglib:cglib:3.3.0")
 
+
+                miscBundle += "cglib"
             }
 
             eclipseCollection()
@@ -371,39 +151,20 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
 
             misc.apply {
 
-                //            <!-- Gson - https://code.google.com/p/google-gson/ -->
-                //            <dependency>
-                //            <groupId>com.google.code.gson</groupId>
-                //            <artifactId>gson</artifactId>
-                //            <version>${gson.version}</version>
-                //            </dependency>
-                //
-                //            <!-- Guava - https://github.com/google/guava -->
-                //            <dependency>
-                //            <groupId>com.google.guava</groupId>
-                //            <artifactId>guava</artifactId>
-                //            <version>${guava.version}</version>
-                //            </dependency>
-                //
-                //            <!-- HyperSQL DataBase - http://hsqldb.org/ -->
-                //            <dependency>
-                //            <groupId>hsqldb</groupId>
-                //            <artifactId>hsqldb</artifactId>
-                //            <version>${hsqldb.version}</version>
-                //            </dependency>
-                //
-                //            <!-- iText PDF - https://github.com/itext/itextpdf -->
-                //            <dependency>
-                //            <groupId>com.itextpdf</groupId>
-                //            <artifactId>itextpdf</artifactId>
-                //            <version>${itextpdf.version}</version>
-                //            </dependency>
-                //
-                //            <!-- Jackrabbit WebDAV - https://jackrabbit.apache.org/jcr/components/jackrabbit-webdav-library.html -->
-                //            <dependency>
-                //            <groupId>org.apache.jackrabbit</groupId>
-                //            <artifactId>jackrabbit-webdav</artifactId>
-                //            <version>${jackrabbit-webdav.version}</version>
+                // Gson - https://code.google.com/p/google-gson/
+                alias("gson").to("com.google.code.gson:gson:2.8.6")
+
+                // Guava - https://github.com/google/guava
+                alias("guave").to("com.google.guava:guava:21.0")
+
+                // HyperSQL DataBase - http://hsqldb.org/
+                alias("hsqldb").to("hsqldb:hsqldb:1.8.0.10")
+
+                // iText PDF - https://github.com/itext/itextpdf
+                alias("itextpdf").to("com.itextpdf:itextpdf:5.5.13.1")
+
+                // Jackrabbit WebDAV - https://jackrabbit.apache.org/jcr/components/jackrabbit-webdav-library.html
+                alias("jackrabbitWebdav").to("org.apache.jackrabbit:jackrabbit-webdav:2.21.1")
                 //            <exclusions>
                 //            <exclusion>
                 //            <!--
@@ -416,204 +177,44 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                 //            <artifactId>jcl-over-slf4j</artifactId>
                 //            </exclusion>
                 //            </exclusions>
-                //            </dependency>
-                //
-                //            <!-- Jackson - https://github.com/FasterXML/jackson -->
-                //            <dependency>
-                //            <groupId>com.fasterxml.jackson.core</groupId>
-                //            <artifactId>jackson-databind</artifactId>
-                //            <version>${jackson-databind.version}</version>
-                //            </dependency>
-                //
-                //            <!-- Java Advanced Imaging - https://java.net/projects/jai-core -->
-                //            <dependency>
-                //            <groupId>com.sun.media</groupId>
-                //            <artifactId>jai-codec</artifactId>
-                //            <version>${jai-codec.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>javax.media</groupId>
-                //            <artifactId>jai-core</artifactId>
-                //            <version>${jai-core.version}</version>
-                //            </dependency>
-                //
-                //            <!-- JAMA - http://math.nist.gov/javanumerics/jama/ -->
-                //            <dependency>
-                //            <groupId>gov.nist.math</groupId>
-                //            <artifactId>jama</artifactId>
-                //            <version>${jama.version}</version>
-                //            </dependency>
-                //
-                //            <!-- Java 3D - https://github.com/scijava/java3d-core -->
-                //            <dependency>
-                //            <groupId>org.scijava</groupId>
-                //            <artifactId>j3dcore</artifactId>
-                //            <version>${j3dcore.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.scijava</groupId>
-                //            <artifactId>j3dutils</artifactId>
-                //            <version>${j3dutils.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.scijava</groupId>
-                //            <artifactId>vecmath</artifactId>
-                //            <version>${vecmath.version}</version>
-                //            </dependency>
-                //
-                //            <!-- Javassist - http://www.javassist.org/ -->
-                //            <dependency>
-                //            <groupId>org.javassist</groupId>
-                //            <artifactId>javassist</artifactId>
-                //            <version>${javassist.version}</version>
-                //            </dependency>
-                //
-                //            <!-- JDOM - http://www.jdom.org/ -->
-                //            <dependency>
-                //            <groupId>org.jdom</groupId>
-                //            <artifactId>jdom2</artifactId>
-                //            <version>${jdom2.version}</version>
-                //            </dependency>
-                //
-                //            <!-- Java Expression Parser - https://github.com/scijava/jep -->
-                //            <dependency>
-                //            <groupId>org.scijava</groupId>
-                //            <artifactId>jep</artifactId>
-                //            <version>${jep.version}</version>
-                //            </dependency>
-                //
-                //            <!-- Jetty - http://eclipse.org/jetty/ -->
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-annotations</artifactId>
-                //            <version>${jetty-annotations.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-client</artifactId>
-                //            <version>${jetty-client.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-continuation</artifactId>
-                //            <version>${jetty-continuation.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-deploy</artifactId>
-                //            <version>${jetty-deploy.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-http</artifactId>
-                //            <version>${jetty-http.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-http-spi</artifactId>
-                //            <version>${jetty-http-spi.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-io</artifactId>
-                //            <version>${jetty-io.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-jaas</artifactId>
-                //            <version>${jetty-jaas.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-jaspi</artifactId>
-                //            <version>${jetty-jaspi.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-jmx</artifactId>
-                //            <version>${jetty-jmx.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-jndi</artifactId>
-                //            <version>${jetty-jndi.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-nosql</artifactId>
-                //            <version>${jetty-nosql.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-plus</artifactId>
-                //            <version>${jetty-plus.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-proxy</artifactId>
-                //            <version>${jetty-proxy.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-rewrite</artifactId>
-                //            <version>${jetty-rewrite.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-security</artifactId>
-                //            <version>${jetty-security.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-server</artifactId>
-                //            <version>${jetty-server.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-servlet</artifactId>
-                //            <version>${jetty-servlet.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-servlets</artifactId>
-                //            <version>${jetty-servlets.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-spring</artifactId>
-                //            <version>${jetty-spring.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-start</artifactId>
-                //            <version>${jetty-start.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-util</artifactId>
-                //            <version>${jetty-util.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-util-ajax</artifactId>
-                //            <version>${jetty-util-ajax.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-webapp</artifactId>
-                //            <version>${jetty-webapp.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.eclipse.jetty</groupId>
-                //            <artifactId>jetty-xml</artifactId>
-                //            <version>${jetty-xml.version}</version>
-                //            </dependency>
-                //
-                //            <!-- JFreeChart - http://www.jfree.org/jfreechart/ -->
-                //            <dependency>
-                //            <groupId>org.jfree</groupId>
-                //            <artifactId>jfreechart</artifactId>
-                //            <version>${jfreechart.version}</version>
+
+                // Jackson - https://github.com/FasterXML/jackson
+                alias("jackson").to("com.fasterxml.jackson.core:jackson-databind:2.11.0")
+
+                // Java Advanced Imaging - https://java.net/projects/jai-core
+                val jai = "1.1.3"
+                alias("jaiCodec").to("com.sun.media:jai-codec:$jai")
+                alias("jaiCore").to("javax.media:jai-core:$jai")
+
+                // JAMA - http://math.nist.gov/javanumerics/jama/
+                alias("jama").to("gov.nist.math:jama:1.0.3")
+
+                // Java 3D - https://github.com/scijava/java3d-core
+                val java3d = "1.6.0-scijava-2"
+                alias("j3dCore").to("org.scijava:j3dcore:$java3d")
+                alias("j3dUtils").to("org.scijava:j3dutils:$java3d")
+                alias("j3dVecmath").to("org.scijava:vecmath:$java3d")
+
+                // Javassist - http://www.javassist.org/
+                alias("javassist").to("org.javassist:javassist:3.27.0-GA")
+
+                // JDOM - http://www.jdom.org/
+                alias("jdom2").to("org.jdom:jdom2:2.0.6")
+
+                // Java Expression Parser - https://github.com/scijava/jep
+                alias("jep").to("org.scijava:jep:2.4.2")
+
+
+                miscBundle += listOf("gson", "guave", "hsqldb", "itextpdf", "jackrabbitWebdav", "jackson", "jaiCodec",
+                                     "jaiCore", "jama", "j3dCore", "j3dUtils", "j3dVecmath", "javassist", "jdom2", "jep")
+            }
+
+            jetty()
+
+            misc.apply {
+
+                // JFreeChart - http://www.jfree.org/jfreechart/
+                alias("jFreeChart").to("org.jfree:jfreechart:1.5.0")
                 //            <exclusions>
                 //            <exclusion>
                 //            <groupId>xml-apis</groupId>
@@ -621,196 +222,66 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                 //            </exclusion>
                 //            </exclusions>
                 //            </dependency>
-                //
-                //            <!-- JFreeSVG - http://www.jfree.org/jfreesvg/ -->
-                //            <dependency>
-                //            <groupId>org.jfree</groupId>
-                //            <artifactId>jfreesvg</artifactId>
-                //            <version>${jfreesvg.version}</version>
-                //            </dependency>
-                //
-                //            <!-- JGraphT - https://github.com/jgrapht/jgrapht -->
-                //            <dependency>
-                //            <groupId>org.jgrapht</groupId>
-                //            <artifactId>jgrapht-core</artifactId>
-                //            <version>${jgrapht-core.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.jgrapht</groupId>
-                //            <artifactId>jgrapht-demo</artifactId>
-                //            <version>${jgrapht-demo.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.jgrapht</groupId>
-                //            <artifactId>jgrapht-ext</artifactId>
-                //            <version>${jgrapht-ext.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.jgrapht</groupId>
-                //            <artifactId>jgrapht-guava</artifactId>
-                //            <version>${jgrapht-guava.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.jgrapht</groupId>
-                //            <artifactId>jgrapht-io</artifactId>
-                //            <version>${jgrapht-io.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.jgrapht</groupId>
-                //            <artifactId>jgrapht-opt</artifactId>
-                //            <version>${jgrapht-opt.version}</version>
-                //            </dependency>
-                //
-                //            <!-- JGraphX - https://github.com/jgraph/jgraphx -->
-                //            <dependency>
-                //            <groupId>com.github.vlsi.mxgraph</groupId>
-                //            <artifactId>jgraphx</artifactId>
-                //            <version>${jgraphx.version}</version>
-                //            </dependency>
-                //
-                //            <!-- JHDF5 - https://wiki-bsse.ethz.ch/label/JHDF5/hdf5 -->
-                //            <dependency>
-                //            <groupId>cisd</groupId>
-                //            <artifactId>jhdf5</artifactId>
-                //            <version>${jhdf5.version}</version>
-                //            </dependency>
-                //
-                //            <!-- JNA - https://github.com/twall/jna -->
-                //            <dependency>
-                //            <groupId>net.java.dev.jna</groupId>
-                //            <artifactId>jna</artifactId>
-                //            <version>${jna.version}</version>
-                //            </dependency>
-                //
-                //            <!-- Joda-Time - http://www.joda.org/joda-time/ -->
-                //            <dependency>
-                //            <groupId>joda-time</groupId>
-                //            <artifactId>joda-time</artifactId>
-                //            <version>${joda-time.version}</version>
-                //            </dependency>
 
+                // JFreeSVG - http://www.jfree.org/jfreesvg/
+                alias("jFreeSvg").to("org.jfree:jfreesvg:3.4")
 
-                // JOGL - https: //jogamp.org/jogl/
-                create("jogamp").apply {
-                    val version = "2.3.2"
-                    alias("gluegen").to("org.jogamp.gluegen:gluegen-rt-main:$version")
-                    alias("joal").to("org.jogamp.joal:joal-main:$version")
-                    alias("jocl").to("org.jogamp.jocl:jocl-main:$version")
-                    alias("jogl").to("org.jogamp.jogl:jogl-all-main:$version")
-                }
+                miscBundle += listOf("jFreeChart", "jFreeSvg")
+            }
+
+            jGraphT()
+
+            misc.apply {
+
+                // JGraphX - https://github.com/jgraph/jgraphx
+                alias("jGraphX").to("com.github.vlsi.mxgraph:jgraphx:4.1.0")
+
+                // JHDF5 - https://wiki-bsse.ethz.ch/label/JHDF5/hdf5
+                alias("jhdf5").to("cisd:jhdf5:14.12.6")
+
+                // JNA - https://github.com/twall/jna
+                alias("jna").to("net.java.dev.jna:jna:4.5.2")
+
+                // Joda-Time - http://www.joda.org/joda-time/
+                alias("jodaTime").to("joda-time:joda-time:2.10.6")
+
+                miscBundle += listOf("jGraphX", "jhdf5", "jna", "jodaTime")
+            }
+
+            jogamp()
+
+            misc.apply {
 
                 // JOML - http://joml-ci.github.io/JOML/
                 alias("joml").to("org.joml:joml:1.9.25")
 
-                //            <!-- JPedal - http://jpedal.org/ (defunct) -->
-                //            <dependency>
-                //            <groupId>org.jpedal</groupId>
-                //            <artifactId>jpedalSTD</artifactId>
-                //            <version>${jpedalSTD.version}</version>
-                //            </dependency>
-                //
-                //            <!-- JSch - http://www.jcraft.com/jsch/ -->
-                //            <dependency>
-                //            <groupId>com.jcraft</groupId>
-                //            <artifactId>jsch</artifactId>
-                //            <version>${jsch.version}</version>
-                //            </dependency>
-                //
-                //            <!-- Jython - https://jython.org/ -->
-                //            <dependency>
-                //            <groupId>org.python</groupId>
-                //            <artifactId>jython-slim</artifactId>
-                //            <version>${jython-slim.version}</version>
-                //            </dependency>
-                //
-                //            <!-- JZlib - http://www.jcraft.com/jzlib/ -->
-                //            <dependency>
-                //            <groupId>com.jcraft</groupId>
-                //            <artifactId>jzlib</artifactId>
-                //            <version>${jzlib.version}</version>
-                //            </dependency>
-                //
-                //            <!-- Kotlin - https://kotlinlang.org/ -->
-                //            <dependency>
-                //            <groupId>org.jetbrains.kotlin</groupId>
-                //            <artifactId>kotlin-compiler-embeddable</artifactId>
-                //            <version>${kotlin-compiler-embeddable.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.jetbrains.kotlin</groupId>
-                //            <artifactId>kotlin-daemon-embeddable</artifactId>
-                //            <version>${kotlin-daemon-embeddable.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.jetbrains.kotlin</groupId>
-                //            <artifactId>kotlin-reflect</artifactId>
-                //            <version>${kotlin-reflect.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.jetbrains.kotlin</groupId>
-                //            <artifactId>kotlin-script-runtime</artifactId>
-                //            <version>${kotlin-script-runtime.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.jetbrains.kotlin</groupId>
-                //            <artifactId>kotlin-script-util</artifactId>
-                //            <version>${kotlin-script-util.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.jetbrains.kotlin</groupId>
-                //            <artifactId>kotlin-scripting-common</artifactId>
-                //            <version>${kotlin-scripting-common.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.jetbrains.kotlin</groupId>
-                //            <artifactId>kotlin-scripting-compiler-embeddable</artifactId>
-                //            <version>${kotlin-scripting-compiler-embeddable.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.jetbrains.kotlin</groupId>
-                //            <artifactId>kotlin-scripting-jvm</artifactId>
-                //            <version>${kotlin-scripting-jvm.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.jetbrains.kotlin</groupId>
-                //            <artifactId>kotlin-stdlib</artifactId>
-                //            <version>${kotlin-stdlib.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.jetbrains.kotlin</groupId>
-                //            <artifactId>kotlin-stdlib-common</artifactId>
-                //            <version>${kotlin-stdlib-common.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.jetbrains.kotlin</groupId>
-                //            <artifactId>kotlin-stdlib-jdk8</artifactId>
-                //            <version>${kotlin-stdlib-jdk8.version}</version>
-                //            </dependency>
-                //
-                //            <!-- Logback - http://logback.qos.ch/ -->
-                //            <dependency>
-                //            <groupId>ch.qos.logback</groupId>
-                //            <artifactId>logback-classic</artifactId>
-                //            <version>${logback-classic.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>ch.qos.logback</groupId>
-                //            <artifactId>logback-core</artifactId>
-                //            <version>${logback-core.version}</version>
-                //            </dependency>
-                //
-                //            <!-- LZ4 compression for Java - https://github.com/lz4/lz4-java -->
-                //            <dependency>
-                //            <groupId>org.lz4</groupId>
-                //            <artifactId>lz4-java</artifactId>
-                //            <version>${lz4-java.version}</version>
-                //            </dependency>
-                //
-                //            <!-- MapDB - http://www.mapdb.org/ -->
-                //            <dependency>
-                //            <groupId>org.mapdb</groupId>
-                //            <artifactId>mapdb</artifactId>
-                //            <version>${mapdb.version}</version>
+                // JPedal - http://jpedal.org/ (defunct)
+                alias("jPedal").to("org.jpedal:jpedalSTD:2.80b11")
+
+                // JSch - http://www.jcraft.com/jsch/
+                alias("jSch").to("com.jcraft:jsch:0.1.55")
+
+                // Jython - https://jython.org/
+                alias("jython").to("org.python:jython-slim:2.7.2")
+
+                // JZlib - http://www.jcraft.com/jzlib/
+                alias("jZlib").to("com.jcraft:jzlib:1.1.3")
+
+
+                miscBundle += listOf("joml", "jPedal", "jSch", "jython", "jZlib")
+            }
+
+            kotlin()
+
+            logBack()
+
+            misc.apply {
+
+                // LZ4 compression for Java - https://github.com/lz4/lz4-java
+                alias("lz4").to("org.lz4:lz4-java:1.7.1")
+
+                // MapDB - http://www.mapdb.org/
+                alias("mapDB").to("org.mapdb:mapdb:3.0.8")
                 //            <exclusions>
                 //            <exclusion>
                 //            <!--
@@ -822,148 +293,55 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                 //            </exclusion>
                 //            </exclusions>
                 //            </dependency>
-                //
-                //            <!-- MigLayout - http://www.miglayout.com/ -->
-                //            <dependency>
-                //            <groupId>com.miglayout</groupId>
-                //            <artifactId>miglayout-core</artifactId>
-                //            <version>${miglayout-core.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>com.miglayout</groupId>
-                //            <artifactId>miglayout-swing</artifactId>
-                //            <version>${miglayout-swing.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>com.miglayout</groupId>
-                //            <artifactId>miglayout-swt</artifactId>
-                //            <version>${miglayout-swt.version}</version>
-                //            </dependency>
-                //
-                //            <!-- Mines JTK - https://github.com/dhale/jtk -->
-                //            <dependency>
-                //            <groupId>edu.mines</groupId>
-                //            <artifactId>mines-jtk</artifactId>
-                //            <version>${mines-jtk.version}</version>
-                //            </dependency>
-                //
-                //            <!-- oj! Algorithms - https://github.com/optimatika/ojAlgo -->
-                //            <dependency>
-                //            <groupId>org.ojalgo</groupId>
-                //            <artifactId>ojalgo</artifactId>
-                //            <version>${ojalgo.version}</version>
-                //            </dependency>
-                //
-                //            <!-- OpenCSV - http://opencsv.sourceforge.net/ -->
-                //            <dependency>
-                //            <groupId>com.opencsv</groupId>
-                //            <artifactId>opencsv</artifactId>
-                //            <version>${opencsv.version}</version>
-                //            </dependency>
-                //
-                //            <!-- picocli - http://picocli.info/ -->
-                //            <dependency>
-                //            <groupId>info.picocli</groupId>
-                //            <artifactId>picocli</artifactId>
-                //            <version>${picocli.version}</version>
-                //            </dependency>
-                //
-                //            <!-- PostgreSQL JDBC Driver - https://jdbc.postgresql.org/ -->
-                //            <dependency>
-                //            <groupId>org.postgresql</groupId>
-                //            <artifactId>postgresql</artifactId>
-                //            <version>${postgresql.version}</version>
-                //            </dependency>
-                //
-                //            <!-- RSyntaxTextArea - http://bobbylight.github.io/RSyntaxTextArea/ -->
-                //            <dependency>
-                //            <groupId>com.fifesoft</groupId>
-                //            <artifactId>rsyntaxtextarea</artifactId>
-                //            <version>${rsyntaxtextarea.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>com.fifesoft</groupId>
-                //            <artifactId>autocomplete</artifactId>
-                //            <version>${autocomplete.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>com.fifesoft</groupId>
-                //            <artifactId>languagesupport</artifactId>
-                //            <version>${languagesupport.version}</version>
-                //            </dependency>
 
-                // SLF4J - http://slf4j.org/
-                create("slf4j").apply {
-                    val version = "1.7.30"
-                    alias("api").to("org.slf4j:slf4j-api:$version")
-                    alias("ext").to("org.slf4j:slf4j-ext:$version")
-                    alias("jcl").to("org.slf4j:slf4j-jcl:$version")
-                    alias("jdk14").to("org.slf4j:slf4j-jdk14:$version")
-                    alias("nop").to("org.slf4j:slf4j-nop:$version")
-                    alias("simple").to("org.slf4j:slf4j-simple:$version")
-                    alias("jclOverSlf4j").to("org.slf4j:jcl-over-slf4j:$version")
-                }
+                miscBundle += listOf("lz4", "mapDB")
+            }
 
-                //            <!-- SnakeYAML - https://bitbucket.org/asomov/snakeyaml -->
-                //            <dependency>
-                //            <groupId>org.yaml</groupId>
-                //            <artifactId>snakeyaml</artifactId>
-                //            <version>${snakeyaml.version}</version>
-                //            </dependency>
-                //
-                //            <!-- SnakeYAML Engine - https://bitbucket.org/asomov/snakeyaml-engine -->
-                //            <dependency>
-                //            <groupId>org.snakeyaml</groupId>
-                //            <artifactId>snakeyaml-engine</artifactId>
-                //            <version>${snakeyaml-engine.version}</version>
-                //            </dependency>
-                //
-                //            <!-- Spring - https://spring.io/ -->
-                //            <dependency>
-                //            <groupId>org.springframework</groupId>
-                //            <artifactId>spring-aop</artifactId>
-                //            <version>${spring-aop.version}</version>
-                //            </dependency>
-                //
-                //            <!-- TensorFlow - https://www.tensorflow.org/ -->
-                //            <dependency>
-                //            <groupId>org.tensorflow</groupId>
-                //            <artifactId>tensorflow</artifactId>
-                //            <version>${tensorflow.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.tensorflow</groupId>
-                //            <artifactId>libtensorflow</artifactId>
-                //            <version>${libtensorflow.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.tensorflow</groupId>
-                //            <artifactId>libtensorflow_jni</artifactId>
-                //            <version>${libtensorflow_jni.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.tensorflow</groupId>
-                //            <artifactId>libtensorflow_jni_gpu</artifactId>
-                //            <version>${libtensorflow_jni_gpu.version}</version>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.tensorflow</groupId>
-                //            <artifactId>proto</artifactId>
-                //            <version>${proto.version}</version>
-                //            </dependency>
-                //
-                //            <!-- Trove - http://trove.starlight-systems.com/ -->
-                //            <dependency>
-                //            <groupId>net.sf.trove4j</groupId>
-                //            <artifactId>trove4j</artifactId>
-                //            <version>${trove4j.version}</version>
-                //            </dependency>
-                //
-                //            <!-- Weka - http://www.cs.waikato.ac.nz/ml/weka/ -->
-                //            <dependency>
-                //            <groupId>nz.ac.waikato.cms.weka</groupId>
-                //            <artifactId>weka-dev</artifactId>
-                //            <version>${weka-dev.version}</version>
+            migLayout()
+
+            misc.apply {
+
+                // Mines JTK - https://github.com/dhale/jtk
+                alias("minesJTK").to("edu.mines:mines-jtk:20151125")
+
+                // oj! Algorithms - https://github.com/optimatika/ojAlgo
+                alias("ojAlgo").to("org.ojalgo:ojalgo:45.1.1")
+
+                // OpenCSV - http://opencsv.sourceforge.net/
+                alias("openCSV").to("com.opencsv:opencsv:5.2")
+
+                // picocli - http://picocli.info/
+                alias("picocli").to("info.picocli:picocli:4.3.2")
+
+                // PostgreSQL JDBC Driver - https://jdbc.postgresql.org/
+                alias("postgreSQL").to("org.postgresql:postgresql:42.2.12")
+
+
+                miscBundle += listOf("minesJTK", "ojAlgo", "openCSV", "picocli", "postgreSQL")
+            }
+
+            rSyntaxTextArea()
+
+            slf4j()
+
+            snakeYAML()
+
+            // Spring - https://spring.io/
+            misc.alias("spring").to("org.springframework:spring-aop:3.2.9.RELEASE")
+            //               NB: 3.2.9.RELEASE is the last version not to depend properly on
+            //               aopalliance:aopalliance, rather than including org.aopalliance
+            //               classes unshadowed!
+            miscBundle += "spring"
+
+            tensorFlow()
+
+            misc.apply {
+
+                // Trove - http://trove.starlight-systems.com/
+                alias("trove").to("net.sf.trove4j:trove4j:3.0.3")
+
+                // Weka - http://www.cs.waikato.ac.nz/ml/weka/
+                alias("wekaDev").to("nz.ac.waikato.cms.weka:weka-dev:3.9.4")
                 //            <exclusions>
                 //            <exclusion>
                 //            <groupId>com.github.fommil.netlib</groupId>
@@ -992,84 +370,35 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                 //            </exclusion>
                 //            </exclusions>
                 //            </dependency>
-                //
-                //            <!-- XZ for Java - https://tukaani.org/xz/java.html -->
-                //            <dependency>
-                //            <groupId>org.tukaani</groupId>
-                //            <artifactId>xz</artifactId>
-                //            <version>${xz.version}</version>
-                //            </dependency>
-                //
+
+                // XZ for Java - https://tukaani.org/xz/java.html
+                alias("xz").to("org.tukaani:xz:1.8")
+
+
                 //            <!-- Test scope dependencies -->
 
                 // JUnit 4 - https://junit.org/junit4/
-                alias("junit").to("junit:junit:4.13")
+                alias("junit4").to("junit:junit:4.13")
 
-                //            <!-- JUnit 5 - https://junit.org/junit5/ -->
-                //            <dependency>
-                //            <groupId>org.junit.jupiter</groupId>
-                //            <artifactId>junit-jupiter-api</artifactId>
-                //            <version>${junit-jupiter-api.version}</version>
-                //            <scope>test</scope>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.junit.jupiter</groupId>
-                //            <artifactId>junit-jupiter-engine</artifactId>
-                //            <version>${junit-jupiter-engine.version}</version>
-                //            <scope>test</scope>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.junit.jupiter</groupId>
-                //            <artifactId>junit-jupiter-migrationsupport</artifactId>
-                //            <version>${junit-jupiter-migrationsupport.version}</version>
-                //            <scope>test</scope>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.junit.jupiter</groupId>
-                //            <artifactId>junit-jupiter-params</artifactId>
-                //            <version>${junit-jupiter-params.version}</version>
-                //            <scope>test</scope>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.junit.vintage</groupId>
-                //            <artifactId>junit-vintage-engine</artifactId>
-                //            <version>${junit-vintage-engine.version}</version>
-                //            <scope>test</scope>
-                //            </dependency>
-                //
-                //
-                //            <!-- JMockit - https://jmockit.github.io/ -->
-                //            <dependency>
-                //            <groupId>org.jmockit</groupId>
-                //            <artifactId>jmockit</artifactId>
-                //            <version>${jmockit.version}</version>
-                //            <scope>test</scope>
-                //            </dependency>
-                //
-                //            <!-- Mockito - http://site.mockito.org/ -->
-                //            <dependency>
-                //            <groupId>org.mockito</groupId>
-                //            <artifactId>mockito-core</artifactId>
-                //            <version>${mockito-core.version}</version>
-                //            <scope>test</scope>
-                //            </dependency>
-                //
-                //            <!-- JMH - http://openjdk.java.net/projects/code-tools/jmh/ -->
-                //            <dependency>
-                //            <groupId>org.openjdk.jmh</groupId>
-                //            <artifactId>jmh-core</artifactId>
-                //            <version>${jmh-core.version}</version>
-                //            <scope>test</scope>
-                //            </dependency>
-                //            <dependency>
-                //            <groupId>org.openjdk.jmh</groupId>
-                //            <artifactId>jmh-generator-annprocess</artifactId>
-                //            <version>${jmh-generator-annprocess.version}</version>
-                //            <scope>test</scope>
-                //            </dependency>
-                //            </dependencies>
-                //            </dependencyManagement>
+
+                miscBundle += listOf("trove", "wekaDev", "xz", "junit4")
             }
+
+            junit5()
+
+            misc.apply {
+
+                // JMockit - https://jmockit.github.io/
+                alias("jMockit").to("org.jmockit:jmockit:1.49")
+
+                // Mockito - http://site.mockito.org/
+                alias("mockito").to("org.mockito:mockito-core:2.19.0")
+
+
+                bundle("all", miscBundle + "jMockit" + "mockito")
+            }
+
+            jmh()
         }
     }
 }

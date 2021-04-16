@@ -19,7 +19,7 @@ plugins {
 }
 
 group = "sciJava.catalogs"
-version = "30.0.0+5"
+version = "30.0.0+53"
 
 repositories {
     // Use jcenter for resolving dependencies.
@@ -45,7 +45,7 @@ gradlePlugin {
     // Define the plugin
     val greeting by plugins.creating {
         id = "sciJava.catalogs"
-        implementationClass = "sciJava.catalogs.SciJavaCatalogsPlugin"
+        implementationClass = "sciJava.SciJavaCatalogsPlugin"
     }
 }
 
@@ -68,10 +68,6 @@ val check by tasks.getting(Task::class) {
 }
 
 publishing {
-    publications.create<MavenPublication>("maven") {
-        from(components["java"])
-        suppressPomMetadataWarningsFor("runtimeElements")
-    }
     repositories {
         maven {
             url = uri("$rootDir/../mary")

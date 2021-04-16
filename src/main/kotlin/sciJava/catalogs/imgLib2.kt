@@ -40,8 +40,8 @@ fun MutableVersionCatalogContainer.addImgLib2() {
         // ImgLib2 Unsafe - https://github.com/imglib/imglib2-unsafe
         alias("unsafe").to("net.imglib2:imglib2-unsafe:0.4.0")
 
-        val full = arrayListOf("core", "algorithms", "algorithmFft", "algorithmGpl", "cache", "ij", "realTransform",
-            "roi", "script", "ui", "unsafe")
-        bundle("all", full)
+
+        bundle("all", listOf("core", "algorithms", "algorithmFft", "algorithmGpl", "cache", "ij", "realTransform",
+                             "roi", "script", "ui", "unsafe"))
     }
 }

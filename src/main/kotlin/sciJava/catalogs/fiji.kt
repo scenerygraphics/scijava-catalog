@@ -35,7 +35,7 @@ fun MutableVersionCatalogContainer.addFiji() {
         alias("directionality").to("sc.fiji:Directionality_:2.3.0")
         alias("fsAlignTrakEM2").to("sc.fiji:FS_Align_TrakEM2:2.0.3")
         alias("featureDetection").to("sc.fiji:Feature_Detection:2.0.2")
-        alias("_3dBlobSegmentation").to("sc.fiji:3D_Blob_Segmentation:3.0.1")
+//        alias("_3dBlobSegmentation").to("sc.fiji:3D_Blob_Segmentation:3.0.1")
         alias("archipelago").to("sc.fiji:Fiji_Archipelago:2.0.1")
         alias("developer").to("sc.fiji:Fiji_Developer:2.0.7")
         alias("packageMaker").to("sc.fiji:Fiji_Package_Maker:2.1.1")
@@ -50,8 +50,8 @@ fun MutableVersionCatalogContainer.addFiji() {
         alias("ijRobot").to("sc.fiji:IJ_Robot:2.0.1")
         alias("io").to("sc.fiji:IO_:4.1.0")
         alias("image5D").to("sc.fiji:Image_5D:2.0.2")
-        alias("_3dObjectsCounter").to("sc.fiji:3D_Objects_Counter:2.0.1")
-        alias("_3dViewer").to("sc.fiji:3D_Viewer:4.0.3")
+//        alias("_3dObjectsCounter").to("sc.fiji:3D_Objects_Counter:2.0.1")
+//        alias("_3dViewer").to("sc.fiji:3D_Viewer:4.0.3")
         alias("imageExpressionParser").to("sc.fiji:Image_Expression_Parser:3.0.1")
         alias("interactive3dSurfacePlot").to("sc.fiji:Interactive_3D_Surface_Plot:3.0.0")
         alias("isoDataClassifier").to("sc.fiji:IsoData_Classifier:2.0.1")
@@ -116,10 +116,10 @@ fun MutableVersionCatalogContainer.addFiji() {
                              "calculatorPlus", "cellCounter", "colocalisationAnalysis", "colorHistogram",
                              "colorInspector3D", "colourDeconvolution", "correctBleach", "correct3dDrift",
                              "descriptorBasedRegistration", "dichromacy", "directionality", "fsAlignTrakEM2",
-                             "featureDetection", "_3dBlobSegmentation", "archipelago", "developer", "packageMaker",
+                             "featureDetection", /*"_3dBlobSegmentation",*/ "archipelago", "developer", "packageMaker",
                              "plugins", "filamentDetector", "flowJ", "graphCut", "grayMorphology", "h5jLoaderPlugin",
                              "hdf5Vibez", "helmholtzAnalysis", "ijRobot", "io", "image5D",
-                             "imageExpressionParser", "_3dObjectsCounter", "_3dViewer", "interactive3dSurfacePlot",
+                             "imageExpressionParser", /*"_3dObjectsCounter", "_3dViewer",*/ "interactive3dSurfacePlot",
                              "isoDataClassifier", "kappa", "kuwaharaFilter", "kymographBuilder", "lsmReader",
                              "lsmToolbox", "lassoAndBlowTool", "linearKuwahara", "localThickness", "mTrack2", "mip",
                              "manualTracking", "multiKymograph", "omeVisual", "pivAnalyser", "quickPalm", "rats",
