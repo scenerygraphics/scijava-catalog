@@ -14,7 +14,7 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
 
     override fun apply(settings: Settings) {
 
-        settings.enableFeaturePreview("VERSION_CATALOGS")
+//        settings.enableFeaturePreview("VERSION_CATALOGS")
         // Register a task
         //        project.tasks.register("greeting") { task ->
         //            task.doLast {
@@ -178,9 +178,13 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                 //            </exclusion>
                 //            </exclusions>
 
-                // Jackson - https://github.com/FasterXML/jackson
-                alias("jackson").to("com.fasterxml.jackson.core:jackson-databind:2.11.0")
 
+                miscBundle += listOf("gson", "guave", "hsqldb", "itextpdf", "jackrabbitWebdav")
+            }
+
+            jackson()
+
+            misc.apply {
                 // Java Advanced Imaging - https://java.net/projects/jai-core
                 val jai = "1.1.3"
                 alias("jaiCodec").to("com.sun.media:jai-codec:$jai")
@@ -205,8 +209,8 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                 alias("jep").to("org.scijava:jep:2.4.2")
 
 
-                miscBundle += listOf("gson", "guave", "hsqldb", "itextpdf", "jackrabbitWebdav", "jackson", "jaiCodec",
-                                     "jaiCore", "jama", "j3dCore", "j3dUtils", "j3dVecmath", "javassist", "jdom2", "jep")
+                miscBundle += listOf("jaiCodec", "jaiCore", "jama", "j3dCore", "j3dUtils", "j3dVecmath", "javassist",
+                                     "jdom2", "jep")
             }
 
             jetty()
@@ -239,14 +243,15 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                 // JHDF5 - https://wiki-bsse.ethz.ch/label/JHDF5/hdf5
                 alias("jhdf5").to("cisd:jhdf5:14.12.6")
 
-                // JNA - https://github.com/twall/jna
-                alias("jna").to("net.java.dev.jna:jna:4.5.2")
 
-                // Joda-Time - http://www.joda.org/joda-time/
-                alias("jodaTime").to("joda-time:joda-time:2.10.6")
-
-                miscBundle += listOf("jGraphX", "jhdf5", "jna", "jodaTime")
+                miscBundle += listOf("jGraphX", "jhdf5")
             }
+
+            jna()
+
+            // Joda-Time - http://www.joda.org/joda-time/
+            misc.alias("jodaTime").to("joda-time:joda-time:2.10.6")
+            miscBundle += "jodaTime"
 
             jogamp()
 

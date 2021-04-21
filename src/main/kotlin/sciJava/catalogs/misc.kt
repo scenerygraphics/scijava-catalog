@@ -339,6 +339,23 @@ fun MutableVersionCatalogContainer.googleCloud() {
     }
 }
 
+fun MutableVersionCatalogContainer.jackson() {
+
+    create("jackson").apply {
+
+        val version = "2.11.0"
+        // Jackson - https://github.com/FasterXML/jackson
+        alias("core").to("com.fasterxml.jackson.core:jackson-databind:$version")
+        // [Gradle]
+        alias("module").to("com.fasterxml.jackson.module:jackson-module-kotlin:$version")
+        // [Gradle]
+        alias("dataformat").to("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:$version")
+
+
+        bundle("all", listOf("core", "module", "dataformat"))
+    }
+}
+
 fun MutableVersionCatalogContainer.jetty() {
 
     // Jetty - https://www.eclipse.org/jetty/
@@ -402,16 +419,33 @@ fun MutableVersionCatalogContainer.jGraphT() {
     }
 }
 
+fun MutableVersionCatalogContainer.jna() {
+
+    create("jna").apply {
+
+        val version = "4.5.2"
+
+        // JNA - https://github.com/twall/jna
+        alias("core").to("net.java.dev.jna:jna:$version")
+        // [Gradle]
+        alias("platform").to("net.java.dev.jna:jna-platform:$version")
+
+
+        bundle("all", listOf("core", "platform"))
+    }
+}
+
 fun MutableVersionCatalogContainer.jogamp() {
 
     // JOGL - https: //jogamp.org/jogl/
     create("jogamp").apply {
 
         val version = "2.3.2"
-        alias("gluegen").to("org.jogamp.gluegen:gluegen-rt-main:$version")
-        alias("joal").to("org.jogamp.joal:joal-main:$version")
-        alias("jocl").to("org.jogamp.jocl:jocl-main:$version")
-        alias("jogl").to("org.jogamp.jogl:jogl-all-main:$version")
+        // [Gradle] we use the atomic version instead of the `*-main` ones
+        alias("gluegen").to("org.jogamp.gluegen:gluegen-rt:$version")
+        alias("joal").to("org.jogamp.joal:joal:$version")
+        alias("jocl").to("org.jogamp.jocl:jocl:$version")
+        alias("jogl").to("org.jogamp.jogl:jogl-all:$version")
 
         bundle("all", listOf("gluegen", "joal", "jocl", "jogl"))
     }
@@ -423,7 +457,7 @@ fun MutableVersionCatalogContainer.kotlin() {
 
     val version = "1.4.21"
 
-    create("kotlin").apply {
+    create("kotlib").apply {
 
         val root = "org.jetbrains.kotlin:kotlin"
 

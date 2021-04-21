@@ -7,7 +7,7 @@ fun MutableVersionCatalogContainer.addScifio() {
     create("scifio").apply {
 
         // SCIFIO - https://github.com/scifio/scifio
-        alias("scifio").to("io.scif:scifio:0.41.1")
+        alias("core").to("io.scif:scifio:0.41.1")
 
         // SCIFIO-BF-compat - https://github.com/scifio/scifio-bf-compat
         alias("bfCompat").to("io.scif:scifio-bf-compat:4.1.0")
@@ -27,6 +27,6 @@ fun MutableVersionCatalogContainer.addScifio() {
         // SCIFIO-OME-XML - https://github.com/scifio/scifio-ome-xml
         alias("omeXml").to("io.scif:scifio-ome-xml:0.16.1")
 
-        bundle("all", listOf("scifio", "bfCompat", "cli", "hdf5", "jaiImageIO", "lifesci", "omeXml"))
+        bundle("all", listOf("core", "bfCompat", "cli", "hdf5", "jaiImageIO", "lifesci", "omeXml"))
     }
 }
