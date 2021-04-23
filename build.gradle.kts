@@ -15,11 +15,11 @@ plugins {
 
     `maven-publish`
 
-    `version-catalog`
+    `java-library`
 }
 
 group = "sciJava.catalogs"
-version = "30.0.0+59"
+version = "30.0.0+60"
 
 repositories {
     // Use jcenter for resolving dependencies.
@@ -68,11 +68,6 @@ val check by tasks.getting(Task::class) {
 }
 
 publishing {
-    publications {
-        create<MavenPublication>("maven") {
-            from(components["versionCatalog"])
-        }
-    }
     repositories {
         maven {
             url = uri("$rootDir/../mary")
