@@ -99,10 +99,10 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
                 alias("cleargl").to("net.clearvolume:cleargl:2.2.10")
 
                 // Scenery - https://github.com/scenerygraphics/scenery
-                alias("scenery").to("graphics.scenery:scenery:0.7.0-beta-7")
+//                alias("scenery").to("graphics.scenery:scenery:0.7.0-beta-7")
 
                 // SciView - https://github.com/scenerygraphics/SciView
-                alias("sciview").to("sc.iview:sciview:0.2.0-beta-5")
+//                alias("sciview").to("sc.iview:sciview:0.2.0-beta-5")
 
                 // Third party components
 
@@ -111,7 +111,7 @@ class SciJavaCatalogsPlugin : Plugin<Settings> {
 
 
                 miscBundle += listOf("morphoLibJ", "bigStitcher", "multiviewReconstruction", "multiviewSimulation",
-                                     "coreMem", "cleargl", "scenery", "sciview", "awsJdkS3")
+                                     "coreMem", "cleargl", /*"scenery", "sciview",*/ "awsJdkS3")
             }
 
             groovy()
