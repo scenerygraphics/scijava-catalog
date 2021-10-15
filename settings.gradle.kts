@@ -17,6 +17,6 @@ dependencyResolutionManagement {
     }
 }
 
-include("processor", "annotations")
+include("processor"/*, "annotations"*/)
 //enableFeaturePreview("VERSION_CATALOGS")
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
