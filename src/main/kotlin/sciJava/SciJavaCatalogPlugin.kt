@@ -10,7 +10,7 @@ import org.gradle.api.initialization.Settings
 /**
  * A simple 'hello world' plugin.
  */
-class SciJavaCatalogsPlugin : Plugin<Settings> {
+class SciJavaCatalogPlugin : Plugin<Settings> {
 
     override fun apply(settings: Settings) {
 
