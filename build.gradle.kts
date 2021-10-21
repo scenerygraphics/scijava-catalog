@@ -18,7 +18,7 @@ plugins {
     idea
 }
 
-group = "org.sciJava"
+group = "org.scijava"
 version = "31.1.0"
 
 repositories {
@@ -47,7 +47,7 @@ dependencies {
 gradlePlugin {
     // Define the plugin
     plugins.create("scijava-catalog") {
-        id = "sciJava.catalog"
+        id = "org.scijava.catalogs"
         displayName = "SciJava Gradle catalog"
         description = "Take advantage of the whole SciJava ecosystem via Gradle catalogs feature"
         implementationClass = "sciJava.SciJavaCatalogPlugin"

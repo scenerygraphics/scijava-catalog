@@ -7,7 +7,7 @@
  * in the user manual at https://docs.gradle.org/6.6.1/userguide/multi_project_builds.html
  */
 
-rootProject.name = "sciJava-catalogs"
+rootProject.name = "catalogs"
 
 dependencyResolutionManagement {
 //    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
