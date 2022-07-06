@@ -1,4 +1,5 @@
 import core.GenerateCode
+import org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -76,16 +77,21 @@ tasks {
         }
     }
     val generateCode by registering(GenerateCode::class)
-    assemble {
-        dependsOn(generateCode)
-    }
+//    compileKotlin {
+//        dependsOn(generateCode)
+//    }
+    kotlin.sourceSets["main"].kotlin.srcDir(generateCode.get().outputs.files)
 }
 
-sourceSets {
-    main {
-        java.srcDir("$buildDir/generated")
-    }
-}
+//val SourceSet.kotlin: SourceDirectorySet
+//    get() = project.extensions.getByType<KotlinJvmProjectExtension>().sourceSets.getByName(name).kotlin
+
+//sourceSets {
+//    main {
+//        output.dir("$buildDir/generated", "builtBy" to "generateCode")
+//        kotlin.srcDir("$buildDir/generated")
+//    }
+//}
 
 // Add a source set for the functional test suite
 //val functionalTestSourceSet = sourceSets.create("functionalTest") {

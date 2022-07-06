@@ -14,6 +14,7 @@ abstract class GenerateCode : DefaultTask() {
 
     init {
         group = "build"
+        description = "Generate Scijava catalog"
     }
 
     @get:OutputDirectory
@@ -44,8 +45,11 @@ abstract class GenerateCode : DefaultTask() {
                     for (dep in deps) {
                         if (dep.comment.isNotEmpty())
                             appendLine("        // ${dep.comment}")
-                        appendLine("        alias(\"${dep.art}\").to(\"${dep.gav}\")")
+                        appendLine("        library(\"${dep.art}\", \"${dep.gav}\")")
                     }
+                    val prefix = "bundle(\"$key\", listOf("
+                    val separator = ",\n${" ".repeat(8 + prefix.length)}"
+                    appendLine("        $prefix${deps.joinToString(separator) { "\"${it.gav}\""}}))")
 
                     appendLine("""
                     }
