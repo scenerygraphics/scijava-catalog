@@ -1,31 +1,19 @@
 import core.GenerateCode
-import org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     // Apply the Java Gradle plugin development plugin to add support for developing Gradle plugins
     `java-gradle-plugin`
-
-    // Apply the Kotlin JVM plugin to add support for Kotlin.
     kotlin("jvm") version embeddedKotlinVersion
-
     `maven-publish`
-
     `java-library`
-
-    id("com.gradle.plugin-publish") version "1.0.0-rc-3"
-
-    //    idea
+    id("com.gradle.plugin-publish") version "1.0.0"
 }
 
 group = "org.scijava"
 version = "32.0.0-SNAPSHOT"
 
-repositories {
-    // Use jcenter for resolving dependencies.
-    // You can declare any Maven/Ivy/file repository here.
-    mavenCentral()
-}
+repositories { mavenCentral() }
 
 dependencies {
     // Align versions of all Kotlin components
@@ -57,15 +45,6 @@ pluginBundle {
     tags = listOf("scijava", "gradle", "catalog")
 }
 
-//idea {
-//    module {
-//        // Not using += due to https://github.com/gradle/gradle/issues/8749
-//        sourceDirs = sourceDirs + file("build/generated/ksp/main/kotlin") // or tasks["kspKotlin"].destination
-//        testSourceDirs = testSourceDirs + file("build/generated/ksp/test/kotlin")
-//        generatedSourceDirs = generatedSourceDirs + file("build/generated/ksp/main/kotlin") + file("build/generated/ksp/test/kotlin")
-//    }
-//}
-
 tasks {
     withType<JavaCompile> {
         sourceCompatibility = "1.8"
@@ -77,21 +56,8 @@ tasks {
         }
     }
     val generateCode by registering(GenerateCode::class)
-//    compileKotlin {
-//        dependsOn(generateCode)
-//    }
     kotlin.sourceSets["main"].kotlin.srcDir(generateCode.get().outputs.files)
 }
-
-//val SourceSet.kotlin: SourceDirectorySet
-//    get() = project.extensions.getByType<KotlinJvmProjectExtension>().sourceSets.getByName(name).kotlin
-
-//sourceSets {
-//    main {
-//        output.dir("$buildDir/generated", "builtBy" to "generateCode")
-//        kotlin.srcDir("$buildDir/generated")
-//    }
-//}
 
 // Add a source set for the functional test suite
 //val functionalTestSourceSet = sourceSets.create("functionalTest") {
@@ -109,12 +75,4 @@ tasks {
 //val check by tasks.getting(Task::class) {
 //    // Run the functional tests as part of `check`
 //    dependsOn(functionalTest)
-//}
-//
-//publishing {
-//    repositories {
-//        maven {
-//            url = uri("$rootDir/../mary")
-//        }
-//    }
 //}
