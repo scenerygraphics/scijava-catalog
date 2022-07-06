@@ -1,21 +1,21 @@
-package main
+package core
 
 import java.net.URL
 
 var pom = URL("https://raw.githubusercontent.com/scijava/pom-scijava/master/pom.xml").readText().lines()
-        .filter { it.isNotEmpty() && it.isNotBlank() } // condense
+    .filter { it.isNotEmpty() && it.isNotBlank() } // condense
 
 val versions = mutableMapOf<String, String>().also { m ->
     pom.dropWhile { it != "\t<properties>" }.takeWhile { it != "\t</properties>" }.filter { it.endsWith(".version>") }
-            .forEach {
-                val key = it.substringAfter('<').substringBefore(".version>")
-                var value = it.value
-                if (value[0] == '$') { // ${imagej2.version}
-                    val v = value.drop(2).dropLast(".version}".length)
-                    value = m.getOrElse(v) { searchPomBase(v) }
-                }
-                m[key] = value
+        .forEach {
+            val key = it.substringAfter('<').substringBefore(".version>")
+            var value = it.value
+            if (value[0] == '$') { // ${imagej2.version}
+                val v = value.drop(2).dropLast(".version}".length)
+                value = m.getOrElse(v) { searchPomBase(v) }
             }
+            m[key] = value
+        }
 }
 
 fun searchPomBase(value: String): String {
@@ -25,7 +25,7 @@ fun searchPomBase(value: String): String {
 }
 
 val lines: List<String> = pom.dropWhile { it != "\t\t<dependencies>" }.takeWhile { it != "\t\t</dependencies>" }
-        .filter { !it.endsWith("dependency>") && !it.endsWith(".version}</version>") }
+    .filter { !it.endsWith("dependency>") && !it.endsWith(".version}</version>") }
 
 var p = 1
 
@@ -85,7 +85,7 @@ fun initDeps() {
             "Logback - http://logback.qos.ch/" -> parse2("ch.qos.logback")
             "MigLayout - http://www.miglayout.com/" -> parse2("com.miglayout")
             "RSyntaxTextArea - https://bobbylight.github.io/RSyntaxTextArea/" -> parse2("rSyntaxTextArea", "com.fifesoft")
-            "SLF4J - http://slf4j.org/" -> parse2("org.slf4j")
+            "SLF4J - https://www.slf4j.org/" -> parse2("org.slf4j")
             "TensorFlow - https://www.tensorflow.org/" -> parse2("org.tensorflow")
             "JUnit 5 - https://junit.org/junit5/" -> parse2("junit5", "org.junit.jupiter", "org.junit.vintage")
             "JMH - http://openjdk.java.net/projects/code-tools/jmh/" -> parse2("org.openjdk.jmh")
@@ -110,7 +110,7 @@ fun parse(group: String, name: String = group.split('.')[1], mainComment: Boolea
     while (p++ in lines.indices)
         if (line.isComment)
             if (name in line) {
-                val comment = consumeLine.substringAfter("<!-- ").substringBefore(" -->")
+                val comment = consumeLine.comment
                 check(consumeLine == groupId(group))
                 val art = line.value
                 dependencies.getOrPut(name) { ArrayList() } += Dep(comment, group, art)
@@ -124,11 +124,8 @@ fun parse2(name: String, vararg groups: String) {
     while (p in lines.indices && !line.isComment) {
         if (line.isGroupId) {
             var group = ""
-            for (g in groups)
-                if (g == line.value) {
-                    group = g
-                    break
-                }
+            for (g in groups) if (g == line.value) {
+                group = g; break; }
             //        val group = groups.first { it == lines[p[0]++].value } TODO
             val art = nextLine.value
             dependencies.getOrPut(name) { ArrayList() } += Dep("", group, art)

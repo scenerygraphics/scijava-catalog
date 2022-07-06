@@ -1,3 +1,4 @@
+import core.GenerateCode
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -5,21 +6,19 @@ plugins {
     `java-gradle-plugin`
 
     // Apply the Kotlin JVM plugin to add support for Kotlin.
-    id("org.jetbrains.kotlin.jvm") version embeddedKotlinVersion
+    kotlin("jvm") version embeddedKotlinVersion
 
     `maven-publish`
 
     `java-library`
 
-    id("com.google.devtools.ksp") version "1.5.30-1.0.0-beta09"
+    id("com.gradle.plugin-publish") version "1.0.0-rc-3"
 
-    id("com.gradle.plugin-publish") version "0.14.0"
-
-    idea
+    //    idea
 }
 
 group = "org.scijava"
-version = "31.1.0"
+version = "32.0.0-SNAPSHOT"
 
 repositories {
     // Use jcenter for resolving dependencies.
@@ -39,9 +38,6 @@ dependencies {
 
     // Use the Kotlin JUnit integration.
     testImplementation(kotlin("test-junit"))
-
-//    implementation(projects.processor)
-    ksp(projects.processor)
 }
 
 gradlePlugin {
@@ -60,14 +56,14 @@ pluginBundle {
     tags = listOf("scijava", "gradle", "catalog")
 }
 
-idea {
-    module {
-        // Not using += due to https://github.com/gradle/gradle/issues/8749
-        sourceDirs = sourceDirs + file("build/generated/ksp/main/kotlin") // or tasks["kspKotlin"].destination
-        testSourceDirs = testSourceDirs + file("build/generated/ksp/test/kotlin")
-        generatedSourceDirs = generatedSourceDirs + file("build/generated/ksp/main/kotlin") + file("build/generated/ksp/test/kotlin")
-    }
-}
+//idea {
+//    module {
+//        // Not using += due to https://github.com/gradle/gradle/issues/8749
+//        sourceDirs = sourceDirs + file("build/generated/ksp/main/kotlin") // or tasks["kspKotlin"].destination
+//        testSourceDirs = testSourceDirs + file("build/generated/ksp/test/kotlin")
+//        generatedSourceDirs = generatedSourceDirs + file("build/generated/ksp/main/kotlin") + file("build/generated/ksp/test/kotlin")
+//    }
+//}
 
 tasks {
     withType<JavaCompile> {
@@ -78,6 +74,16 @@ tasks {
         kotlinOptions {
             jvmTarget = "1.8"
         }
+    }
+    val generateCode by registering(GenerateCode::class)
+    assemble {
+        dependsOn(generateCode)
+    }
+}
+
+sourceSets {
+    main {
+        java.srcDir("$buildDir/generated")
     }
 }
 
