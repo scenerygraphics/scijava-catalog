@@ -42,7 +42,7 @@ gradlePlugin {
 pluginBundle {
     website = "https://github.com/scijava/gradle-catalog"
     vcsUrl = "https://github.com/scijava/gradle-catalog"
-    tags = listOf("scijava", "gradle", "catalog")
+    tags = listOf("scijava", "catalog")
 }
 
 tasks {
