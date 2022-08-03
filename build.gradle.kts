@@ -11,7 +11,7 @@ plugins {
 }
 
 group = "org.scijava"
-version = "31.1.1"
+version = "31.1.2"
 
 repositories { mavenCentral() }
 
