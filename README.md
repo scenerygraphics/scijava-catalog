@@ -7,5 +7,5 @@ It's supposed to serve as a native solution for the Gradle Scijava community cou
 
 ```kotlin 
 plugins {
-    id("org.scijava.catalogs) version "31.1.1" // or "latest.release"
+    id("org.scijava.catalogs") version "31.1.1" // or "latest.release"
 }
