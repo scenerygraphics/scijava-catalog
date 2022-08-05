@@ -5,20 +5,9 @@ import java.net.URL
 val commit = "f42038dfa9698ba7136f73a89fa9be0e18127599" // 31.1.0
 
 var pom = URL("https://raw.githubusercontent.com/scijava/pom-scijava/$commit/pom.xml").readText().lines()
-    .filter { it.isNotEmpty() && it.isNotBlank() } // condense
+        .filter { it.isNotEmpty() && it.isNotBlank() } // condense
 
-val versions = mutableMapOf<String, String>().also { m ->
-    pom.dropWhile { it != "\t<properties>" }.takeWhile { it != "\t</properties>" }.filter { it.endsWith(".version>") }
-        .forEach {
-            val key = it.substringAfter('<').substringBefore(".version>")
-            var value = it.value
-            if (value[0] == '$') { // ${imagej2.version}
-                val v = value.drop(2).dropLast(".version}".length)
-                value = m.getOrElse(v) { searchPomBase(v) }
-            }
-            m[key] = value
-        }
-}
+val versions = mutableMapOf<String, String>()
 
 fun searchPomBase(value: String): String {
     val commit = "71471fc07836b528620d5c852afa9b1a1cd1728f" // 13.0.0
@@ -28,7 +17,7 @@ fun searchPomBase(value: String): String {
 }
 
 val lines: List<String> = pom.dropWhile { it != "\t\t<dependencies>" }.takeWhile { it != "\t\t</dependencies>" }
-    .filter { !it.endsWith("dependency>") && !it.endsWith(".version}</version>") }
+        .filter { !it.endsWith("dependency>") && !it.endsWith(".version}</version>") }
 
 var p = 1
 
@@ -41,8 +30,9 @@ val nextLine: String
 val consumeLine: String
     get() = lines[p++]
 
-class Dep(val comment: String, group: String, val art: String) {
-    val gav = "$group.$art.${versions["$group.$art"]}"
+class Dep(val comment: String, val group: String, val art: String) {
+    val gav: String
+        get() = "$group:$art:${versions[art]}"
 }
 
 val dependencies = mutableMapOf("misc" to ArrayList<Dep>())
@@ -53,6 +43,19 @@ val String.comment get() = substringAfter("<!-- ").substringBefore(" -->")
 val String.isGroupId get() = startsWith("\t\t\t\t<groupId>")
 fun groupId(string: String) = "\t\t\t\t<groupId>$string</groupId>"
 fun artifactId(string: String) = "\t\t\t\t<artifactId>$string</artifactId>"
+
+fun initVersions() {
+    pom.dropWhile { it != "\t<properties>" }.takeWhile { it != "\t</properties>" }.filter { it.endsWith(".version>") }
+            .forEach {
+                val key = it.substringAfter('<').substringBefore(".version>")
+                var value = it.value
+                if (value[0] == '$') { // ie: ${imagej2.version}
+                    val v = value.drop(2).dropLast(".version}".length)
+                    value = versions.getOrElse(v) { searchPomBase(v) }
+                }
+                versions[key] = value
+            }
+}
 
 fun initDeps() {
     while (p in lines.indices) {
@@ -66,7 +69,7 @@ fun initDeps() {
             "BigDataViewer - https://github.com/bigdataviewer" -> parse2("bigdataviewer", "sc.fiji")
             "TrakEM2 - https://github.com/trakem2" -> parse2("trakem2", "sc.fiji")
             "N5 - https://github.com/saalfeldlab/n5" -> parse2("n5", "net.imglib2", "org.janelia.saalfeldlab")
-//            "BoneJ2 - https://github.com/bonej-org/BoneJ2" -> parse2("org.bonej")
+            //            "BoneJ2 - https://github.com/bonej-org/BoneJ2" -> parse2("org.bonej")
             "BoneJ - http://bonej.org/" -> parse2("org.bonej")
             "Open Microscopy Environment - https://github.com/ome" -> parse("org.openmicroscopy", "ome")
             "Bio-Formats - https://github.com/ome/bioformats" -> parse2("bioformats", "ome")
@@ -88,9 +91,9 @@ fun initDeps() {
             "Kotlin - https://kotlinlang.org/" -> parse2("org.jetbrains.kotlin")
             "Logback - http://logback.qos.ch/" -> parse2("ch.qos.logback")
             "MigLayout - http://www.miglayout.com/" -> parse2("com.miglayout")
-//            "RSyntaxTextArea - https://bobbylight.github.io/RSyntaxTextArea/" -> parse2("rSyntaxTextArea", "com.fifesoft")
+            //            "RSyntaxTextArea - https://bobbylight.github.io/RSyntaxTextArea/" -> parse2("rSyntaxTextArea", "com.fifesoft")
             "RSyntaxTextArea - http://bobbylight.github.io/RSyntaxTextArea/" -> parse2("rSyntaxTextArea", "com.fifesoft")
-//            "SLF4J - https://www.slf4j.org/" -> parse2("org.slf4j")
+            //            "SLF4J - https://www.slf4j.org/" -> parse2("org.slf4j")
             "SLF4J - http://slf4j.org/" -> parse2("org.slf4j")
             "TensorFlow - https://www.tensorflow.org/" -> parse2("org.tensorflow")
             "JUnit 5 - https://junit.org/junit5/" -> parse2("junit5", "org.junit.jupiter", "org.junit.vintage")
@@ -102,8 +105,13 @@ fun initDeps() {
                     linea = nextLine
                 }
                 val group = linea.value
-                val art = nextLine.value
-                dependencies["misc"]!! += Dep(comment, group, art)
+                var art = nextLine.value
+                if (art.endsWith('_'))
+                    art = art.dropLast(1)
+                val misc = dependencies["misc"]!!
+                // avoid duplication with artifact names ending with `_`
+                if (misc.none { it.group == group && it.art == art })
+                    misc += Dep(comment, group, art)
                 while (!line.isComment && !line.isGroupId)
                     p++
             }
@@ -130,8 +138,11 @@ fun parse2(name: String, vararg groups: String) {
     while (p in lines.indices && !line.isComment) {
         if (line.isGroupId) {
             var group = ""
-            for (g in groups) if (g == line.value) {
-                group = g; break; }
+            for (g in groups)
+                if (g == line.value) {
+                    group = g
+                    break
+                }
             //        val group = groups.first { it == lines[p[0]++].value } TODO
             val art = nextLine.value
             dependencies.getOrPut(name) { ArrayList() } += Dep("", group, art)

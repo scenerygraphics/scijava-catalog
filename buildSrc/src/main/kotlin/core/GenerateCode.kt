@@ -24,6 +24,8 @@ abstract class GenerateCode : DefaultTask() {
     @TaskAction
     fun generate() {
 
+        initVersions()
+
         initDeps()
 
         for((key, deps) in dependencies) {
@@ -45,11 +47,11 @@ abstract class GenerateCode : DefaultTask() {
                     for (dep in deps) {
                         if (dep.comment.isNotEmpty())
                             appendLine("        // ${dep.comment}")
-                        appendLine("        library(\"${dep.art}\", \"${dep.gav}\")")
+                        appendLine("        library(\"${dep.art.toLowerCase()}\", \"${dep.gav}\")")
                     }
                     val prefix = "bundle(\"$key\", listOf("
                     val separator = ",\n${" ".repeat(8 + prefix.length)}"
-                    appendLine("        $prefix${deps.joinToString(separator) { "\"${it.gav}\""}}))")
+                    appendLine("        $prefix${deps.joinToString(separator) { "\"${it.art.toLowerCase()}\""}}))")
 
                     appendLine("""
                     }

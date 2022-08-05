@@ -20,13 +20,13 @@ dependencies {
     implementation(platform(kotlin("bom", embeddedKotlinVersion)))
 
     // Use the Kotlin JDK 8 standard library.
-    implementation(kotlin("stdlib-jdk8"))
+    implementation(kotlin("stdlib-jdk8", embeddedKotlinVersion))
 
     // Use the Kotlin test library.
-    testImplementation(kotlin("test"))
+    testImplementation(kotlin("test", embeddedKotlinVersion))
 
     // Use the Kotlin JUnit integration.
-    testImplementation(kotlin("test-junit"))
+    testImplementation(kotlin("test-junit", embeddedKotlinVersion))
 }
 
 gradlePlugin {
