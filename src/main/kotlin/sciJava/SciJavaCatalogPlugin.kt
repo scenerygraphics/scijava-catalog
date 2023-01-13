@@ -44,7 +44,7 @@ class SciJavaCatalogPlugin : Plugin<Settings> {
             miglayout()
             misc()
             n5()
-            ome()
+//            ome() // empty
             omero()
             rSyntaxTextArea()
             scifio()

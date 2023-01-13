@@ -7,13 +7,16 @@ plugins {
     kotlin("jvm") version embeddedKotlinVersion
     `maven-publish`
     `java-library`
-    id("com.gradle.plugin-publish") version "1.0.0"
+    id("com.gradle.plugin-publish") version "1.1.0"
 }
 
 group = "org.scijava"
-version = "31.1.2"
+version = "33.2.0"
 
-repositories { mavenCentral() }
+repositories {
+    google()
+    mavenCentral()
+}
 
 dependencies {
     // Align versions of all Kotlin components
