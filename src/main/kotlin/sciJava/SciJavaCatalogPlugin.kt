@@ -3,7 +3,7 @@
  */
 package sciJava
 
-import catalogs.*
+import addGeneratedCatalog
 import org.gradle.api.Plugin
 import org.gradle.api.initialization.Settings
 
@@ -16,42 +16,43 @@ class SciJavaCatalogPlugin : Plugin<Settings> {
 
         settings.enableFeaturePreview("VERSION_CATALOGS")
 
-        settings.dependencyResolutionManagement.versionCatalogs.apply {
-            batik()
-            bigdataviewer()
-            bioformats()
-            bonej()
-            commonsLang()
-            eclipseCollections()
-            eclipseSwt()
-            fiji()
-            googleCloud()
-            googleHttpClient()
-            groovy()
-            httpcomponents()
-            imagej()
-            imglib2()
-            jackson()
-            java3d()
-            jetty()
-            jgrapht()
-            jmh()
-            jogl()
-            junit5()
-            kotlin()
-            logback()
-            maven()
-            miglayout()
-            misc()
-            n5()
-//            ome() // empty
-            omero()
-            rSyntaxTextArea()
-            scifio()
-            scijava()
-            slf4j()
-            tensorflow()
-            trakem2()
-        }
+        settings.dependencyResolutionManagement.versionCatalogs.addGeneratedCatalog()
+//        settings.dependencyResolutionManagement.versionCatalogs.apply {
+//            batik()
+//            bigdataviewer()
+//            bioformats()
+////            bonej()
+//            commonsLang()
+//            eclipseCollections()
+//            eclipseSwt()
+//            fiji()
+//            googleCloud()
+//            googleHttpClient()
+//            groovy()
+//            httpcomponents()
+//            imagej()
+//            imglib2()
+//            jackson()
+//            java3d()
+//            jetty()
+//            jgrapht()
+////            jmh()
+//            jogl()
+//            junit5()
+//            kotlin()
+//            logback()
+//            maven()
+//            miglayout()
+//            misc()
+//            n5()
+////            ome() // empty
+//            omero()
+//            rSyntaxTextArea()
+//            scifio()
+//            scijava()
+//            slf4j()
+//            tensorflow()
+//            trakem2()
+//        }
     }
 }

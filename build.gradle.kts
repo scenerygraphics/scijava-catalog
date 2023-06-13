@@ -7,11 +7,11 @@ plugins {
     kotlin("jvm") version embeddedKotlinVersion
     `maven-publish`
     `java-library`
-    id("com.gradle.plugin-publish") version "1.1.0"
+    id("com.gradle.plugin-publish") version "1.2.0"
 }
 
 group = "org.scijava"
-version = "33.2.0"
+version = "35.1.1+2"
 
 repositories {
     google()
@@ -33,19 +33,16 @@ dependencies {
 }
 
 gradlePlugin {
+    website.set("https://github.com/scijava/gradle-catalog")
+    vcsUrl.set("https://github.com/scijava/gradle-catalog")
     // Define the plugin
     plugins.create("scijava-catalog") {
         id = "org.scijava.catalogs"
         displayName = "SciJava Gradle catalog"
         description = "Take advantage of the whole SciJava ecosystem via Gradle catalogs feature"
         implementationClass = "sciJava.SciJavaCatalogPlugin"
+        tags.set(listOf("scijava", "catalog"))
     }
-}
-
-pluginBundle {
-    website = "https://github.com/scijava/gradle-catalog"
-    vcsUrl = "https://github.com/scijava/gradle-catalog"
-    tags = listOf("scijava", "catalog")
 }
 
 tasks {

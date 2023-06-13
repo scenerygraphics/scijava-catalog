@@ -2,7 +2,7 @@ package core
 
 import java.net.URL
 
-val release = "33.2.0"
+val release = "35.1.1"
 
 val pom = URL("https://raw.githubusercontent.com/scijava/pom-scijava/pom-scijava-$release/pom.xml").readText().lines()
         .filter { it.isNotEmpty() && it.isNotBlank() } // condense
@@ -42,13 +42,17 @@ val String.value get() = substringAfter('>').substringBefore('<')
 val String.isComment get() = startsWith("\t\t\t<!-- ")
 val String.comment get() = substringAfter("<!-- ").substringBefore(" -->")
 val String.isGroupId get() = startsWith("\t\t\t\t<groupId>")
+val String.withoutComment get() = when {
+    endsWith("-->") -> substringBefore(" <!--")
+    else -> this
+}
 fun groupId(string: String) = "\t\t\t\t<groupId>$string</groupId>"
 fun artifactId(string: String) = "\t\t\t\t<artifactId>$string</artifactId>"
 
 fun initVersions() {
      // we are forced to cache them first since it can happen `x.version`s get resolved later on, ie `org.bytedeco.javacpp.version`
         pom.dropWhile { it != "\t<properties>" }.takeWhile { it != "\t</properties>" }
-                .filter { it.endsWith(".version>") }
+                .filter { it.withoutComment.trimEnd().endsWith(".version>") }
                 .associateByTo(versions, { it.substringAfter('<').substringBefore(".version>") }, { it.value })
         for ((k, v) in versions)
             if ('$' in v) // ie: `2.3.1-${org.bytedeco.javacpp.version}`
@@ -76,8 +80,8 @@ fun initDeps() {
             "BigDataViewer - https://github.com/bigdataviewer" -> parse2("bigdataviewer", "sc.fiji")
             "TrakEM2 - https://github.com/trakem2" -> parse2("trakem2", "sc.fiji")
             "N5 - https://github.com/saalfeldlab/n5" -> parse2("n5", "net.imglib2", "org.janelia.saalfeldlab")
-            "BoneJ2 - https://github.com/bonej-org/BoneJ2" -> parse2("org.bonej")
-//            "Open Microscopy Environment - https://github.com/ome" -> parse("org.openmicroscopy", "ome")
+//            "BoneJ2 - https://github.com/bonej-org/BoneJ2" -> parse2("org.bonej") // removed
+//            "Open Microscopy Environment - https://github.com/ome" -> parse("org.openmicroscopy", "ome") // empty
             "Bio-Formats - https://github.com/ome/bioformats" -> parse2("bioformats", "ome")
             "OMERO Blitz - https://github.com/ome/omero-blitz" -> parse("org.openmicroscopy", "omero", mainComment = false)
             "Apache Groovy - https://groovy-lang.org/" -> parse2("org.codehaus.groovy")
@@ -88,20 +92,20 @@ fun initDeps() {
             "Eclipse Collections - https://www.eclipse.org/collections/" -> parse2("eclipseCollections", "org.eclipse.collections")
             "Eclipse SWT - https://www.eclipse.org/swt/" -> parse2("eclipseSwt", "org.eclipse.swt")
             "Google Cloud Storage - https://github.com/googleapis/google-cloud-java" -> parse2("googleCloud", "com.google.cloud")
-            "Google HTTP Client Library for Java - https://github.com/googleapis/google-http-java-client" -> parse2("googleHttpClient", "com.google.http-client")
+            "Google HTTP Client - https://github.com/googleapis/google-http-java-client" -> parse2("googleHttpClient", "com.google.http-client")
             "Jackson - https://github.com/FasterXML/jackson" -> parse2("jackson", "com.fasterxml.jackson.core", "com.fasterxml.jackson.dataformat")
             "Java 3D - https://github.com/scijava/java3d-core" -> parse2("java3d", "org.scijava")
-            "Jetty - http://eclipse.org/jetty/" -> parse2("org.eclipse.jetty")
+            "Jetty - https://www.eclipse.org/jetty/" -> parse2("org.eclipse.jetty")
             "JGraphT - https://github.com/jgrapht/jgrapht" -> parse2("org.jgrapht")
             "JogAmp - https://jogamp.org/" -> parse2("jogl", "org.jogamp.gluegen", "org.jogamp.joal", "org.jogamp.jocl", "org.jogamp.jogl")
             "Kotlin - https://kotlinlang.org/" -> parse2("org.jetbrains.kotlin")
-            "Logback - http://logback.qos.ch/" -> parse2("ch.qos.logback")
-            "MigLayout - http://www.miglayout.com/" -> parse2("com.miglayout")
+            "Logback - https://logback.qos.ch/" -> parse2("ch.qos.logback")
+            "MigLayout - https://www.miglayout.com/" -> parse2("com.miglayout")
             "RSyntaxTextArea - https://bobbylight.github.io/RSyntaxTextArea/" -> parse2("rSyntaxTextArea", "com.fifesoft")
             "SLF4J - https://www.slf4j.org/" -> parse2("org.slf4j")
             "TensorFlow - https://www.tensorflow.org/" -> parse2("org.tensorflow")
             "JUnit 5 - https://junit.org/junit5/" -> parse2("junit5", "org.junit.jupiter", "org.junit.vintage")
-            "JMH - http://openjdk.java.net/projects/code-tools/jmh/" -> parse2("org.openjdk.jmh")
+            "JMH - https://openjdk.java.net/projects/code-tools/jmh/" -> parse2("org.openjdk.jmh")
             else -> {
                 var comment = ""
                 while (linea.isComment) {
@@ -117,7 +121,8 @@ fun initDeps() {
                 if (misc.none { it.group == group && it.art == art })
                     misc += Dep(comment, group, art)
                 while (!line.isComment && !line.isGroupId)
-                    p++
+                    if (++p == lines.lastIndex)
+                        return
             }
         }
     }
