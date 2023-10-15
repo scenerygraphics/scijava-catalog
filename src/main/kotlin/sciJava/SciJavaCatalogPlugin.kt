@@ -7,52 +7,10 @@ import addGeneratedCatalog
 import org.gradle.api.Plugin
 import org.gradle.api.initialization.Settings
 
-/**
- * A simple 'hello world' plugin.
- */
 class SciJavaCatalogPlugin : Plugin<Settings> {
 
     override fun apply(settings: Settings) {
 
-        settings.enableFeaturePreview("VERSION_CATALOGS")
-
         settings.dependencyResolutionManagement.versionCatalogs.addGeneratedCatalog()
-//        settings.dependencyResolutionManagement.versionCatalogs.apply {
-//            batik()
-//            bigdataviewer()
-//            bioformats()
-////            bonej()
-//            commonsLang()
-//            eclipseCollections()
-//            eclipseSwt()
-//            fiji()
-//            googleCloud()
-//            googleHttpClient()
-//            groovy()
-//            httpcomponents()
-//            imagej()
-//            imglib2()
-//            jackson()
-//            java3d()
-//            jetty()
-//            jgrapht()
-////            jmh()
-//            jogl()
-//            junit5()
-//            kotlin()
-//            logback()
-//            maven()
-//            miglayout()
-//            misc()
-//            n5()
-////            ome() // empty
-//            omero()
-//            rSyntaxTextArea()
-//            scifio()
-//            scijava()
-//            slf4j()
-//            tensorflow()
-//            trakem2()
-//        }
     }
 }

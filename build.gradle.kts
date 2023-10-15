@@ -1,17 +1,16 @@
 import core.GenerateCode
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     // Apply the Java Gradle plugin development plugin to add support for developing Gradle plugins
     `java-gradle-plugin`
-    kotlin("jvm") version embeddedKotlinVersion
+    embeddedKotlin("jvm")
     `maven-publish`
     `java-library`
-    id("com.gradle.plugin-publish") version "1.2.0"
+    id("com.gradle.plugin-publish") version "1.2.1"
 }
 
 group = "org.scijava"
-version = "35.1.1+2"
+version = "35.1.1+4"
 
 repositories {
     google()
@@ -20,43 +19,35 @@ repositories {
 
 dependencies {
     // Align versions of all Kotlin components
-    implementation(platform(kotlin("bom", embeddedKotlinVersion)))
+    implementation(platform(embeddedKotlin("bom")))
 
     // Use the Kotlin JDK 8 standard library.
-    implementation(kotlin("stdlib-jdk8", embeddedKotlinVersion))
+    implementation(embeddedKotlin("stdlib-jdk8"))
 
     // Use the Kotlin test library.
-    testImplementation(kotlin("test", embeddedKotlinVersion))
+    testImplementation(embeddedKotlin("test"))
 
     // Use the Kotlin JUnit integration.
-    testImplementation(kotlin("test-junit", embeddedKotlinVersion))
+    testImplementation(embeddedKotlin("test-junit"))
 }
 
 gradlePlugin {
-    website.set("https://github.com/scijava/gradle-catalog")
-    vcsUrl.set("https://github.com/scijava/gradle-catalog")
+    website = "https://github.com/scijava/gradle-catalog"
+    vcsUrl = "https://github.com/scijava/gradle-catalog"
     // Define the plugin
     plugins.create("scijava-catalog") {
         id = "org.scijava.catalogs"
         displayName = "SciJava Gradle catalog"
         description = "Take advantage of the whole SciJava ecosystem via Gradle catalogs feature"
         implementationClass = "sciJava.SciJavaCatalogPlugin"
-        tags.set(listOf("scijava", "catalog"))
+        tags = listOf("scijava", "catalog")
     }
 }
+kotlin.jvmToolchain(8)
 
 tasks {
-    withType<JavaCompile> {
-        sourceCompatibility = "1.8"
-        targetCompatibility = "1.8"
-    }
-    withType<KotlinCompile> {
-        kotlinOptions {
-            jvmTarget = "1.8"
-        }
-    }
     val generateCode by registering(GenerateCode::class)
-    kotlin.sourceSets["main"].kotlin.srcDir(generateCode.get().outputs.files)
+    kotlin.sourceSets.main { kotlin.srcDir(generateCode) }
 }
 
 // Add a source set for the functional test suite
